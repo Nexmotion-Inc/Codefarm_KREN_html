@@ -353,9 +353,9 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .chkBtn::before {content:""; display: inline-block; position: relative; top: 0px; width: 18px; height: 18px; background: url("../img/ico_chk_w.svg") center no-repeat, #777; border-radius: 50%; margin:auto 7px auto 0;}
 .chkBtn.btnSelected::before {background: url("../img/ico_chk_w.svg") center no-repeat, var(--dark-purple);}
 .cartItemList .chkBtn{ margin: 0 8px auto 0;}
-.itemPlusBtn {background:url("img/ico_plus_item_b.svg") center no-repeat;}
+.itemPlusBtn {background:url("../img/ico_plus_item_b.svg") center no-repeat;}
 .itemPlusBtn.amountLimit {background:url("/img/ico_plus_item_g.svg") center no-repeat, #f6f6f6;}
-.itemMinusBtn {background:url("img/ico_minus_item_b.svg") center no-repeat;}
+.itemMinusBtn {background:url("../img/ico_minus_item_b.svg") center no-repeat;}
 .itemMinusBtn.amountLimit {background:url("/img/ico_minus_item_g.svg") center no-repeat, #f6f6f6;}
 .couponSelectBtn {height: 25px; margin: 3px 0 3px 40px; padding: 0 4px; border-radius: 4px; background-color: var(--dark-purple); color: #fff; font-size: 13px; line-height: 25px;}
 .deleteItemBtn {width:24px; height: 24px; margin-left: 16px;  background: url("img/ico_delete.svg") center no-repeat;}
@@ -388,9 +388,9 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .cilTotal >div >span {display: block; padding-bottom: 8px;}
 .cilTotal >div >span:first-child {font-size: 12px; color: #999;}
 .cilTotal >span {text-indent: 100%; white-space: nowrap; overflow: hidden;}
-.cilTotal .cilTotalMinus {width: 24px; background: url("/img/ico_minus_total.svg") center no-repeat;}
-.cilTotal .cilTotalPlus {width: 24px; background: url("/img/ico_plus_total.svg") center no-repeat;}
-.cilTotal .cilTotalEqual {width: 24px; background: url("/img/ico_equal_total.svg") center no-repeat;}
+.cilTotal .cilTotalMinus {width: 24px; background: url("../img/ico_minus_total.svg") center no-repeat;}
+.cilTotal .cilTotalPlus {width: 24px; background: url("../img/ico_plus_total.svg") center no-repeat;}
+.cilTotal .cilTotalEqual {width: 24px; background: url("../img/ico_equal_total.svg") center no-repeat;}
 
 .orderInfoWrap {display: flex; justify-content: flex-end;}
 .orderInfo {width: 360px; padding: 0 20px 24px 20px;}

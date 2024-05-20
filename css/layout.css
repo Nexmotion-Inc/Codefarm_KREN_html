@@ -5,6 +5,7 @@
 html, body {font-size: 10px;}
 /*포커스*/
 #wrap{min-width: 1360px; overflow-x: hidden; height: 100%;}
+#wrap.hAuto{height: auto;}
 
 /*인풋 셀렉트*/
 input[type='text'],
@@ -18,7 +19,6 @@ textarea:focus {outline: 2px solid #1A83EF;}
 textarea::placeholder {color: #ADADAD;}
 select { height: 4rem; padding-left: 1.2rem; padding-right: 4rem; border: 1px solid #d8d7d8; border-radius: 3px; -webkit-appearance: none; -moz-appearance: none; appearance: none; background: #fff url(../img/ico_select.svg) right center no-repeat; border-radius: 5px;}
 select:focus{border-radius: 5px;}
-
 
 span, p {word-break: keep-all;}
 
@@ -35,7 +35,7 @@ span, p {word-break: keep-all;}
 #contHeader > div:nth-of-type(2) {height: 56px;}
 #contHeader #hamburger-icon { position: relative; display: inline-block; top: initial; right: initial; } 
 
-#subCont { position: relative; max-width: 1120px; margin: 0 auto; height: auto; min-height: 800px; padding-bottom: 10em;}
+#subCont { position: relative; max-width: 1120px; margin: 0 auto; height: calc(100% - 402px); padding-bottom: 10em;}
 
 /*3차메뉴*/
 #quickMenu{width: 100px; height: 140px; position: absolute; top: 220px; z-index: 15; left: -146px;} 

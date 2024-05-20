@@ -1,11 +1,10 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
 
 html, body {font-size: 10px;}
 /*포커스*/
 #wrap{min-width: 1360px; overflow-x: hidden; height: 100%;}
-#wrap.hAuto{height: auto;}
+#wrap.hAuto{height: auto; min-height: calc(100% - 402px);}
+a:hover{ text-decoration: none;}
 
 /*인풋 셀렉트*/
 input[type='text'],
@@ -35,10 +34,10 @@ span, p {word-break: keep-all;}
 #contHeader > div:nth-of-type(2) {height: 56px;}
 #contHeader #hamburger-icon { position: relative; display: inline-block; top: initial; right: initial; } 
 
-#subCont { position: relative; max-width: 1120px; margin: 0 auto; height: calc(100% - 402px); padding-bottom: 10em;}
+#subCont { position: relative; max-width: 1120px; margin: 0 auto; min-height: calc(100% - 402px); padding-bottom: 10em;}
 
 /*3차메뉴*/
-#quickMenu{width: 100px; height: 140px; position: absolute; top: 220px; z-index: 15; left: -146px;} 
+#quickMenu{width: 100px; height: 140px; position: absolute; top: 220px; z-index: 15; left: -140px;} 
 .quickMenuMiddle{ width: 100%; display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between;}
 #quickMenu li {text-align: right; margin-bottom: 12px;}
 #quickMenu li:last-child {margin-bottom: 0px;}
@@ -75,8 +74,6 @@ a.menuBtn.closedNavMBtn {background: url(../img/ico_close.svg) center no-repeat;
 
 
 
-
-
 #menuToggle{ display: block; position: relative; top: 50px; left: 50px; z-index: 1; -webkit-user-select: none; user-select: none;}
 #menuToggle a{ text-decoration: none; color: #232323; transition: color 0.3s ease;}
 #menuToggle a:hover{color: tomato;}
@@ -88,18 +85,20 @@ a.menuBtn.closedNavMBtn {background: url(../img/ico_close.svg) center no-repeat;
 
 /*상단메뉴*/
 #topMenu {height: 30px; display: flex; width: 100%; position: relative; align-items: flex-start; justify-content: space-between;}
-#topMenu ul li { color: #fff; float: left; vertical-align: middle; text-align: center;}
+#topMenu ul li { color: #fff; float: left; vertical-align: middle; text-align: center; }
+#topMenu ul {background: #fff;}
 .menuLink, .submenuLink { text-decoration:none; display: block; width: 150px; font-weight: bold;}
 .menuLink {margin-right: 20px; width: auto; height: 34px; border-radius: 6px; padding: 4px 13px; display: inline-block;  font-size: 1.6em; font-weight: 600; line-height: 25.6px; letter-spacing: 0.01em; text-align: right; box-sizing: border-box; color: #120D4D; font-weight: 600;}
 .menuLink:hover {background-color: #E0DEF2; text-decoration: none;}
 .topMenuLi:hover .submenu {height: 38px; width: auto;}
-.submenu {position: absolute; height: 0px; visibility: hidden; width: 100%; left: 15px; top: 65px; z-index: 30;}
+.submenu {position: absolute; height: 0px; visibility: hidden; width: 100%; left: 0px; top: 65px; z-index: 30;}
 .submenu {height: 38px; width: auto; }
 .submenu li {display: inline-block; margin-right: 20px; height: 100%; color:#AEAEAE;}
 .submenu a { margin-right: -1px; display: inline-block; font-size: 16px; height: 38px; color:#AEAEAE; font-weight: 600; min-width: 60px;}
-.submenu a:hover{background:url(../img/ico_nav.svg) no-repeat center bottom; text-decoration: none; background-size: 60px auto; color: #120D4D;}
+.submenu a:hover{background:url(../img/ico_nav.svg) no-repeat center 26px; text-decoration: none; background-size: 60px auto; color: #120D4D;}
 .submenu a:hover ,.menuLink:visited ,.menuLink:hover{color: #120D4D;}  
 .submenu.on { visibility: visible;}
+#topMenu > ul > li:nth-of-type(2) .submenu li{margin-right: 14px;}
 
 
 .hRight a{font-size: 1.6em; font-weight: bold; margin-right: 20px; width: auto; height: 34px; border-radius: 6px; padding: 4px 10px; color: #120D4D; display: flex;}
@@ -155,7 +154,7 @@ a.fax {cursor: default;}
 
 
 /*슬라이드*/
-.carouselMain { width: 1120px; height: 240px; position: relative; overflow: hidden; margin: 0 auto; user-select: none;}
+.carouselMain { width: 1120px; height: 240px; position: relative; overflow: hidden; margin: 0 auto; user-select: none; margin-bottom: 24px;}
 .carouselWrapper { display: flex; transition: transform 1s;}
 .carouselSlide { flex: 0 0 1120px; position: relative; height: 240px;}
 .carouselSlide img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 16px;}
@@ -169,7 +168,85 @@ a.fax {cursor: default;}
 .carouselCircle.active {background-color: #fff; opacity: 1;}
 
 
+/*탭*/
+.serchTab {padding-bottom: 50px; margin-bottom: 64px;}
+.serchTab .tab {display: flex; float: left;}
+.serchTab .tab > li{margin-right: 24px; height: 38px;}
+.serchTab .tab > li.on {background:url(../img/ico_nav.svg) no-repeat center 26px; text-decoration: none; background-size: 60px auto; color: #120D4D;}
+.serchTab .tab > li:last-child{margin-right: 0px;}
+.serchTab .tab > li a{color:#bbb; font-size: 16px; font-weight: 600;} 
+.serchTab .tab > li.on > a{color: #120D4D;} 
+.serchTab .tab > li a:hover{text-decoration: none;}
+.serchTab .tab > li ul {display: flex; position: absolute; margin-top: 24px; left: 0;}
+.serchTab .tab > li ul li {width: auto; padding: 6px 14px; border-radius: 8px; margin-right: 24px; border:1px solid #bbb;}
+.tabTop40 {margin-top: -40px;}
+.serchTab .tab > li ul li.on {border: 1px solid #353876; background: #EEEDFA;}
+.serchTab .tab > li ul li.on a {color:#120D4D; font-size: 16px;}
+.serchTab .tab > li ul li a{color: #bbb;}
+.serchTab .tab > li ul {display: none;}
+.serchTab .tab > li.on ul {display: flex;} 
+.serchTab input::placeholder {color: #999; font-size: 14px;}
+.serchTab input:focus {outline: none;}
+.serchTab .serch {background: #F6F6F6; display: flex; align-items: center; width: 304px; padding-left: 16px; border-radius: 8px; float: right;}
+.serchTab .serch i{width: 24px; height: 24px; background:url(../img/ion_search.svg) no-repeat;  display: inline-block; text-indent: -9999px;}
+.serchTab .serch input {width: calc(100% - 40px); border: none; background: none;}
 
+.slick-slider{ position: relative; display: block; box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; -khtml-user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent;}
+.slick-list{display: block; overflow: hidden; margin: 0 -10px; padding: 0;}
+.slick-list:focus{outline: none;}
+.slick-list.dragging{cursor: pointer; cursor: hand; }
+.slick-slider .slick-track,.slick-slider .slick-list{-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+.slick-track{ position: relative; top: 0; left: 0; display: block; margin-left: auto; margin-right: auto;}
+.slick-track:before, .slick-track:after{display: table; content: '';}
+.slick-track:after{clear: both;}
+.slick-loading .slick-track{visibility: hidden;}
+.slick-slide{display: none; float: left;height: 100%; min-height: 1px; margin: 0 10px;}
+[dir='rtl'] .slick-slide{float: right;}
+.slick-slide img{display: block;}
+.slick-slide.slick-loading img{display: none;}
+.slick-slide.dragging img{pointer-events: none;}
+.slick-initialized .slick-slide{display: block;}
+.slick-loading .slick-slide{visibility: hidden;}
+.slick-vertical .slick-slide{ display: block; height: auto; border: 1px solid transparent;}
+.slick-arrow.slick-hidden {display: none;}
+
+.sliderWrap { position: relative; }
+.sliderWrap .cont {padding: 12px; display: inline-block; height: 450px; border: 1px solid #F2F2F2; border-radius: 12px;}
+.sliderWrap .cont > a{display: inline-block; width: 100%; height: 100%;}
+.sliderWrap .imgWrap {width: 336px; height: 240px; border-radius: 12px; background: #E5E5EB; display: flex; justify-content: center; align-items: center; position: relative; margin-bottom: 8px;}
+.sliderWrap .imgWrap .hot {width: 46px; height: 26px; padding: 2px 8px 2px 8px; border-radius: 8px; background: #506AF5; display: inline-block; color: #fff; text-align: center; font-weight: 700; font-style: normal; font-size: 14px; line-height: 22px; position: absolute; top: 0; left: 0; box-sizing: border-box;}
+
+.sliderWrap .txt > a {display: inline-block; font-weight: 400; font-size: 14px; color: #120D4D;}
+.sliderWrap .txt > a:hover{text-decoration: none;}
+.sliderWrap .txt > p {font-size: 16px; font-weight: 600; color: #333; width: 230px; line-height: 24px; margin-bottom: 4px;}
+.sliderWrap .txt .price {margin-top: 16px;}
+.sliderWrap .txt .price i{display: block; font-size: 14px; font-style: normal; color: #777;}
+.sliderWrap .txt .price i.cancel {text-decoration: line-through;}
+.sliderWrap .txt .price em {font-weight: 700; font-size: 24px; color: #333;}
+.txt > span {font-size: 12px; color: #777; margin-bottom: 16px;}
+.txt > button {background: url(../img/ico_arrow.svg) right no-repeat; border:none; padding-right: 10px; position: relative; z-index: 5; padding-left: 0; margin-bottom: 10px; cursor: pointer; font-size: 14px; color: #120D4D;}
+
+.slick-arrow {display: inline-block; width: 40px; height: 40px; background: url(../img/ico_slideBtn.svg) center no-repeat; background-size: cover; text-indent: -9999px; border: none; position: absolute; cursor: pointer;}
+.slickNext {right: -100px; top: 50%; transform: translate(-50%,0) rotate(180deg);}
+.slickPrev {left: -60px; top: 50%; transform: translate(-50%,0);}
+
+.lgBox {margin-bottom: 100px;}
+.productBox .moreBox {width: 100%; display: flex; text-align: center; justify-content: center; margin-top: 40px;}
+.productBox .more {background: url(../img/ico_more_arrow.svg) right no-repeat; border:none; padding-right: 20px; color: #506AF5; display: flex; cursor: pointer; font-size: 16px;} 
+
+
+/*많은제품보러가기*/
+.productList .sliderWrap {display: flex; flex-wrap: wrap; justify-content: space-between; align-items: stretch;}
+.productList .sliderWrap .cont{margin-bottom: 20px;}
+.productListTab { height: 35px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between;}
+.productListTab .productCount{font-size: 22px; font-weight: 600; float: left;}
+.productListTab .productCount i {font-style: normal;}
+.productListTab ul { float: right;}
+.productListTab ul li {float: left; margin-right: 16px;}
+.productListTab ul li:last-child {margin-right: 0px;}
+.productListTab ul li a{font-weight: 600; font-size: 16px; color: #C0C0C0;}
+.productListTab ul li.on a {color: #120D4D;}
 
 
 

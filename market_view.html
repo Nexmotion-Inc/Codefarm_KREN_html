@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div id="wrap">
+  <div id="wrap" class="hAuto">
     <div class="mainNav">
       <ul>
         <li class=""><a class="" href="">재단소개</a>
@@ -147,30 +147,19 @@
     </header>
 
     <div id="subCont">
-
-
-      <!--슬라이드-->
-      <div class="carouselMain">
-        <div class="carouselWrapper">
-          <div class="carouselSlide">
-            <img src="./img/img_slide.png" alt="이미지" />
-          </div>
-          <div class="carouselSlide">
-            <img src="./img/img_slide.png" alt="이미지" />
-          </div>
-          <div class="carouselSlide">
-            <img src="./img/img_slide.png" alt="이미지" />
-          </div>
-        </div>
-        <div class="carouselPagination">
-          <div class="carouselCircle"></div>
-          <div class="carouselCircle"></div>
-          <div class="carouselCircle"></div>
-        </div>
+      <!--3차메뉴-->
+      <div id="quickMenu">
+        <ul>
+          <li class="on"><a href="" target=""><span>삼성</span></a></li>
+          <li><a href="" target=""><span>LG</span></a></li>
+          <li><a href="" target=""><span>애플</span></a></li>
+          <li><a href="" target=""><span>Apple</span></a></li>
+          <li><a href="" target=""><span>DELL</span></a></li>
+        </ul>
       </div>
 
       <div class="serchTab">
-        <ul class="tab">
+        <ul class="tab tabTop40">
           <li class="on"><a href="">전자기기</a>
             <ul>
               <li class="on"><a href="">노트북</a></li>
@@ -180,7 +169,7 @@
               <li><a href="">음향기기</a></li>
             </ul>
           </li>
-           <li class=""><a href="">라이선스</a>
+          <li class=""><a href="">라이선스</a>
             <ul>
               <li class=""><a href="">리눅스</a></li>
               <li><a href="">리눅스C</a></li>
@@ -196,88 +185,16 @@
         </div>
       </div>
 
-
-      <div class="lgBox productBox">
-        <p class="parentTitle">LG</p>
-        <div class="sliderWrap">
-          <div class="cont">
-            <a href="" target="">
-              <div class="imgWrap">
-                <i class="hot">HOT</i>
-                <img src="./img/img_product.png" alt="이미지" />
-              </div>
-              <div class="txt">
-                <button>LG</button>
-                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
-                <span>16Z90SP-KAOWK</span>
-                <div class="price">
-                  <i class="cancel">2,590,000 원</i>
-                  <em>1,990,000 원</em>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="cont">
-            <a href="" target="">
-              <div class="imgWrap">
-                <i class="hot">HOT</i>
-                <img src="./img/img_product.png" alt="이미지" />
-              </div>
-              <div class="txt">
-                <button>LG</button>
-                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
-                <span>16Z90SP-KAOWK</span>
-                <div class="price">
-                  <i class="cancel">2,590,000 원</i>
-                  <em>1,990,000 원</em>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="cont">
-            <a href="" target="">
-              <div class="imgWrap">
-                <i class="hot">HOT</i>
-                <img src="./img/img_product.png" alt="이미지" />
-              </div>
-              <div class="txt">
-                <button>LG</button>
-                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
-                <span>16Z90SP-KAOWK</span>
-                <div class="price">
-                  <i class="cancel">2,590,000 원</i>
-                  <em>1,990,000 원</em>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="cont">
-            <a href="" target="">
-              <div class="imgWrap">
-                <i class="hot">HOT</i>
-                <img src="./img/img_product.png" alt="이미지" />
-              </div>
-              <div class="txt">
-                <button>LG</button>
-                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
-                <span>16Z90SP-KAOWK</span>
-                <div class="price">
-                  <i class="cancel">2,590,000 원</i>
-                  <em>1,990,000 원</em>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="moreBox">
-          <button class="more">더 많은 제품 보러가기</button>
-        </div>
-      </div>
-
-
-
-      <div class="samsungBox productBox">
-        <p class="parentTitle">삼성</p>
+      <div class="productList">
+       <div class="productListTab">
+         <span class="productCount"><i>13</i>개 상품</span>
+         <ul>
+           <li class="on"><a>추천순</a></li>
+           <li><a>낮은가격순</a></li>
+           <li><a>높은가격순</a></li>
+         </ul>
+       </div>
+       
         <div class="sliderWrap">
           <div class="cont">
             <a href="" target="">
@@ -347,13 +264,42 @@
               </div>
             </a>
           </div>
-        </div>
-        <div class="moreBox">
-          <button class="more">더 많은 제품 보러가기</button>
+          <div class="cont">
+            <a href="" target="">
+              <div class="imgWrap">
+                <!--                <i class="hot">HOT</i>-->
+                <img src="./img/img_product02.png" alt="이미지" />
+              </div>
+              <div class="txt">
+                <button>삼성</button>
+                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
+                <span>16Z90SP-KAOWK</span>
+                <div class="price">
+                  <i class="cancel">2,590,000 원</i>
+                  <em>1,990,000 원</em>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cont">
+            <a href="" target="">
+              <div class="imgWrap">
+                <!--                <i class="hot">HOT</i>-->
+                <img src="./img/img_product02.png" alt="이미지" />
+              </div>
+              <div class="txt">
+                <button>삼성</button>
+                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
+                <span>16Z90SP-KAOWK</span>
+                <div class="price">
+                  <i class="cancel">2,590,000 원</i>
+                  <em>1,990,000 원</em>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-
-
 
     </div>
 

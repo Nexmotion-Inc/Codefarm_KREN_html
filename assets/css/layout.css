@@ -481,8 +481,14 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 
 /*market detail_시작*/
 .detailHeader {display: flex;}
-.carouselDetail {width: 455px; height: 374px; position:relative; overflow: hidden; user-select: none; margin-bottom: 24px;}
-.carouselDetail .carouselSlide { flex: 0 0 100%; height: 100%;}
+.detailHeaderLeft {display: flex; flex-direction: column;}
+.carouselDetail {width: 455px; height: 374px; position:relative; overflow: hidden; user-select: none; margin-bottom: 24px; background-color: #E5E5EB; border-radius: 16px;}
+.carouselDetail .carouselWrapper { height: 100%;}
+.carouselDetail .carouselSlide { flex: 0 0 100%; height: auto; display: flex; padding: 30px;}
+.carouselDetail .carouselSlide img { object-fit: contain;}
+.carouselDetail +.carouselPagination { position: static; transform: translateX(0); justify-content: center;}
+.carouselDetail +.carouselPagination .carouselCircle {background-color: #E3E3E3;}
+.carouselDetail +.carouselPagination .carouselCircle.active {background-color: #002278;}
 .detailHeaderRight {display: flex; flex-direction: column; width: 625px; margin-left: 40px;}
 .detailHeaderRight .txt { margin-bottom: 52px;}
 .detailHeaderRight .txt >button {font-size: 20px; padding-right: 20px; background-size: 10px}
@@ -491,7 +497,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .detailHeaderRight .txt .price{ margin-top: 32px;}
 .detailHeaderRight .txt .price i {font-size: 22px; }
 .detailHeaderRight .txt .price em {font-size: 30px;}
-.detailAmount { margin-bottom: 32px; padding: 16px; background-color: #F8F9FA; }
+.detailAmount { margin-bottom: 32px; padding: 16px; background-color: #F8F9FA; border-radius: 4px;}
 .detailAmount >span {font-size: 18px;}
 .detailAmount >div {display: flex; justify-content: space-between;}
 .detailAmount >div .selectAmountWrap { display: flex;}
@@ -502,3 +508,4 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .detailBtn a { display: inline-block; width: calc(50% - 5px); height: 72px; font-size: 24px; text-align: center; line-height: 72px;}
 .btnWhite { background-color: #fff; border: 1px solid var(--dark-purple); color: var(--dark-purple); border-radius: 4px; font-weight: 600;}
 .btnPurple { background-color: var(--dark-purple); color: #fff; border-radius: 4px; font-weight: 600;}
+.detailBody {margin-top: 100px;}

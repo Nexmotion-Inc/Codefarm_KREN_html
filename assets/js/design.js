@@ -118,4 +118,30 @@ $(document).ready(function () {
         ]
 
   });
-})
+});
+
+//리뷰 슬라이드
+$(document).ready(function () {
+  var swiper = new Swiper('.reviewSwiper', {
+    slidesPerView: 3,
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 0,
+    autoplay: { //자동슬라이드 (false-비활성화)         
+      delay: 10000, // 시간 설정          
+      disableOnInteraction: false,
+      // false-스와이프 후 자동 재생        
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + '</span>';
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+});

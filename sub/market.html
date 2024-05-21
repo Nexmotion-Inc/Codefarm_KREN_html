@@ -4,28 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="./img/symcs_pavicon.png">
-  <link href="./css/style.css" rel="stylesheet" type="text/css">
-  <script src="./js/jquery-2.1.4.min.js"></script>
-  <script src="./js/design.js"></script>
+  <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+  <script src="../assets/js/jquery-2.1.4.min.js"></script>
+  <script src="../assets/js/design.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <title>한국교육정보화재단</title>
-  
-  <script type="text/javascript">
-    function layerShow(){
-      $(".cartOrderLayer").show();
-      setTimeout(function(){
-        $(".cartOrderLayer .layerBox").toggleClass("layerShow"); 
-      }, 0);
-      
-    }
-    function layerHide(){
-      $(".cartOrderLayer .layerBox").toggleClass("layerShow");
-      setTimeout(function(){
-        $(".cartOrderLayer").hide(); 
-      }, 500);
-    }
-  </script>
 </head>
+
 <body>
   <div id="wrap">
     <div class="mainNav">
@@ -160,123 +145,216 @@
       </div>
     </header>
 
-    <div class="cartWrap">
-      <div id="subCont">
-          <div class="totalCnt">전체<span>3</span></div>
-          <div class="selectItem">
-           <!--선택 버튼 클릭 시 btnSelected 클래스 추가-->
-            <a class="btnChk btnSelected" href="#">전체선택</a>
-            <span class="partLine"></span>
-            <a href="#">선택삭제</a>
-          </div>
-          <div class="cartItemList" style="display: ">
-            <div class="cartListTitle"><a class="btnChk"></a>삼성</div>
-            <div class="cilCont">
-              <div class="cilContLeft">
-                <a class="btnChk btnSelected"></a>
-                <a><div class="itemImg"><img src="./img/test_labtop.png"></div><div class="itemTxt">갤러시북3 360 NT750QFT-A51A 단3일 129만 + SSD더블업 13세대 i5/16G/256G 터치 대학생 인강용 사무용 노트북</div></a>
-                <div class="itemAmount">
-                 <!--1 또는 최대 개수일 경우, amountLimit 클래스 추가-->
-                  <a class="btnItemMinus amountLimit" title="상품 개수 감소"></a>
-                  <span>1</span>
-                  <a class="btnItemPlus" title="상품 개수 추가"></a>
-                </div>
-                <a class="btnCouponSelect">쿠폰적용</a>
-              </div>
-              <div class="cilContRight">
-                <div class="itemPrice">1,499,000원</div>
-                <a class="btnDeleteGray"></a>
-              </div>
-            </div>
-            <div class="cilCont">
-              <div class="cilContLeft">
-                <a class="btnChk btnSelected"></a>
-                <a><div class="itemImg"><img src="./img/test_labtop.png"></div><div class="itemTxt">갤러시북3 360 NT750QFT-A51A 단3일 129만 + SSD더블업 13세대 i5/16G/256G 터치 대학생 인강용 사무용 노트북</div></a>
-                <div class="itemAmount">
-                 <!--1 또는 최대 개수일 경우, amountLimit 클래스 추가-->
-                  <a class="btnItemMinus amountLimit" title="상품 개수 감소"></a>
-                  <span>1</span>
-                  <a class="btnItemPlus" title="상품 개수 추가"></a>
-                </div>
-                <a class="btnCouponSelect">쿠폰적용</a>
-              </div>
-              <div class="cilContRight">
-                <div class="itemPrice">1,499,000원</div>
-                <a class="btnDeleteGray"></a>
-              </div>
-            </div>
-            <div class="cilTotal">
-              <div><span>상품금액</span><span class="itemPrice">1,577,890원</span></div>
-              <span class="cilTotalMinus">-</span>
-              <div><span class="alignC">할인금액</span><span class="itemPrice colorPurple">78,890원</span></div>
-              <span class="cilTotalPlus">+</span>
-              <div><span class="alignC">배송비</span><span class="itemPrice">무료배송</span></div>
-              <span class="cilTotalEqual">=</span>
-              <div><span class="alignL">주문금액</span><span class="itemPrice">1,499,000원</span></div>
-            </div>
-          </div>
-          <div class="cartItemList" style="display: ">
-            <div class="cartListTitle"><a class="btnChk"></a>삼성</div>
-            <div class="cilCont">
-              <div class="cilContLeft">
-                <a class="btnChk btnSelected"></a>
-                <a><div class="itemImg"><img src="./img/test_labtop.png"></div><div class="itemTxt">갤러시북3 360 NT750QFT-A51A 단3일 129만 + SSD더블업 13세대 i5/16G/256G 터치 대학생 인강용 사무용 노트북</div></a>
-                <div class="itemAmount">
-                 <!--1 또는 최대 개수일 경우, amountLimit 클래스 추가-->
-                  <a class="btnItemMinus amountLimit" title="상품 개수 감소"></a>
-                  <span>1</span>
-                  <a class="btnItemPlus" title="상품 개수 추가"></a>
-                </div>
-                <a class="btnCouponSelect">쿠폰적용</a>
-              </div>
-              <div class="cilContRight">
-                <div class="itemPrice">1,499,000원</div>
-                <a class="btnDeleteGray"></a>
-              </div>
-            </div>
-            <div class="cilCont">
-              <div class="cilContLeft">
-                <a class="btnChk btnSelected"></a>
-                <a><div class="itemImg"><img src="./img/test_labtop.png"></div><div class="itemTxt">갤러시북3 360 NT750QFT-A51A 단3일 129만 + SSD더블업 13세대 i5/16G/256G 터치 대학생 인강용 사무용 노트북</div></a>
-                <div class="itemAmount">
-                 <!--1 또는 최대 개수일 경우, amountLimit 클래스 추가-->
-                  <a class="btnItemMinus amountLimit" title="상품 개수 감소"></a>
-                  <span>1</span>
-                  <a class="btnItemPlus" title="상품 개수 추가"></a>
-                </div>
-                <a class="btnCouponSelect">쿠폰적용</a>
-              </div>
-              <div class="cilContRight">
-                <div class="itemPrice">1,499,000원</div>
-                <a class="btnDeleteGray"></a>
-              </div>
-            </div>
-            <div class="cilTotal">
-              <div><span>상품금액</span><span class="itemPrice">1,577,890원</span></div>
-              <span class="cilTotalMinus">-</span>
-              <div><span class="alignC">할인금액</span><span class="itemPrice colorPurple">78,890원</span></div>
-              <span class="cilTotalPlus">+</span>
-              <div><span class="alignC">배송비</span><span class="itemPrice">무료배송</span></div>
-              <span class="cilTotalEqual">=</span>
-              <div><span class="alignL">주문금액</span><span class="itemPrice">1,499,000원</span></div>
-            </div>
-          </div>
-          <div class="orderInfoWrap">
-          <div class="orderInfo">
-            <div class="cartListTitle">결재정보</div>
-            <div class="orderInfoList">
-              <div><span>상품수</span><span>2개</span></div>
-              <div><span>상품금액</span><span>2,998,000원</span></div>
-              <div><span>할인금액</span><span class="colorPurple">-157,780원</span></div>
-              <div><span>배송비</span><span>무료배송</span></div>
-            </div>
-            <div class="orderTotCost"><span>총 결제금액</span><span class="itemPrice">2,998,000원</span></div>
-            <a class="btnOrder" onClick="layerShow()">신청하기</a>
-          </div>
-          </div>
-      </div>
-    </div>
+    <div id="subCont">
 
+
+      <!--슬라이드-->
+      <div class="carouselMain">
+        <div class="carouselWrapper">
+          <div class="carouselSlide">
+            <img src="../img/img_slide.png" alt="이미지" />
+          </div>
+          <div class="carouselSlide">
+            <img src="../img/img_slide.png" alt="이미지" />
+          </div>
+          <div class="carouselSlide">
+            <img src="../img/img_slide.png" alt="이미지" />
+          </div>
+        </div>
+        <div class="carouselPagination">
+          <div class="carouselCircle"></div>
+          <div class="carouselCircle"></div>
+          <div class="carouselCircle"></div>
+        </div>
+      </div>
+
+      <div class="serchTab">
+        <ul class="tab">
+          <li class="on"><a href="">전자기기</a>
+            <ul>
+              <li class="on"><a href="">노트북</a></li>
+              <li><a href="">테블릿PC</a></li>
+              <li><a href="">휴대폰</a></li>
+              <li><a href="">웨어러블</a></li>
+              <li><a href="">음향기기</a></li>
+            </ul>
+          </li>
+           <li class=""><a href="">라이선스</a>
+            <ul>
+              <li class=""><a href="">리눅스</a></li>
+              <li><a href="">리눅스C</a></li>
+            </ul>
+          </li>
+          <li><a href="">리스(렌탈)</a></li>
+          <li><a href="">파트너</a>
+          </li>
+        </ul>
+        <div class="serch">
+          <i>검색</i>
+          <input type="text" placeholder="제품별 검색">
+        </div>
+      </div>
+
+
+      <div class="lgBox productBox">
+        <p class="parentTitle">LG</p>
+        <div class="sliderWrap">
+          <div class="cont">
+            <a href="" target="">
+              <div class="imgWrap">
+                <i class="hot">HOT</i>
+                <img src="../img/img_product.png" alt="이미지" />
+              </div>
+              <div class="txt">
+                <button>LG</button>
+                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
+                <span>16Z90SP-KAOWK</span>
+                <div class="price">
+                  <i class="cancel">2,590,000 원</i>
+                  <em>1,990,000 원</em>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cont">
+            <a href="" target="">
+              <div class="imgWrap">
+                <i class="hot">HOT</i>
+                <img src="../img/img_product.png" alt="이미지" />
+              </div>
+              <div class="txt">
+                <button>LG</button>
+                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
+                <span>16Z90SP-KAOWK</span>
+                <div class="price">
+                  <i class="cancel">2,590,000 원</i>
+                  <em>1,990,000 원</em>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cont">
+            <a href="" target="">
+              <div class="imgWrap">
+                <i class="hot">HOT</i>
+                <img src="../img/img_product.png" alt="이미지" />
+              </div>
+              <div class="txt">
+                <button>LG</button>
+                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
+                <span>16Z90SP-KAOWK</span>
+                <div class="price">
+                  <i class="cancel">2,590,000 원</i>
+                  <em>1,990,000 원</em>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cont">
+            <a href="" target="">
+              <div class="imgWrap">
+                <i class="hot">HOT</i>
+                <img src="../img/img_product.png" alt="이미지" />
+              </div>
+              <div class="txt">
+                <button>LG</button>
+                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
+                <span>16Z90SP-KAOWK</span>
+                <div class="price">
+                  <i class="cancel">2,590,000 원</i>
+                  <em>1,990,000 원</em>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="moreBox">
+          <button class="more">더 많은 제품 보러가기</button>
+        </div>
+      </div>
+
+
+
+      <div class="samsungBox productBox">
+        <p class="parentTitle">삼성</p>
+        <div class="sliderWrap">
+          <div class="cont">
+            <a href="" target="">
+              <div class="imgWrap">
+                <i class="hot">HOT</i>
+                <img src="../img/img_product02.png" alt="이미지" />
+              </div>
+              <div class="txt">
+                <button>삼성</button>
+                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
+                <span>16Z90SP-KAOWK</span>
+                <div class="price">
+                  <i class="cancel">2,590,000 원</i>
+                  <em>1,990,000 원</em>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cont">
+            <a href="" target="">
+              <div class="imgWrap">
+                <!--                <i class="hot">HOT</i>-->
+                <img src="../img/img_product02.png" alt="이미지" />
+              </div>
+              <div class="txt">
+                <button>삼성</button>
+                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
+                <span>16Z90SP-KAOWK</span>
+                <div class="price">
+                  <i class="cancel">2,590,000 원</i>
+                  <em>1,990,000 원</em>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cont">
+            <a href="" target="">
+              <div class="imgWrap">
+                <!--                <i class="hot">HOT</i>-->
+                <img src="../img/img_product02.png" alt="이미지" />
+              </div>
+              <div class="txt">
+                <button>삼성</button>
+                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
+                <span>16Z90SP-KAOWK</span>
+                <div class="price">
+                  <i class="cancel">2,590,000 원</i>
+                  <em>1,990,000 원</em>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="cont">
+            <a href="" target="">
+              <div class="imgWrap">
+                <!--                <i class="hot">HOT</i>-->
+                <img src="../img/img_product02.png" alt="이미지" />
+              </div>
+              <div class="txt">
+                <button>삼성</button>
+                <p>LG 그램 Pro 40.6cm 인텔® 코어™  Ultra 5</p>
+                <span>16Z90SP-KAOWK</span>
+                <div class="price">
+                  <i class="cancel">2,590,000 원</i>
+                  <em>1,990,000 원</em>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="moreBox">
+          <button class="more">더 많은 제품 보러가기</button>
+        </div>
+      </div>
+
+
+
+    </div>
 
     <footer id="ft">
       <div class="ft container">
@@ -314,15 +392,15 @@
             <p class="tit">사업자별 연락처</p>
             <ul>
               <li>
-                <span class="logo"><img src="./img/kt.png" alt="kt"></span>
+                <span class="logo"><img src="../img/kt.png" alt="kt"></span>
                 <span class="num">02-720-4121</span>
               </li>
               <li>
-                <span class="logo"><img src="./img/uplus.png" alt="LG Uplus"></span>
+                <span class="logo"><img src="../img/uplus.png" alt="LG Uplus"></span>
                 <span class="num">070-4080-5787</span>
               </li>
               <li>
-                <span class="logo"><img src="./img/sk.png" alt="SK Broadband"></span>
+                <span class="logo"><img src="../img/sk.png" alt="SK Broadband"></span>
                 <span class="num">02-6266-2016</span>
               </li>
             </ul>
@@ -331,27 +409,6 @@
       </div>
     </footer>
   </div>
-      
-  <div class="cartOrderLayer" style="display: none">
-   <!--layer 보여지면 layerShow 클래스 추가-->
-    <div class="layerBox">
-      <a class="btnLayerClose" title="창 닫기" onClick="layerHide()"></a>
-      <div class="cartOrderTitle">제품 신청</div>
-      <div class="layerCont">    
-        <div><span>성명</span><input type="text" placeholder="성명을 입력해주세요"></div>
-        <div><span>연락처</span><input type="text" placeholder="휴대폰 번호를 입력해주세요"></div>
-        <div><span>이메일</span><input type="text" placeholder="이메일 주소를 입력해주세요"></div>
-        <div><span>신청 문의 내용</span><input type="text" placeholder="문의 내용을 입력해주세요"></div>
-        <div><span>신청 수량 </span>
-          <div class="layerOrderAmount">
-           <!--1 또는 최대 개수일 경우, amountLimit 클래스 추가-->
-            <div class="layerItemAmount"><a class="btnItemMinus amountLimit"></a> <span>1</span><a class="btnItemPlus"></a></div>
-            <span class="cartLayerTotal">2,070,000 원</span>
-          </div>
-        </div>
-      </div>
-      <div><a class="btnOrder">신청하기</a></div>
-    </div>
-  </div>
 </body>
+
 </html>

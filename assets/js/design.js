@@ -46,9 +46,12 @@ $(document).ready(function () {
   const bullets = document.querySelectorAll('.carouselCircle');
 
   let currentSlide = 0;
+  
+  /*배너 사이즈 측정하여 다른 사이즈의 배너에도 호환되도록 했습니다*/
+  const imgWidth = $(".carouselWrapper").width();
 
   function showSlide(slideIndex) {
-    swiper.style.transform = `translateX(-${slideIndex * 1120}px)`;
+    swiper.style.transform = `translateX(-${slideIndex * imgWidth}px)`;
     currentSlide = slideIndex;
 
     bullets.forEach((bullet, index) => {

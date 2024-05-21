@@ -220,15 +220,15 @@ a.fax {cursor: default;}
 .sliderWrap .imgWrap {width: 336px; height: 240px; border-radius: 12px; background: #E5E5EB; display: flex; justify-content: center; align-items: center; position: relative; margin-bottom: 8px;}
 .sliderWrap .imgWrap .hot {width: 46px; height: 26px; padding: 2px 8px 2px 8px; border-radius: 8px; background: #506AF5; display: inline-block; color: #fff; text-align: center; font-weight: 700; font-style: normal; font-size: 14px; line-height: 22px; position: absolute; top: 0; left: 0; box-sizing: border-box;}
 
-.sliderWrap .txt > a {display: inline-block; font-weight: 400; font-size: 14px; color: #120D4D;}
-.sliderWrap .txt > a:hover{text-decoration: none;}
-.sliderWrap .txt > p {font-size: 16px; font-weight: 600; color: #333; width: 230px; line-height: 24px; margin-bottom: 4px;}
-.sliderWrap .txt .price {margin-top: 16px;}
-.sliderWrap .txt .price i{display: block; font-size: 14px; font-style: normal; color: #777;}
-.sliderWrap .txt .price i.cancel {text-decoration: line-through;}
-.sliderWrap .txt .price em {font-weight: 700; font-size: 24px; color: #333;}
-.sliderWrap .txt > span {font-size: 12px; color: #777; margin-bottom: 16px;}
-.sliderWrap .txt > button {background: url(../../img/ico_arrow.svg) right no-repeat; border:none; padding-right: 10px; position: relative; z-index: 5; padding-left: 0; margin-bottom: 10px; cursor: pointer; font-size: 14px; color: #120D4D;}
+.txt > a {display: inline-block; font-weight: 400; font-size: 14px; color: #120D4D;}
+.txt > a:hover{text-decoration: none;}
+.txt > p {font-size: 16px; font-weight: 600; color: #333; width: 230px; line-height: 24px; margin-bottom: 4px;}
+.txt .price {margin-top: 16px;}
+.txt .price i{display: block; font-size: 14px; font-style: normal; color: #777;}
+.txt .price i.cancel {text-decoration: line-through;}
+.txt .price em {font-weight: 700; font-size: 24px; color: #333;}
+.txt > span {font-size: 12px; color: #777; margin-bottom: 16px;}
+.txt > button {background: url(../../img/ico_arrow.svg) right no-repeat; border:none; padding-right: 10px; position: relative; z-index: 5; padding-left: 0; margin-bottom: 10px; cursor: pointer; font-size: 14px; color: #120D4D;}
 
 .slick-arrow {display: inline-block; width: 40px; height: 40px; background: url(../../img/ico_slideBtn.svg) center no-repeat; background-size: cover; text-indent: -9999px; border: none; position: absolute; cursor: pointer;}
 .slickNext {right: -100px; top: 50%; transform: translate(-50%,0) rotate(180deg);}
@@ -379,6 +379,7 @@ span.label {color: #120D4D; display: inline-block; border: 1px solid #120D4D; pa
 
 /* 텍스트 색상 */
 .txtSkyblue {color:#84DDFF !important;}
+.txtPurple {color: #3C31BC !important;}
 
 /* 텍스트 스타일 */
 ul.text-list > li { position: relative; padding:8px 5px 8px 20px; font-size:2.2rem; font-weight:300; text-align: left;  line-height: 140%;}
@@ -391,22 +392,26 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 
 /* cart_시작*/
 :root {--dark-purple : #120D4D; }
-.colorPurple {color: #3C31BC}
+
 .partLine {display: inline-block; width:1px; height: 12px; margin: auto 12px; background-color: #D2D2D2;}
   /*button*/
-.couponSelectBtn:hover,
-.orderBtn:hover {color: #fff; text-decoration: none;}
-.chkBtn {display: flex;}
-.chkBtn::before {content:""; display: inline-block; position: relative; top: 0px; width: 18px; height: 18px; background: url("../../img/ico_chk_w.svg") center no-repeat, #777; border-radius: 50%; margin:auto 7px auto 0;}
-.chkBtn.btnSelected::before {background: url("../../img/ico_chk_w.svg") center no-repeat, var(--dark-purple);}
-.cartItemList .chkBtn{ margin: 0 8px auto 0;}
-.itemPlusBtn {background:url("../../img/ico_plus_item_b.svg") center no-repeat;}
-.itemPlusBtn.amountLimit {background:url("/img/ico_plus_item_g.svg") center no-repeat, #f6f6f6;}
-.itemMinusBtn {background:url("../../img/ico_minus_item_b.svg") center no-repeat;}
-.itemMinusBtn.amountLimit {background:url("/img/ico_minus_item_g.svg") center no-repeat, #f6f6f6;}
-.couponSelectBtn {height: 25px; margin: 3px 0 3px 40px; padding: 0 4px; border-radius: 4px; background-color: var(--dark-purple); color: #fff; font-size: 13px; line-height: 25px;}
-.deleteItemBtn {width:24px; height: 24px; margin-left: 16px;  background: url("img/ico_delete.svg") center no-repeat;}
-.orderBtn {display: block; padding: 10px 0; color: #fff; font-size: 18px; font-weight: 600px; background-color: var(--dark-purple); border-radius: 8px; text-align: center;}
+.btnCouponSelect:hover,
+.btnOrder:hover,
+.btnPurple:hover {color: #fff; text-decoration: none;}
+
+.btnWhite:hover {color: var(--dark-purple); text-decoration: none;}
+
+.btnChk {display: flex;}
+.btnChk::before {content:""; display: inline-block; position: relative; top: 0px; width: 18px; height: 18px; background: url("../../img//ico_chk_w.svg") center no-repeat, #bbb; border-radius: 50%; margin:auto 7px auto 0;}
+.btnChk.btnSelected::before {background: url("../../img//ico_chk_w.svg") center no-repeat, var(--dark-purple);}
+.cartItemList .btnChk{ margin: 0 8px auto 0;}
+.btnItemPlus {background:url("../../img//ico_plus_item_b.svg") center no-repeat;}
+.btnItemPlus.amountLimit {background:url("/img/ico_plus_item_g.svg") center no-repeat, #f6f6f6;}
+.btnItemMinus {background:url("../../img//ico_minus_item_b.svg") center no-repeat;}
+.btnItemMinus.amountLimit {background:url("../../img//ico_minus_item_g.svg") center no-repeat, #f6f6f6;}
+.btnCouponSelect {height: 25px; margin: 3px 0 3px 40px; padding: 0 4px; border-radius: 4px; background-color: var(--dark-purple); color: #fff; font-size: 13px; line-height: 25px;}
+.btnDeleteGray {width:24px; height: 24px; margin-left: 16px;  background: url("../../img//ico_delete.svg") center no-repeat;}
+.btnOrder {display: block; padding: 10px 0; color: #fff; font-size: 18px; font-weight: 600; background-color: var(--dark-purple); border-radius: 8px; text-align: center;}
 
 .cartWrap { padding-top: 16px; background-color: #f6f6f6;}
 .cartWrap #subCont { height: auto;}
@@ -435,9 +440,9 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .cilTotal >div >span {display: block; padding-bottom: 8px;}
 .cilTotal >div >span:first-child {font-size: 12px; color: #999;}
 .cilTotal >span {text-indent: 100%; white-space: nowrap; overflow: hidden;}
-.cilTotal .cilTotalMinus {width: 24px; background: url("../../img/ico_minus_total.svg") center no-repeat;}
-.cilTotal .cilTotalPlus {width: 24px; background: url("../../img/ico_plus_total.svg") center no-repeat;}
-.cilTotal .cilTotalEqual {width: 24px; background: url("../../img/ico_equal_total.svg") center no-repeat;}
+.cilTotalMinus {width: 24px; background: url("../../img//ico_minus_total.svg") center no-repeat;}
+.cilTotalPlus {width: 24px; background: url("../../img//ico_plus_total.svg") center no-repeat;}
+.cilTotalEqual {width: 24px; background: url("../../img//ico_equal_total.svg") center no-repeat;}
 
 .orderInfoWrap {display: flex; justify-content: flex-end;}
 .orderInfo {width: 360px; padding: 0 20px 24px 20px;}
@@ -445,6 +450,45 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .orderInfoList {padding: 16px 0; border-bottom: 1px solid #ddd;}
 .orderInfoList >div {display: flex; justify-content: space-between; margin: 2px 0; line-height: 24px}
 .orderTotCost {display: flex; justify-content: space-between; padding: 16px 0; margin-bottom: 8px;}
-
-.cartOrderlayer {position: absolute; top:0px;left: 0px; width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); z-index: 10;}
+.cartOrderLayer { display: flex; position: fixed; top:0px;left: 0px; width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); z-index: 1000;}
+.layerBox { position: relative; width: 550px; background-color: #fff; border-radius: 16px; margin: auto; padding: 24px 0; transform: translateY(150%); transition: all 0.5s ease;}
+.layerBox >div {padding: 0 24px;}
+.cartOrderLayer .cartOrderTitle { padding: 0 0 24px 16px; font-size: 18px; font-weight: 600; border-bottom: 1px solid #e2e2e2}
+.layerCont {margin: 16px 0;}
+.layerCont >div {padding-bottom: 24px;}
+.layerCont >div >span {display: block; margin-bottom: 12px; font-size: 16px;}
+.layerCont >div >input {width: 100%; padding: 16px; height: 50px; border: 1px solid #e2e2e2; border-radius: 5px;}
+.layerCont >div >input::placeholder {color: #bbb;}
+.layerOrderAmount {display: flex; justify-content: space-between}
+.layerItemAmount { display: flex; height: 52px; font-size: 24px; line-height: 52px; border: 1px solid #d2d2d2; border-radius: 4px; overflow: hidden; background-color: #fff}
+.layerItemAmount a{display: inline-block; width: 52px; height: 100%; background-color: #F6F6F6;}
+.layerItemAmount span {display: inline-block; width: 64px; text-align: center;}
+.layerCont >div .cartLayerTotal {font-size: 30px; font-weight: 600;}
+.cartOrderLayer .btnOrder {padding: 15px;}
+.btnLayerClose {position: absolute; width: 24px; height: 24px; right: 16px; background: url("../../img//ico_close.svg") center no-repeat;}
+.layerShow {transform: translateY(0%)}
 /*cart_끝*/
+
+/*market detail_시작*/
+.detailHeader {display: flex;}
+.carouselDetail {width: 455px; height: 374px; position:relative; overflow: hidden; user-select: none; margin-bottom: 24px;}
+.carouselDetail .carouselSlide { flex: 0 0 100%; height: 100%;}
+.detailHeaderRight {display: flex; flex-direction: column; width: 625px; margin-left: 40px;}
+.detailHeaderRight .txt { margin-bottom: 52px;}
+.detailHeaderRight .txt >button {font-size: 20px; padding-right: 20px; background-size: 10px}
+.detailHeaderRight .txt >p {font-size: 32px; line-height: 45px; width: auto; margin-bottom: 12px;}
+.detailHeaderRight .txt > span {font-size: 24px;}
+.detailHeaderRight .txt .price{ margin-top: 32px;}
+.detailHeaderRight .txt .price i {font-size: 22px; }
+.detailHeaderRight .txt .price em {font-size: 30px;}
+.detailAmount { margin-bottom: 32px; padding: 16px; background-color: #F8F9FA; }
+.detailAmount >span {font-size: 18px;}
+.detailAmount >div {display: flex; justify-content: space-between;}
+.detailAmount >div .selectAmountWrap { display: flex;}
+.detailAmount >div .selectAmountWrap >a{ display: inline-block; width: 80px; height: 52px; background-color: #fff; border: 1px solid #d2d2d2; border-radius: 4px; font-size: 18px; text-align: center; line-height: 52px;}
+.detailtotPrice {margin: auto 0; font-size: 30px; font-weight: 600;}
+
+.detailBtn {width: 100%; display: flex; justify-content: space-between;}
+.detailBtn a { display: inline-block; width: calc(50% - 5px); height: 72px; font-size: 24px; text-align: center; line-height: 72px;}
+.btnWhite { background-color: #fff; border: 1px solid var(--dark-purple); color: var(--dark-purple); border-radius: 4px; font-weight: 600;}
+.btnPurple { background-color: var(--dark-purple); color: #fff; border-radius: 4px; font-weight: 600;}

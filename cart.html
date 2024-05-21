@@ -9,6 +9,22 @@
   <script src="./js/jquery-2.1.4.min.js"></script>
   <script src="./js/design.js"></script>
   <title>한국교육정보화재단</title>
+  
+  <script type="text/javascript">
+    function layerShow(){
+      $(".cartOrderLayer").show();
+      setTimeout(function(){
+        $(".cartOrderLayer .layerBox").toggleClass("layerShow"); 
+      }, 0);
+      
+    }
+    function layerHide(){
+      $(".cartOrderLayer .layerBox").toggleClass("layerShow");
+      setTimeout(function(){
+        $(".cartOrderLayer").hide(); 
+      }, 500);
+    }
+  </script>
 </head>
 <body>
   <div id="wrap">
@@ -149,44 +165,44 @@
           <div class="totalCnt">전체<span>3</span></div>
           <div class="selectItem">
            <!--선택 버튼 클릭 시 btnSelected 클래스 추가-->
-            <a class="chkBtn btnSelected" href="#">전체선택</a>
+            <a class="btnChk btnSelected" href="#">전체선택</a>
             <span class="partLine"></span>
             <a href="#">선택삭제</a>
           </div>
-          <div class="cartItemList" style="display:  ">
-            <div class="cartListTitle"><a class="chkBtn"></a>삼성</div>
+          <div class="cartItemList" style="display: ">
+            <div class="cartListTitle"><a class="btnChk"></a>삼성</div>
             <div class="cilCont">
               <div class="cilContLeft">
-                <a class="chkBtn btnSelected"></a>
+                <a class="btnChk btnSelected"></a>
                 <a><div class="itemImg"><img src="./img/test_labtop.png"></div><div class="itemTxt">갤러시북3 360 NT750QFT-A51A 단3일 129만 + SSD더블업 13세대 i5/16G/256G 터치 대학생 인강용 사무용 노트북</div></a>
                 <div class="itemAmount">
                  <!--1 또는 최대 개수일 경우, amountLimit 클래스 추가-->
-                  <a class="itemMinusBtn amountLimit" title="상품 개수 감소"></a>
+                  <a class="btnItemMinus amountLimit" title="상품 개수 감소"></a>
                   <span>1</span>
-                  <a class="itemPlusBtn" title="상품 개수 추가"></a>
+                  <a class="btnItemPlus" title="상품 개수 추가"></a>
                 </div>
-                <a class="couponSelectBtn">쿠폰적용</a>
+                <a class="btnCouponSelect">쿠폰적용</a>
               </div>
               <div class="cilContRight">
                 <div class="itemPrice">1,499,000원</div>
-                <a class="deleteItemBtn"></a>
+                <a class="btnDeleteGray"></a>
               </div>
             </div>
             <div class="cilCont">
               <div class="cilContLeft">
-                <a class="chkBtn btnSelected"></a>
+                <a class="btnChk btnSelected"></a>
                 <a><div class="itemImg"><img src="./img/test_labtop.png"></div><div class="itemTxt">갤러시북3 360 NT750QFT-A51A 단3일 129만 + SSD더블업 13세대 i5/16G/256G 터치 대학생 인강용 사무용 노트북</div></a>
                 <div class="itemAmount">
                  <!--1 또는 최대 개수일 경우, amountLimit 클래스 추가-->
-                  <a class="itemMinusBtn amountLimit" title="상품 개수 감소"></a>
+                  <a class="btnItemMinus amountLimit" title="상품 개수 감소"></a>
                   <span>1</span>
-                  <a class="itemPlusBtn" title="상품 개수 추가"></a>
+                  <a class="btnItemPlus" title="상품 개수 추가"></a>
                 </div>
-                <a class="couponSelectBtn">쿠폰적용</a>
+                <a class="btnCouponSelect">쿠폰적용</a>
               </div>
               <div class="cilContRight">
                 <div class="itemPrice">1,499,000원</div>
-                <a class="deleteItemBtn"></a>
+                <a class="btnDeleteGray"></a>
               </div>
             </div>
             <div class="cilTotal">
@@ -200,39 +216,39 @@
             </div>
           </div>
           <div class="cartItemList" style="display: ">
-            <div class="cartListTitle"><a class="chkBtn"></a>삼성</div>
+            <div class="cartListTitle"><a class="btnChk"></a>삼성</div>
             <div class="cilCont">
               <div class="cilContLeft">
-                <a class="chkBtn btnSelected"></a>
+                <a class="btnChk btnSelected"></a>
                 <a><div class="itemImg"><img src="./img/test_labtop.png"></div><div class="itemTxt">갤러시북3 360 NT750QFT-A51A 단3일 129만 + SSD더블업 13세대 i5/16G/256G 터치 대학생 인강용 사무용 노트북</div></a>
                 <div class="itemAmount">
                  <!--1 또는 최대 개수일 경우, amountLimit 클래스 추가-->
-                  <a class="itemMinusBtn amountLimit" title="상품 개수 감소"></a>
+                  <a class="btnItemMinus amountLimit" title="상품 개수 감소"></a>
                   <span>1</span>
-                  <a class="itemPlusBtn" title="상품 개수 추가"></a>
+                  <a class="btnItemPlus" title="상품 개수 추가"></a>
                 </div>
-                <a class="couponSelectBtn">쿠폰적용</a>
+                <a class="btnCouponSelect">쿠폰적용</a>
               </div>
               <div class="cilContRight">
                 <div class="itemPrice">1,499,000원</div>
-                <a class="deleteItemBtn"></a>
+                <a class="btnDeleteGray"></a>
               </div>
             </div>
             <div class="cilCont">
               <div class="cilContLeft">
-                <a class="chkBtn btnSelected"></a>
+                <a class="btnChk btnSelected"></a>
                 <a><div class="itemImg"><img src="./img/test_labtop.png"></div><div class="itemTxt">갤러시북3 360 NT750QFT-A51A 단3일 129만 + SSD더블업 13세대 i5/16G/256G 터치 대학생 인강용 사무용 노트북</div></a>
                 <div class="itemAmount">
                  <!--1 또는 최대 개수일 경우, amountLimit 클래스 추가-->
-                  <a class="itemMinusBtn amountLimit" title="상품 개수 감소"></a>
+                  <a class="btnItemMinus amountLimit" title="상품 개수 감소"></a>
                   <span>1</span>
-                  <a class="itemPlusBtn" title="상품 개수 추가"></a>
+                  <a class="btnItemPlus" title="상품 개수 추가"></a>
                 </div>
-                <a class="couponSelectBtn">쿠폰적용</a>
+                <a class="btnCouponSelect">쿠폰적용</a>
               </div>
               <div class="cilContRight">
                 <div class="itemPrice">1,499,000원</div>
-                <a class="deleteItemBtn"></a>
+                <a class="btnDeleteGray"></a>
               </div>
             </div>
             <div class="cilTotal">
@@ -255,7 +271,7 @@
               <div><span>배송비</span><span>무료배송</span></div>
             </div>
             <div class="orderTotCost"><span>총 결제금액</span><span class="itemPrice">2,998,000원</span></div>
-            <a class="orderBtn">신청하기</a>
+            <a class="btnOrder" onClick="layerShow()">신청하기</a>
           </div>
           </div>
       </div>
@@ -315,9 +331,27 @@
       </div>
     </footer>
   </div>
-<!--      
-  <div class="cartOrderlayer">
-
-  </div>-->
+      
+  <div class="cartOrderLayer" style="display: none">
+   <!--layer 보여지면 layerShow 클래스 추가-->
+    <div class="layerBox">
+      <a class="btnLayerClose" title="창 닫기" onClick="layerHide()"></a>
+      <div class="cartOrderTitle">제품 신청</div>
+      <div class="layerCont">    
+        <div><span>성명</span><input type="text" placeholder="성명을 입력해주세요"></div>
+        <div><span>연락처</span><input type="text" placeholder="휴대폰 번호를 입력해주세요"></div>
+        <div><span>이메일</span><input type="text" placeholder="이메일 주소를 입력해주세요"></div>
+        <div><span>신청 문의 내용</span><input type="text" placeholder="문의 내용을 입력해주세요"></div>
+        <div><span>신청 수량 </span>
+          <div class="layerOrderAmount">
+           <!--1 또는 최대 개수일 경우, amountLimit 클래스 추가-->
+            <div class="layerItemAmount"><a class="btnItemMinus amountLimit"></a> <span>1</span><a class="btnItemPlus"></a></div>
+            <span class="cartLayerTotal">2,070,000 원</span>
+          </div>
+        </div>
+      </div>
+      <div><a class="btnOrder">신청하기</a></div>
+    </div>
+  </div>
 </body>
 </html>

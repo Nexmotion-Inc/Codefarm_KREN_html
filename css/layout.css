@@ -350,19 +350,19 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .colorPurple {color: #3C31BC}
 .partLine {display: inline-block; width:1px; height: 12px; margin: auto 12px; background-color: #D2D2D2;}
   /*button*/
-.couponSelectBtn:hover,
-.orderBtn:hover {color: #fff; text-decoration: none;}
-.chkBtn {display: flex;}
-.chkBtn::before {content:""; display: inline-block; position: relative; top: 0px; width: 18px; height: 18px; background: url("../img/ico_chk_w.svg") center no-repeat, #777; border-radius: 50%; margin:auto 7px auto 0;}
-.chkBtn.btnSelected::before {background: url("../img/ico_chk_w.svg") center no-repeat, var(--dark-purple);}
-.cartItemList .chkBtn{ margin: 0 8px auto 0;}
-.itemPlusBtn {background:url("../img/ico_plus_item_b.svg") center no-repeat;}
-.itemPlusBtn.amountLimit {background:url("/img/ico_plus_item_g.svg") center no-repeat, #f6f6f6;}
-.itemMinusBtn {background:url("../img/ico_minus_item_b.svg") center no-repeat;}
-.itemMinusBtn.amountLimit {background:url("/img/ico_minus_item_g.svg") center no-repeat, #f6f6f6;}
-.couponSelectBtn {height: 25px; margin: 3px 0 3px 40px; padding: 0 4px; border-radius: 4px; background-color: var(--dark-purple); color: #fff; font-size: 13px; line-height: 25px;}
-.deleteItemBtn {width:24px; height: 24px; margin-left: 16px;  background: url("img/ico_delete.svg") center no-repeat;}
-.orderBtn {display: block; padding: 10px 0; color: #fff; font-size: 18px; font-weight: 600px; background-color: var(--dark-purple); border-radius: 8px; text-align: center;}
+.btnCouponSelect:hover,
+.btnOrder:hover {color: #fff; text-decoration: none;}
+.btnChk {display: flex;}
+.btnChk::before {content:""; display: inline-block; position: relative; top: 0px; width: 18px; height: 18px; background: url("../img/ico_chk_w.svg") center no-repeat, #bbb; border-radius: 50%; margin:auto 7px auto 0;}
+.btnChk.btnSelected::before {background: url("../img/ico_chk_w.svg") center no-repeat, var(--dark-purple);}
+.cartItemList .btnChk{ margin: 0 8px auto 0;}
+.btnItemPlus {background:url("../img/ico_plus_item_b.svg") center no-repeat;}
+.btnItemPlus.amountLimit {background:url("/img/ico_plus_item_g.svg") center no-repeat, #f6f6f6;}
+.btnItemMinus {background:url("../img/ico_minus_item_b.svg") center no-repeat;}
+.btnItemMinus.amountLimit {background:url("../img/ico_minus_item_g.svg") center no-repeat, #f6f6f6;}
+.btnCouponSelect {height: 25px; margin: 3px 0 3px 40px; padding: 0 4px; border-radius: 4px; background-color: var(--dark-purple); color: #fff; font-size: 13px; line-height: 25px;}
+.btnDeleteGray {width:24px; height: 24px; margin-left: 16px;  background: url("../img/ico_delete.svg") center no-repeat;}
+.btnOrder {display: block; padding: 10px 0; color: #fff; font-size: 18px; font-weight: 600; background-color: var(--dark-purple); border-radius: 8px; text-align: center;}
 
 .cartWrap { padding-top: 16px; background-color: #f6f6f6;}
 .cartWrap #subCont { height: auto;}
@@ -391,16 +391,32 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .cilTotal >div >span {display: block; padding-bottom: 8px;}
 .cilTotal >div >span:first-child {font-size: 12px; color: #999;}
 .cilTotal >span {text-indent: 100%; white-space: nowrap; overflow: hidden;}
-.cilTotal .cilTotalMinus {width: 24px; background: url("../img/ico_minus_total.svg") center no-repeat;}
-.cilTotal .cilTotalPlus {width: 24px; background: url("../img/ico_plus_total.svg") center no-repeat;}
-.cilTotal .cilTotalEqual {width: 24px; background: url("../img/ico_equal_total.svg") center no-repeat;}
+.cilTotalMinus {width: 24px; background: url("../img/ico_minus_total.svg") center no-repeat;}
+.cilTotalPlus {width: 24px; background: url("../img/ico_plus_total.svg") center no-repeat;}
+.cilTotalEqual {width: 24px; background: url("../img/ico_equal_total.svg") center no-repeat;}
 
 .orderInfoWrap {display: flex; justify-content: flex-end;}
 .orderInfo {width: 360px; padding: 0 20px 24px 20px;}
-.orderInfo span {font-size: 15px; }
+.orderInfo span {font-size: 15px;}
 .orderInfoList {padding: 16px 0; border-bottom: 1px solid #ddd;}
 .orderInfoList >div {display: flex; justify-content: space-between; margin: 2px 0; line-height: 24px}
 .orderTotCost {display: flex; justify-content: space-between; padding: 16px 0; margin-bottom: 8px;}
 
-.cartOrderlayer {position: absolute; top:0px;left: 0px; width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); z-index: 10;}
+.cartOrderLayer { display: flex; position: fixed; top:0px;left: 0px; width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); z-index: 1000;}
+.layerBox { position: relative; width: 550px; background-color: #fff; border-radius: 16px; margin: auto; padding: 24px 0; transform: translateY(150%); transition: all 0.5s ease;}
+.layerBox >div {padding: 0 24px;}
+.cartOrderLayer .cartOrderTitle { padding: 0 0 24px 16px; font-size: 18px; font-weight: 600; border-bottom: 1px solid #e2e2e2}
+.layerCont {margin: 16px 0;}
+.layerCont >div {padding-bottom: 24px;}
+.layerCont >div >span {display: block; margin-bottom: 12px; font-size: 16px;}
+.layerCont >div >input {width: 100%; padding: 16px; height: 50px; border: 1px solid #e2e2e2; border-radius: 5px;}
+.layerCont >div >input::placeholder {color: #bbb;}
+.layerOrderAmount {display: flex; justify-content: space-between}
+.layerItemAmount { display: flex; height: 52px; font-size: 24px; line-height: 52px; border: 1px solid #d2d2d2; border-radius: 4px; overflow: hidden;}
+.layerItemAmount a{display: inline-block; width: 52px; height: 100%; background-color: #F6F6F6;}
+.layerItemAmount span {display: inline-block; width: 64px; text-align: center;}
+.layerCont >div .cartLayerTotal {font-size: 30px; font-weight: 600;}
+.cartOrderLayer .btnOrder {padding: 15px;}
+.btnLayerClose {position: absolute; width: 24px; height: 24px; right: 16px; background: url("../img/ico_close.svg") center no-repeat;}
+.layerShow {transform: translateY(0%)}
 /*cart_끝*/

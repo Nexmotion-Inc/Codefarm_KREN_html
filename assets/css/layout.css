@@ -17,9 +17,9 @@ textarea {border: 1px solid #ccc; border-radius: 5px; height: 25rem; padding: 10
 input[type='text']:focus,
 input[type='password']:focus,
 select:focus,
-textarea:focus {outline: 2px solid #1A83EF;}
+textarea:focus {outline: none; /*2px solid #1A83EF;*/}
 textarea::placeholder {color: #ADADAD;}
-select { height: 4rem; padding-left: 1.2rem; padding-right: 4rem; border: 1px solid #d8d7d8; border-radius: 3px; -webkit-appearance: none; -moz-appearance: none; appearance: none; background: #fff url(../../img/ico_select.svg) right center no-repeat; border-radius: 5px;}
+select { height: 4rem; padding-left: 1.2rem; padding-right: 4rem; border: 1px solid #d8d7d8; border-radius: 3px; background: #fff url(../../img/ico_select.svg) calc(100% - 0.8rem) center no-repeat; border-radius: 5px;}
 select:focus{border-radius: 5px;}
 
 span, p {word-break: keep-all;}
@@ -174,14 +174,14 @@ a.fax {cursor: default;}
 /*탭*/
 .serchTab {padding-bottom: 50px; margin-bottom: 64px;}
 .serchTab .tab {display: flex; float: left;}
-.serchTab .tab > li{margin-right: 24px; height: 38px;}
+.serchTab .tab > li{margin-right: 20px; height: 38px; width: 80px; text-align: center;}
 .serchTab .tab > li.on {background:url(../../img/ico_nav.svg) no-repeat center 26px; text-decoration: none; background-size: 60px auto; color: #120D4D;}
 .serchTab .tab > li:last-child{margin-right: 0px;}
 .serchTab .tab > li a{color:#bbb; font-size: 16px; font-weight: 600;} 
 .serchTab .tab > li.on > a{color: #120D4D;} 
 .serchTab .tab > li a:hover{text-decoration: none;}
 .serchTab .tab > li ul {display: flex; position: absolute; margin-top: 24px; left: 0;}
-.serchTab .tab > li ul li {width: auto; padding: 6px 14px; border-radius: 8px; margin-right: 24px; border:1px solid #bbb;}
+.serchTab .tab > li ul li {width: auto; padding: 6px 14px; border-radius: 8px; margin-right: 16px; border:1px solid #bbb;}
 .tabTop40 {margin-top: -40px;}
 .serchTab .tab > li ul li.on {border: 1px solid #353876; background: #EEEDFA;}
 .serchTab .tab > li ul li.on a {color:#120D4D; font-size: 16px;}
@@ -509,3 +509,42 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .btnWhite { background-color: #fff; border: 1px solid var(--dark-purple); color: var(--dark-purple); border-radius: 4px; font-weight: 600;}
 .btnPurple { background-color: var(--dark-purple); color: #fff; border-radius: 4px; font-weight: 600;}
 .detailBody {margin-top: 100px;}
+
+/*내부 콘텐츠 검색창*/
+.searchContTab {display: flex; max-width: 760px; margin: 0 auto;}
+.searchContTab select { width: 120px; border: 1px solid #2b2b2b; border-right: none; border-radius: 0; height: 48px; flex-shrink: 0;}
+
+.searchContTab .searchBar {border: 1px solid #2b2b2b; border-radius: 0; height: 48px;}
+.searchContTab .searchBar {display: flex; width: 100%;}
+.searchContTab .searchBar input { width:100%; max-width: calc(100% - 52px); height: 100%; border: none; border-radius: 0;}
+.searchContTab .searchBar input::placeholder { color: #ccc}
+.searchContTab .searchBar a { display: inline-block; width: 52px; height: 100%; background: url("../../img/ico_search_b.svg") center no-repeat}
+/**/
+
+/*게시판*/
+.noteHeader { display: flex; justify-content: space-between; margin-top: 90px;}
+.noteHeader >span {font-size: 16px; font-weight: 500; display: inline-block; margin: auto 0;}
+.noteHeader >div {display: flex;}
+.noteHeader >div select {padding-right: 72px; height: 40px; margin-left:8px; border: 1px solid #e2e2e2;}
+.noteBody {width: 100%; margin-top: 44px; margin-bottom: 84px; border-top: 2px solid #333;}
+.noteCont { display: flex; height: 140px; border-bottom: 1px solid #e2e2e2; }
+.noteDate {width: 140px; text-align: center; display: flex; flex-direction: column; justify-content: center;}
+.noteDate span {display: block; color: #aaa;}
+.noteDate span:first-child {font-size: 13px;}
+.noteDate span:last-child {font-size: 44px; font-weight: 700;}
+
+.notice::before {content: "공지"; display: inline-block; padding: 8px 12px; border-radius: 8px; font-size: 15px; font-weight: 700; color: #fff; background-color: var(--dark-purple); margin-right: 12px;}
+.noteTxt { display: inline-block; max-width: calc(100% - 200px); margin: auto 0; overflow: hidden; white-space: nowrap; word-break: break-all;}
+.noteTxt div:first-child {font-size: 18px; font-weight: 700; text-overflow: ellipsis; overflow: hidden;}
+.noteTxt div:last-child {margin-top: 16px; font-size: 15px; text-overflow: ellipsis; overflow: hidden; color: #888;}
+
+.pageMoveTab {height: 32px; display: flex; justify-content: center; position:relative;}
+.pageMoveTab >a {display: inline-block; width: 32px; background-color: #E0DEF2; border-radius: 4px; margin: 0 8px;}
+.pageMoveTab >a:nth-child(1)::after { content: ""; display: block; position:absolute; width: 32px; height: 100%; background: url(../../img/ico_arrow_double_p.svg) center no-repeat; transform: rotate(180deg)}
+.pageMoveTab >a:nth-child(2)::after { content: ""; display: block; position:absolute; width: 32px; height: 100%; background: url(../../img/ico_arrow_p.svg) center no-repeat; transform: rotate(180deg)}
+.pageMoveTab >a:nth-child(4)::after { content: ""; display: block; position:absolute; width: 32px; height: 100%; background: url(../../img/ico_arrow_p.svg) center no-repeat;}
+.pageMoveTab >a:nth-child(5)::after { content: ""; display: block; position:absolute; width: 32px; height: 100%; background: url(../../img/ico_arrow_double_p.svg) center no-repeat;}
+.
+.pageMoveTab >div {display: flex;}
+.pageMoveTab >div >a {display: inline-block; width: 32px; height: 100%; font-size: 16px; line-height: 32px; text-align: center; margin: 0 8px; color: #777}
+.pageMoveTab .on {color: #120D4D; font-weight: 500;}

@@ -46,7 +46,7 @@ $(document).ready(function () {
   const bullets = document.querySelectorAll('.carouselCircle');
 
   let currentSlide = 0;
-  
+
   /*배너 사이즈 측정하여 다른 사이즈의 배너에도 호환되도록 했습니다*/
   const imgWidth = $(".carouselWrapper").width();
 
@@ -91,29 +91,29 @@ $(document).ready(function () {
 //제품슬라이드
 $(document).ready(function () {
   $('.sliderWrap').slick({
-    slide: 'div', 
+    slide: 'div',
     infinite: true,
-    slidesToShow: 3, 
-    slidesToScroll: 1, 
-    speed: 500, 
-    arrows: true, 
-    dots: false, 
-    autoplay: false, 
-    autoplaySpeed: 2000, 
-    pauseOnHover: true, 
-    vertical: false, 
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    speed: 500,
+    arrows: true,
+    dots: false,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    vertical: false,
     prevArrow: "<button type='button' class='slickPrev'>Previous</button>",
     nextArrow: "<button type='button' class='slickNext'>Next</button>",
-    draggable: true, 
-    responsive: [ 
+    draggable: true,
+    responsive: [
       {
-        breakpoint: 960, 
+        breakpoint: 960,
         settings: {
           slidesToShow: 4
         }
           },
       {
-        breakpoint: 768, 
+        breakpoint: 768,
         settings: {
           slidesToShow: 5
         }
@@ -142,4 +142,10 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
   });
+});
+
+//소개 접기 폈기
+$(document).on("click", ".arrowBtn", function () {
+  $('.systemBox li').removeClass("on");
+  $(this).parents('li').toggleClass("on");
 });

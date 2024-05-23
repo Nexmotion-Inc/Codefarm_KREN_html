@@ -616,7 +616,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .noteHeader >span {font-size: 16px; font-weight: 500; display: inline-block; margin: auto 0;}
 .noteHeader >div {display: flex;}
 .noteHeader >div select {padding-right: 72px; height: 40px; margin-left:8px; border: 1px solid #e2e2e2;}
-.noteBody {width: 100%; margin-top: 44px; margin-bottom: 84px; border-top: 2px solid #333;}
+.noteBody {width: 1120px; margin-top: 44px; margin-bottom: 84px; border-top: 2px solid #333;}
 .noteCont { display: flex; height: 140px; border-bottom: 1px solid #e2e2e2; }
 .noteDate {width: 140px; text-align: center; display: flex; flex-direction: column; justify-content: center;}
 .noteDate span {display: block; color: #aaa;}
@@ -624,9 +624,29 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .noteDate span:last-child {font-size: 44px; font-weight: 700;}
 
 .notice::before {content: "공지"; display: inline-block; padding: 8px 12px; border-radius: 8px; font-size: 15px; font-weight: 700; color: #fff; background-color: var(--dark-purple); margin-right: 12px;}
+.file::after {content:""; display: inline-block; width: 24px; height: 24px; position:relative; top:5px; background: url("../../img/ico_file.svg") center no-repeat; margin-left: 8px;}
+
 .noteTxt { display: inline-block; max-width: calc(100% - 200px); margin: auto 0; overflow: hidden; white-space: nowrap; word-break: break-all;}
-.noteTxt div:first-child {font-size: 18px; font-weight: 700; text-overflow: ellipsis; overflow: hidden;}
-.noteTxt div:last-child {margin-top: 16px; font-size: 15px; text-overflow: ellipsis; overflow: hidden; color: #888;}
+.noteTxt >div:first-child {font-size: 18px; font-weight: 700; text-overflow: ellipsis; overflow: hidden; padding-bottom: 1px;}
+.noteTxt >div:last-child {margin-top: 16px; font-size: 15px; text-overflow: ellipsis; overflow: hidden; color: #888;}
+
+.qna .noteCont {flex-direction: column; padding: 0 16px; height: 95px}
+.qna .noteCont >a {margin: auto 0;}
+.qna .noteCategory { display: flex; margin-bottom: 12px;}
+.qna .noteCategory >div {padding: 2px 4px; border-radius: 1px; font-size: 10px; font-weight: 500; display: none;}
+.qna .noteCategory >div.on {display: block}
+.qna .noteCategory .category1 { color: #fff; background-color: #595DC4;}
+.qna .noteCategory .category2 { color: #fff; background-color: #F39A00;}
+.qna .noteTxt { display: flex; justify-content: space-between; max-width: initial}
+.qna .noteTxt .noteTxtInfo{ display: flex; margin: 0; position:relative;}
+.qna .noteTxt .noteTxtInfo div{ margin-left: 24px;}
+.qna .noteTxt .noteTxtInfo div::before { content: ""; display: inline-block; width: 16px; height: 16px; position:relative; top: 3px; margin-right: 8px}
+.qna .noteTxt .noteTxtInfo div:nth-child(1)::before { background: url(../../img/ico_writer.svg) center no-repeat;}
+.qna .noteTxt .noteTxtInfo div:nth-child(2)::before { background: url(../../img/ico_eye.svg) center no-repeat;}
+.qna .noteTxt .noteTxtInfo div:nth-child(3)::before { background: url(../../img/ico_clock.svg) center no-repeat;}
+.btnWrite { display: flex; position:relative; justify-content: flex-end}
+.btnWrite a{ display: block; background-color: var(--dark-purple); color: #fff; border-radius: 4px; padding: 10px 16px; font-size: 16px; font-weight: 500;}
+.qna .btnWrite {top: -40px;}
 
 .pageMoveTab {height: 32px; display: flex; justify-content: center; position:relative;}
 .pageMoveTab >a {display: inline-block; width: 32px; background-color: #E0DEF2; border-radius: 4px; margin: 0 8px;}

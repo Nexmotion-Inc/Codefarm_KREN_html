@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+  <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
+  <script src="./assets/js/jquery-2.1.4.min.js"></script>
+  <script src="./assets/js/design.js"></script>
+  <script src="./assets/js/swiper-bundle.min.js"></script>
+  <title>한국교육정보화재단</title>
+
+
+  <script>
+    //비디오 재생 멈춤 버튼
+    $(document).ready(function() {
+
+      var visualVideo = $(".videoWrap video")[0],
+        visualButton = $(".videoWrap .videoBtn"),
+        videoControl = false;
+
+      visualButton.on("click", function() {
+        videoControl = !videoControl;
+        if (videoControl) {
+          $(this).addClass("on");
+          visualVideo.pause();
+        } else {
+          $(this).removeClass("on");
+          visualVideo.play();
+        }
+      });
+    });
+
+  </script>
+</head>
+
+<body>
+  <div id="wrap" class="main">
+    <div class="mainNav">
+      <ul>
+        <li class=""><a class="" href="">재단소개</a>
+          <ul class="">
+            <li><a href="" target="">소개</a></li>
+            <li><a href="" target="">연혁</a></li>
+            <li><a href="" target="">조직도</a></li>
+            <li><a href="" target="">공지사항</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="" class="">서비스</a>
+          <ul class="">
+            <li><a href="" target="">서비스 안내</a></li>
+            <li><a href="" target="">회선</a></li>
+            <li><a href="" target="">IP서비스</a></li>
+            <li><a href="" target="">SLA</a></li>
+            <li><a href="" target="">대학 클라우드 확인</a></li>
+            <li><a href="" target="">IT 진단서비스</a></li>
+            <li><a href="" target="">정보보호 수준진단</a></li>
+            <li><a href="" target="">모의해킹</a></li>
+            <li><a href="" target="">웹 취약점 진단</a></li>
+            <li><a href="" target="">대학정보화 현황조사</a></li>
+            <li><a href="" target="">메일 서비스</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="" class="">IT교육</a>
+          <ul class="">
+            <li><a href="" target="">교육 소개</a></li>
+            <li><a href="" target="">교육 공지</a></li>
+            <li><a href="" target="">교육 안내</a></li>
+            <li><a href="" target="">교육 신청</a></li>
+            <li><a href="" target="">나의 학습방</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="" class="">지역별 협의회</a>
+          <ul class="">
+            <li><a href="" target="">지역협의회 안내</a></li>
+            <li><a href="" target="">세미나</a></li>
+            <li><a href="" target="">관련자료실</a></li>
+            <li><a href="" target="">지역협의회 게시판</a></li>
+            <li><a href="" target="">Q&A</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="" class="">재단소식</a>
+          <ul class="">
+            <li><a href="" target="">뉴스레터</a></li>
+            <li><a href="" target="">교육/세미나</a></li>
+            <li><a href="" target="">연구과제 보고서</a></li>
+            <li><a href="" target="">국외교육 보고서</a></li>
+            <li><a href="" target="">자유게시판</a></li>
+            <li><a href="" target="">IT 상담게시판</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="" class="">컨퍼런스</a>
+        <li class=""><a href="" class="">IT마켓</a>
+      </ul>
+    </div>
+    <header id="contHeader">
+      <div class="hTop">
+        <a href="" title="Logo" class="btnLogo">로고</a>
+        <!--상단메뉴-->
+        <nav id="topMenu">
+          <ul>
+            <li class="topMenuLi"><a class="menuLink" href="">재단소개</a>
+              <ul class="submenu">
+                <li><a href="" target="">소개</a></li>
+                <li><a href="" target="">연혁</a></li>
+                <li><a href="" target="">조직도</a></li>
+                <li><a href="" target="">공지사항</a></li>
+              </ul>
+            </li>
+            <li class="topMenuLi"><a href="" class="menuLink">서비스</a>
+              <ul class="submenu">
+                <li><a href="" target="">서비스 안내</a></li>
+                <li><a href="" target="">회선</a></li>
+                <li><a href="" target="">IP서비스</a></li>
+                <li><a href="" target="">SLA</a></li>
+                <li><a href="" target="">대학 클라우드 확인</a></li>
+                <li><a href="" target="">IT 진단서비스</a></li>
+                <li><a href="" target="">정보보호 수준진단</a></li>
+                <li><a href="" target="">모의해킹</a></li>
+                <li><a href="" target="">웹 취약점 진단</a></li>
+                <li><a href="" target="">대학정보화 현황조사</a></li>
+                <li><a href="" target="">메일 서비스</a></li>
+              </ul>
+            </li>
+            <li class="topMenuLi"><a href="" class="menuLink">IT교육</a>
+              <ul class="submenu">
+                <li><a href="" target="">교육 소개</a></li>
+                <li><a href="" target="">교육 공지</a></li>
+                <li><a href="" target="">교육 안내</a></li>
+                <li><a href="" target="">교육 신청</a></li>
+                <li><a href="" target="">나의 학습방</a></li>
+              </ul>
+            </li>
+            <li class="topMenuLi"><a href="" class="menuLink">지역별 협의회</a>
+              <ul class="submenu">
+                <li><a href="" target="">지역협의회 안내</a></li>
+                <li><a href="" target="">세미나</a></li>
+                <li><a href="" target="">관련자료실</a></li>
+                <li><a href="" target="">지역협의회 게시판</a></li>
+                <li><a href="" target="">Q&A</a></li>
+              </ul>
+            </li>
+            <li class="topMenuLi"><a href="" class="menuLink">재단소식</a>
+              <ul class="submenu">
+                <li><a href="" target="">뉴스레터</a></li>
+                <li><a href="" target="">교육/세미나</a></li>
+                <li><a href="" target="">연구과제 보고서</a></li>
+                <li><a href="" target="">국외교육 보고서</a></li>
+                <li><a href="" target="">자유게시판</a></li>
+                <li><a href="" target="">IT 상담게시판</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="hRight">
+            <a href="" class="conference" target="">컨퍼런스</a>
+            <a href="" class="market" target="">IT마켓</a>
+          </div>
+        </nav>
+      </div>
+      <div class="hBottom">
+        <ul>
+          <li><a class="loginBtn">로그인</a></li>
+          <li><a class="basket">장바구니</a></li>
+          <li><a class="menuBtn mobMenuBtn">메뉴</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+    <!--비디오-->
+    <div class="videoWrap">
+      <div class="videoTxt">
+        <h1><b>신뢰</b>와 <b>협력</b>을 기반으로
+          <b>대학 시스템의 혁신</b>주도합니다.
+        </h1>
+        <span>지속 가능한 혁신을 통해 대학의 미래를 밝히는 길을 함께 만들어갑니다.
+          신뢰와 협력으로, 우리는 더 나은 대학 IT 시스템을 현실로 만듭니다.</span>
+        <a href="" target="" class="more">더보기</a>
+        <button class="videoBtn">
+          <img src="./img/ico_pauseBtn.svg" alt="">
+          <!--        <img src="" alt="icon">-->
+        </button>
+      </div>
+      <video id="videoplay" width="100%" height="auto" autoplay loop muted>
+        <source src="./img/kren_main_video_sample_240411.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div id="mainCont">
+      <div id="subCont">
+        <ul>
+          <li class="leftDiv">
+            <div>
+              <em>서비스</em>
+              <h1>IT 서비스 지원을 통해<br />
+                대학 네트워크 시스템을 확립합니다.</h1>
+              <span>대학 네트워크 사업은 대학의 발전과 혁신을 위해 공헌합니다.
+                정보 기술의 급속한 발전 속에서, 우리는 지속적인 혁신을 통해
+                대학 네트워크의 효율성과 안정성을 높이고 있습니다.</span>
+              <a href="" target="" class="more">더 알아보기</a>
+              <div class="serviceIcon">
+                <i></i>
+                <i></i>
+              </div>
+            </div>
+            <i class="serviceImg"></i>
+          </li>
+          <li class="rightDiv">
+            <i class="eduImg"></i>
+            <div>
+              <em>교육</em>
+              <h1>지속적인 IT교육을 통해<br />
+                세계로 한 발 더</h1>
+              <span>지속적인 교육을 통해
+                우리는 IT 인력이 변화하는 기술 환경 속에서도 성장하고,
+                대학에 긍정적인 영향을 미칠 수 있도록 지원합니다.</span>
+              <a href="" target="" class="more">더 알아보기</a>
+            </div>
+          </li>
+          <li class="leftDiv">
+            <div>
+              <em>클라우드</em>
+              <h1>대학 클라우드<br />할인 프로그램</h1>
+              <span>UCLOUD로 자원을 하나의 플랫폼에서 효율적으로 관리하고,
+                실시간으로 모니터링하여 시스템의 성능과 상태를
+                지속적으로 점검할 수 있도록 도와줍니다.
+                대학 전용 클라우드 할인을 통해 비용 효율성도 향상됩니다.</span>
+              <a href="" target="" class="more">더 알아보기</a>
+            </div>
+            <i class="cloudImg"></i>
+          </li>
+          <li class="rightDiv">
+            <i class="mailImg"></i>
+            <div>
+              <em>메일서비스 & 협업도구</em>
+              <h1>CSAP 인증 행정용<br />메일서비스</h1>
+              <span>CSAP 인증을 통해 엄격한 보안 기준을 충족하여
+                대학의 중요 데이터와 커뮤니케이션을 안전하게 보호합니다.
+                다양한 협업 도구를 통해 업무 효율성을 극대화할 수 있습니다</span>
+              <a href="" target="" class="more">더 알아보기</a>
+            </div>
+          </li>
+          <li class="conference">
+            <em>컨퍼런스</em>
+            <div>
+              <div>
+                <h1>교육 정보화의 미래를<br /> 탐색하는 컨퍼런스</h1>
+              </div>
+              <div class="expBox">
+                <span>컨퍼런스로 대학 커뮤니티 내에서 지속 가능한 발전을 이끌어내고,<br />
+                  IT분야의 혁신적 변화를 주도해나갈 것입니다.<br />
+                  우리 모두가 함께 만들어가는 소통과 혁신의 장입니다.</span>
+                <a href="" target="" class="more">더 알아보기</a>
+              </div>
+            </div>
+
+            <div class="swiper-pagination conferPagination"></div>
+            <div class="swiper conferSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/img_conference01.png"></div>
+                <div class="swiper-slide"><img src="./img/img_conference02.png"></div>
+                <div class="swiper-slide"><img src="./img/img_conference03.png"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="bottomCont">
+        <div class="joinTxt">
+          <p>변화에 함께 할 준비가 되셨나요?</p>
+          <div class="swiper-pagination joinagination"></div>
+          <span>지금까지 KREN이 이끌어낸 변화에 동참해보세요.</span>
+        </div>
+        <div class="swiper joinSlide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div>
+                <em>참여대학 수</em>
+                <p>357</p>
+                <span>개 대학</span>
+              </div>
+              <p class="bTxt">국내 최대 규모의 대학 협의회로
+                357개의 대학 참여</p>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <em>자생적 운영</em>
+                <p>227</p>
+                <span>억원</span>
+              </div>
+              <p class="bTxt">대학 공동(회선) 서비스의
+                자생적 운영 기반 마련</p>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <em>자생적 운영</em>
+                <p>227</p>
+                <span>억원</span>
+              </div>
+              <p class="bTxt">국내 최고수준의 교육전문기관에 위탁하여
+                IT신기술과 재교육 수강 무료지원</p>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <em>자생적 운영</em>
+                <p>227</p>
+                <span>억원</span>
+              </div>
+              <p class="bTxt">국내 최고수준의 교육전문기관에 위탁하여
+                IT신기술과 재교육 수강 무료지원</p>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <em>자생적 운영</em>
+                <p>227</p>
+                <span>억원</span>
+              </div>
+              <p class="bTxt">국내 최고수준의 교육전문기관에 위탁하여
+                IT신기술과 재교육 수강 무료지원</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer id="ft">
+      <div class="ft container">
+        <div class="left">
+          <div class="botMenu">
+            <a href="">KREN정관</a>
+            <a href="">KREN규정</a>
+            <a href="" class="txtSkyblue">개인정보처리방침</a>
+          </div>
+          <div class="address">
+            <span class="tit">재단법인 한국교육정보화재단</span> <span>대표자 : 김홍기</span>
+            <span>고유번호 : 119-82-63800</span>
+            <span>주소 : 서울특별시 관악구 관악로 1 서울대학교 정보화본부 4층</span><br>
+            <span>TEL : 02-882-5363</span>
+            <span>FAX : 02-873-7484</span>
+            <span>E-MAIL : kren@snu.ac.kr</span>
+          </div>
+          <p class="copyright">COPYRIGHT(c) Korea Education ICT Network. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="right">
+          <div class="familySite">
+            <button type="button" class="link">관련기관 바로가기</button>
+            <div class="listWrap">
+              <ul>
+                <li>
+                  <a href="" onclick="" target="_blank" title="">IT 전문교육</a>
+                  <a href="" onclick="" target="_blank" title="">컨퍼런스</a>
+                  <a href="" onclick="" target="_blank" title="">커뮤니티</a>
+                  <button type="button" class="btnClose">실과/직속기관 닫기</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="telList">
+            <p class="tit">사업자별 연락처</p>
+            <ul>
+              <li>
+                <span class="logo"><img src="./img/kt.png" alt="kt"></span>
+                <span class="num">02-720-4121</span>
+              </li>
+              <li>
+                <span class="logo"><img src="./img/uplus.png" alt="LG Uplus"></span>
+                <span class="num">070-4080-5787</span>
+              </li>
+              <li>
+                <span class="logo"><img src="./img/sk.png" alt="SK Broadband"></span>
+                <span class="num">02-6266-2016</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    //컨퍼런스 슬라이드
+    var swiper = new Swiper(".conferSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      centeredSlides: false,
+      pagination: {
+        el: ".conferPagination",
+        clickable: true,
+        renderBullet: function(index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+      navigation: false,
+    });
+
+  </script>
+  <script>
+    //동참 슬라이드
+    var swiper = new Swiper(".joinSlide", {
+      slidesPerView: 3,
+      slidesOffsetBefore: 403,
+      slidesOffsetAfter: -500,
+      slidesPerGroup: 1,
+      centeredSlides: false,
+      centeredSlidesBounds: false,
+      slideToClickedSlide: true,
+      //      initialSlide: 0,
+      grabCursor: true,
+      loopAdditionalSlides: 1,
+      spaceBetween: 80,
+      loop: false,
+      pagination: {
+        el: ".joinagination",
+        clickable: true,
+      },
+      //      debugger: true,
+      mousewheel: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+          slideToClickedSlide: true,
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 60,
+          slideToClickedSlide: true,
+        },
+        1400: {
+          slidesPerView: 2,
+          spaceBetween: 60,
+          slideToClickedSlide: true,
+        },
+        1800: {
+          slidesPerView: 3,
+          spaceBetween: 100,
+          slideToClickedSlide: true,
+        }
+
+      },
+    });
+
+  </script>
+</body>
+
+</html>

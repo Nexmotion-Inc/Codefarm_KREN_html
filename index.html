@@ -10,29 +10,6 @@
   <script src="./assets/js/design.js"></script>
   <script src="./assets/js/swiper-bundle.min.js"></script>
   <title>한국교육정보화재단</title>
-
-
-  <script>
-    //비디오 재생 멈춤 버튼
-    $(document).ready(function() {
-
-      var visualVideo = $(".videoWrap video")[0],
-        visualButton = $(".videoWrap .videoBtn"),
-        videoControl = false;
-
-      visualButton.on("click", function() {
-        videoControl = !videoControl;
-        if (videoControl) {
-          $(this).addClass("on");
-          visualVideo.pause();
-        } else {
-          $(this).removeClass("on");
-          visualVideo.play();
-        }
-      });
-    });
-
-  </script>
 </head>
 
 <body>
@@ -169,7 +146,7 @@
     </header>
 
 
-    <!--비디오-->
+<!--비디오 구조 수정 start-->
     <div class="videoWrap">
       <div class="videoTxt">
         <h1><b>신뢰</b>와 <b>협력</b>을 기반으로
@@ -178,16 +155,16 @@
         <span>지속 가능한 혁신을 통해 대학의 미래를 밝히는 길을 함께 만들어갑니다.
           신뢰와 협력으로, 우리는 더 나은 대학 IT 시스템을 현실로 만듭니다.</span>
         <a href="" target="" class="more">더보기</a>
-        <button class="videoBtn">
-          <img src="./img/ico_pauseBtn.svg" alt="">
-          <!--        <img src="" alt="icon">-->
-        </button>
+        <button id="playButton" class="playButton"></button>
       </div>
-      <video id="videoplay" width="100%" height="auto" autoplay loop muted>
-        <source src="./img/kren_main_video_sample_240411.mp4" type="video/mp4">
-      </video>
+      <div class="videoContainer">
+        <video id="myVideo" autoplay muted poster="video-poster.jpg">
+          <source src="./img/kren_main_video_sample_240411.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
-
+<!--비디오 구조 수정 end-->
+   
     <div id="mainCont">
       <div id="subCont">
         <ul>
@@ -445,6 +422,28 @@
     });
 
   </script>
+  
+<!--비디오 구조 스크립트 수정 start-->
+  <script>
+    //비디오멈춤
+    const video = document.getElementById("myVideo");
+    const playButton = document.getElementById("playButton");
+
+    playButton.addEventListener("click", function() {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+
+    $('#playButton').click(function() {
+      $(this).toggleClass('on');
+    });
+
+  </script>
+<!--비디오 구조 스크립트 수정 end-->
+
 </body>
 
 </html>

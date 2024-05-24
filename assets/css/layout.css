@@ -25,7 +25,7 @@ select:focus{border-radius: 5px;}
 span, p {word-break: keep-all;}
 
 /* btn~ */
-.btnLogo { display: inline-block; width: 80px; height: 28px; background: url(../../img/logo.svg) center no-repeat; z-index: 999; text-indent: -9999px; background-size: cover; margin-right: 40px;}  
+.btnLogo { display: inline-block; width: 80px; height: 28px; background: url(../../img/logo.svg) center no-repeat; z-index: 999; text-indent: -9999px; background-size: cover; margin-right: 40px; margin-top: 8px;}  
 
 .btnMenu { display: inline-block; width: 4.5rem; height: 4.5rem; background: url(../../img/menu.svg) center no-repeat; z-index: 99; } 
 
@@ -372,13 +372,15 @@ span.label {color: #120D4D; display: inline-block; border: 1px solid #120D4D; pa
 /*.main {background: #F1F1F1;}*/
 .main #contHeader{position: relative; background: linear-gradient(180deg, rgba(241, 241, 241, 0.8) 0%, rgba(241, 241, 241, 0.3) 14%, rgba(241, 241, 241, 0) 99.99%, #F1F1F1 100%); z-index: 99;}
 .main .videoWrap{ margin-top: -122px; position: relative; display: flex; align-items: center; justify-content: center;}
-.main .videoTxt {height: 100%; width: 100%; position: absolute; display: flex; justify-content: center; align-items: center; flex-direction: column; max-width: 1120px;}
+.main .videoTxt {height: 100%; width: 100%; position: absolute; display: flex; justify-content: center; align-items: center; flex-direction: column; max-width: 1120px; z-index: 1;}
 .main .videoTxt h1{white-space: pre-line; font-size: 52px; font-weight: 300; line-height: 72.8px; text-align: center; color: #120D4D; margin-bottom: 24px;}
 .main .videoTxt span {white-space: pre-line; font-size: 22px;font-weight: 400;line-height: 31.9px;text-align: center; color: #120D4D; margin-bottom: 48px; display: inline-block;}
 .main .videoWrap a.more { display: flex; width: 96px; height: 37px; padding: 8px 16px 8px 16px; border-radius: 2px; border: 1px solid #120D4D; background: rgba(255,255,255, .4) url(../../img/ico_arrow_b.svg) no-repeat 60px 6px; font-size: 16px; font-weight: 600; line-height: 20.8px; color: #120D4D; margin-bottom: 85px; position: relative; z-index: 10; display: inline-block;}
 #btnPlayer {position: absolute; z-index: 10; width: 40px; height: 40px; background: #fff; border-radius: 999px; text-indent: -999px;}
-.videoWrap .videoBtn {display: inline-block; width: 40px; height: 40px; border: none; background: none; cursor: pointer; position: absolute; z-index: 10; padding: 0; bottom: 56px; right: 0;}
-
+/*.videoWrap .playButton {display: inline-block; width: 40px; height: 40px; border: none; background: none; cursor: pointer; position: absolute; z-index: 10; padding: 0; bottom: 56px; right: 0;}*/
+.playButton {position: absolute;  bottom: 56px; right: 0; z-index: 999; border: none; padding: 0; cursor: pointer; background: red; width: 40px; height: 40px; background: url(../../img/ico_pauseBtn.svg) no-repeat;}
+.playButton.on{background: url(../../img/ico_pauseBtn02.svg) no-repeat;}
+.videoContainer { position: relative; width: 100%;}
 
 /* 전체화면 버튼 */ 
 video::-webkit-media-controls-fullscreen-button {display: none;} 
@@ -402,8 +404,7 @@ video::-webkit-media-controls-fullscreen-button { display: none !important; }
 
 
 .main #topMenu ul {background: none;}
-#mainCont{background: #F1F1F1 url(../../img/bg_main.png) no-repeat center 635px; width: 100%;
-background-size: contain;}
+#mainCont{background: #F1F1F1 url(../../img/bg_main.png) no-repeat center 635px; background-size: 100% 1670px;}
 
 #mainCont { padding-top: 120px; width: 100%; height: 100%;}
 #mainCont #subCont {padding-bottom: 20em;}
@@ -452,8 +453,9 @@ margin-bottom: 32px; display: inline-block;}
 #bottomCont {height: 1177px; width: 100%; background: linear-gradient(180deg, #120D4D 0%, #1C1386 100%); position: relative;  padding-top: 114px; padding-bottom: 120px;}
 .swiper-horizontal .joinagination .swiper-pagination-bullets .swiper-pagination-bullet, 
 .swiper-pagination-horizontal.joinagination.swiper-pagination-bullets .swiper-pagination-bullet{width: 13px; height: 13px; background: #fff; opacity: .3;}
-.joinagination .swiper-pagination-bullet swiper-pagination-bullet-active {opacity: 1;}
+.swiper-pagination-horizontal.joinagination.swiper-pagination-bullets .swiper-pagination-bullet-active {opacity: 1; background: #fff;} 
 .joinagination.swiper-pagination-bullets.swiper-pagination-horizontal { top: 90px;}
+.joinagination .swiper-pagination-bullet-active {opacity: 1; border: none !important; background: #fff !important;}
 .joinTxt {position: relative; text-align: center; margin-bottom: 100px;}
 .joinTxt p{color: #fff; font-size: 45px; font-weight: 600; line-height: 58.5px; letter-spacing: 0.01em; text-align: center; margin-bottom: 77px;}
 .joinTxt span{color: #fff; font-size: 22px;font-weight: 500;line-height: 33px;text-align: center; opacity: .8;}
@@ -517,7 +519,7 @@ margin-bottom: 32px; display: inline-block;}
 
 #ft .container .right .familySite .link{position: relative; font-size: 1.5rem; color: #fff; line-height: 60px; width: 100%; text-align: left; display: flex; align-items: center; justify-content: space-between; cursor: pointer;}
 #ft .container .right .familySite .link:after{ width: 15px; height: 15px; display: inline-block; content: ""; background: url(../../img/ico_plus.svg) no-repeat;}
-#ft .container .right .familySite .listWrap{ position:absolute; top:-200px; right:0px; padding-bottom: 1px; border:1px solid #222; border-bottom:0; background-color: #222; padding:12px 20px; height:200px; width:220px; display: none;}
+#ft .container .right .familySite .listWrap{ position:absolute; top:-200px; right:0px; padding-bottom: 1px; border:1px solid #222; border-bottom:0; background-color: #222; padding:12px 20px; height:200px; width:220px; display: none; z-index: 10;}
 #ft .container .right .familySite .listWrap.on{display: inline-block;}
 #ft .container .right .familySite .listWrap ul li a{ position:relative; display: block; padding-left: 15px; line-height: 2; color:#fff; font-size:1.4rem;}
 #ft .container .right .familySite .listWrap ul li a:before{ position:absolute; left:0; top:12px; content:''; width:2px; height:2px; background-color: #fff;}

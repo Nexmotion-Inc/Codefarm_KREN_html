@@ -161,3 +161,41 @@ $(document).on("click", ".arrowBtn", function () {
   $('.systemBox li').removeClass("on");
   $(this).parents('li').toggleClass("on");
 });
+
+
+
+
+//제품슬라이드
+$(document).ready(function () {
+  $('.sliderWrap').slick({
+    slide: 'div',
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    speed: 500,
+    arrows: true,
+    dots: false,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    vertical: false,
+    prevArrow: "<button type='button' class='slickPrev'>Previous</button>",
+    nextArrow: "<button type='button' class='slickNext'>Next</button>",
+    draggable: true,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 4
+        }
+          },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 5
+        }
+          }
+        ]
+
+  });
+});

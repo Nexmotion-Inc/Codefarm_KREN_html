@@ -146,25 +146,17 @@
     </header>
 
 
-<!--비디오 구조 수정 start-->
+    <!--비디오 구조 수정 start-->
     <div class="videoWrap">
-      <div class="videoTxt">
-        <h1><b>신뢰</b>와 <b>협력</b>을 기반으로
-          <b>대학 시스템의 혁신</b>주도합니다.
-        </h1>
-        <span>지속 가능한 혁신을 통해 대학의 미래를 밝히는 길을 함께 만들어갑니다.
-          신뢰와 협력으로, 우리는 더 나은 대학 IT 시스템을 현실로 만듭니다.</span>
-        <a href="" target="" class="more">더보기</a>
-        <button id="playButton" class="playButton"></button>
-      </div>
+      <button id="playButton" class="playButton"></button>
       <div class="videoContainer">
         <video id="myVideo" autoplay muted poster="video-poster.jpg">
           <source src="./img/kren_main_video_sample_240411.mp4" type="video/mp4">
         </video>
       </div>
     </div>
-<!--비디오 구조 수정 end-->
-   
+    <!--비디오 구조 수정 end-->
+
     <div id="mainCont">
       <div id="subCont">
         <ul>
@@ -233,7 +225,13 @@
               </div>
             </div>
 
-            <div class="swiper-pagination conferPagination"></div>
+            <div class="paginationWrap">
+              <div class="swiper-pagination conferPagination">
+              </div>
+              <div class="playCrtl">
+                <button id="conPlayBtn" class=""></button>
+              </div>
+            </div>
             <div class="swiper conferSwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="./img/img_conference01.png"></div>
@@ -356,14 +354,18 @@
       </div>
     </footer>
   </div>
-
   <script>
     //컨퍼런스 슬라이드
-    var swiper = new Swiper(".conferSwiper", {
+    var mySwiper = new Swiper(".conferSwiper", {
       slidesPerView: 1,
       spaceBetween: 30,
       loop: true,
       centeredSlides: false,
+      autoplay: { //자동슬라이드 (false-비활성화)          
+        delay: 4000, // 시간 설정          
+        disableOnInteraction: false, // false-스와이프 후 자동 재생
+      },
+      navigation: false,
       pagination: {
         el: ".conferPagination",
         clickable: true,
@@ -371,59 +373,60 @@
           return '<span class="' + className + '">' + (index + 1) + "</span>";
         },
       },
-      navigation: false,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    })
+    var sw = 0;
+    $('#conPlayBtn').click(function() {
+      if (sw == 0) {
+        $('#conPlayBtn').addClass('on');
+        mySwiper.autoplay.stop();
+        sw = 1;
+      } else {
+        $('#conPlayBtn').removeClass('on');
+        mySwiper.autoplay.start();
+        sw = 0;
+      }
     });
 
   </script>
+
   <script>
     //동참 슬라이드
+
     var swiper = new Swiper(".joinSlide", {
       slidesPerView: 3,
-      slidesOffsetBefore: 403,
-      slidesOffsetAfter: -500,
-      slidesPerGroup: 1,
-      centeredSlides: false,
-      centeredSlidesBounds: false,
-      slideToClickedSlide: true,
-      //      initialSlide: 0,
-      grabCursor: true,
-      loopAdditionalSlides: 1,
       spaceBetween: 80,
-      loop: false,
+      direction: getDirection(),
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: { //자동슬라이드 (false-비활성화)          
+        delay: 4000, // 시간 설정          
+        disableOnInteraction: false, // false-스와이프 후 자동 재생
+      },
       pagination: {
         el: ".joinagination",
         clickable: true,
       },
-      //      debugger: true,
-      mousewheel: true,
-      breakpoints: {
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 40,
-          slideToClickedSlide: true,
+      on: {
+        resize: function() {
+          swiper.changeDirection(getDirection());
         },
-        1024: {
-          slidesPerView: 1,
-          spaceBetween: 60,
-          slideToClickedSlide: true,
-        },
-        1400: {
-          slidesPerView: 2,
-          spaceBetween: 60,
-          slideToClickedSlide: true,
-        },
-        1800: {
-          slidesPerView: 3,
-          spaceBetween: 100,
-          slideToClickedSlide: true,
-        }
-
       },
     });
 
+    function getDirection() {
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+      return direction;
+    }
   </script>
-  
-<!--비디오 구조 스크립트 수정 start-->
+
+  <!--비디오 구조 스크립트 수정 start-->
   <script>
     //비디오멈춤
     const video = document.getElementById("myVideo");
@@ -442,7 +445,7 @@
     });
 
   </script>
-<!--비디오 구조 스크립트 수정 end-->
+  <!--비디오 구조 스크립트 수정 end-->
 
 </body>
 

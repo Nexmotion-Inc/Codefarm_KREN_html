@@ -4,13 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
   <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
-  <link href="../assets/css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
   <script src="../assets/js/jquery-2.1.4.min.js"></script>
-  <script src="../assets/js/scroll.js"></script>
   <script src="../assets/js/design.js"></script>
-  <script src="../assets/js/swiper.min.js"></script>
-
+  <script src="../assets/js/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <title>한국교육정보화재단</title>
 </head>
@@ -152,25 +150,22 @@
     <div class="partnerBg">
       <div id="subCont">
 
-        <!--슬라이드-->
-        <div class="carouselMain">
-          <div class="carouselWrapper">
-            <div class="carouselSlide">
-              <img src="../img/img_slide.png" alt="이미지" />
-            </div>
-            <div class="carouselSlide">
-              <img src="../img/img_slide.png" alt="이미지" />
-            </div>
-            <div class="carouselSlide">
-              <img src="../img/img_slide.png" alt="이미지" />
-            </div>
+      <!--슬라이드 수정 start-->
+      <div class="swiper bannerSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="../img/img_slide.png"></div>
+          <div class="swiper-slide"><img src="../img/img_slide.png"></div>
+          <div class="swiper-slide"><img src="../img/img_slide.png"></div>
+        </div>
+        <div class="bannerWrap">
+          <div class="swiper-pagination bannerPagination">
           </div>
-          <div class="carouselPagination">
-            <div class="carouselCircle"></div>
-            <div class="carouselCircle"></div>
-            <div class="carouselCircle"></div>
+          <div class="bannerBtnWrap">
+            <button id="bannerBtn" class=""></button>
           </div>
         </div>
+      </div>
+      <!--슬라이드 수정end-->
 
         <div class="serchTab">
           <ul class="tab">
@@ -370,6 +365,7 @@
       </div>
     </footer>
   </div>
+
 </body>
 
 </html>

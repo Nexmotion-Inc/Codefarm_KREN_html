@@ -38,94 +38,104 @@ $(document).on("click", ".btnClose", function () {
 });
 
 
+
+//마켓 배너 슬라이드
+//충돌로 인해 html 파일 내부 작성으로 변경
+//$(document).ready(function () {
+//  const swiper = document.querySelector('.carouselWrapper');
+//  const prevButtons = document.querySelectorAll('.carouselPrev');
+//  const nextButtons = document.querySelectorAll('.carouselNext');
+//  const bullets = document.querySelectorAll('.carouselCircle');
+//
+//  let currentSlide = 0;
+//
+//  const imgWidth = $(".carouselWrapper").width();
+//
+//  function showSlide(slideIndex) {
+//    swiper.style.transform = `translateX(-${slideIndex * imgWidth}px)`;
+//    currentSlide = slideIndex;
+//
+//    bullets.forEach((bullet, index) => {
+//      if (index === currentSlide) {
+//        bullet.classList.add('active');
+//      } else {
+//        bullet.classList.remove('active');
+//      }
+//    });
+//  }
+//
+//  prevButtons.forEach((prevButton) => {
+//    prevButton.addEventListener('click', () => {
+//      if (currentSlide > 0) {
+//        showSlide(currentSlide - 1);
+//      }
+//    });
+//  });
+//
+//  nextButtons.forEach((nextButton) => {
+//    nextButton.addEventListener('click', () => {
+//      if (currentSlide < 2) {
+//        showSlide(currentSlide + 1);
+//      }
+//    });
+//  });
+//
+//  bullets.forEach((bullet, index) => {
+//    bullet.addEventListener('click', () => {
+//      showSlide(index);
+//    });
+//  });
+//  showSlide(0);
+//});
+
+
+
+
+//소개 접기 폈기
+$(document).on("click", ".arrowBtn", function () {
+  $('.systemBox li').removeClass("on");
+  $(this).parents('li').toggleClass("on");
+});
+
+
 //마켓 배너 슬라이드
 $(document).ready(function () {
-  const swiper = document.querySelector('.carouselWrapper');
-  const prevButtons = document.querySelectorAll('.carouselPrev');
-  const nextButtons = document.querySelectorAll('.carouselNext');
-  const bullets = document.querySelectorAll('.carouselCircle');
-
-  let currentSlide = 0;
-
-  /*배너 사이즈 측정하여 다른 사이즈의 배너에도 호환되도록 했습니다*/
-  const imgWidth = $(".carouselWrapper").width();
-
-  function showSlide(slideIndex) {
-    swiper.style.transform = `translateX(-${slideIndex * imgWidth}px)`;
-    currentSlide = slideIndex;
-
-    bullets.forEach((bullet, index) => {
-      if (index === currentSlide) {
-        bullet.classList.add('active');
-      } else {
-        bullet.classList.remove('active');
-      }
-    });
-  }
-
-  prevButtons.forEach((prevButton) => {
-    prevButton.addEventListener('click', () => {
-      if (currentSlide > 0) {
-        showSlide(currentSlide - 1);
-      }
-    });
-  });
-
-  nextButtons.forEach((nextButton) => {
-    nextButton.addEventListener('click', () => {
-      if (currentSlide < 2) {
-        showSlide(currentSlide + 1);
-      }
-    });
-  });
-
-  bullets.forEach((bullet, index) => {
-    bullet.addEventListener('click', () => {
-      showSlide(index);
-    });
-  });
-
-  showSlide(0);
-});
-
-//제품슬라이드
-$(document).ready(function () {
-  $('.sliderWrap').slick({
-    slide: 'div',
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 500,
-    arrows: true,
-    dots: false,
-    autoplay: false,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-    vertical: false,
-    prevArrow: "<button type='button' class='slickPrev'>Previous</button>",
-    nextArrow: "<button type='button' class='slickNext'>Next</button>",
-    draggable: true,
-    responsive: [
-      {
-        breakpoint: 960,
-        settings: {
-          slidesToShow: 4
-        }
-          },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 5
-        }
-          }
-        ]
-
+  var mySwiper = new Swiper(".bannerSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: false,
+    autoplay: { //자동슬라이드 (false-비활성화)          
+      delay: 4000, // 시간 설정          
+      disableOnInteraction: false, // false-스와이프 후 자동 재생
+    },
+    navigation: false,
+    pagination: {
+      el: ".bannerPagination",
+      clickable: true,
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    }
+  })
+  var sw = 0;
+  $('#bannerBtn').click(function () {
+    if (sw == 0) {
+      $('#bannerBtn').addClass('on');
+      mySwiper.autoplay.stop();
+      sw = 1;
+    } else {
+      $('#bannerBtn').removeClass('on');
+      mySwiper.autoplay.start();
+      sw = 0;
+    }
   });
 });
 
-//리뷰 슬라이드
+
+//마켓 리뷰
 $(document).ready(function () {
-  var swiper = new Swiper('.reviewSwiper', {
+  var reviewSw = new Swiper('.reviewSwiper', {
     slidesPerView: 3,
     centeredSlides: true,
     loop: true,
@@ -140,14 +150,14 @@ $(document).ready(function () {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
+    }
   });
 });
+
+
 
 //소개 접기 폈기
 $(document).on("click", ".arrowBtn", function () {
   $('.systemBox li').removeClass("on");
   $(this).parents('li').toggleClass("on");
 });
-
-

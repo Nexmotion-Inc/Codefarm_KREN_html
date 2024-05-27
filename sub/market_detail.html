@@ -286,6 +286,55 @@
       </div>
     </footer>
   </div>
+  <script>
+    //제품 슬라이드 스크립트
+    const swiper = document.querySelector('.carouselWrapper');
+    const prevButtons = document.querySelectorAll('.carouselPrev');
+    const nextButtons = document.querySelectorAll('.carouselNext');
+    const bullets = document.querySelectorAll('.carouselCircle');
+
+    let currentSlide = 0;
+
+    const imgWidth = $(".carouselWrapper").width();
+
+    function showSlide(slideIndex) {
+      swiper.style.transform = `translateX(-${slideIndex * imgWidth}px)`;
+      currentSlide = slideIndex;
+
+      bullets.forEach((bullet, index) => {
+        if (index === currentSlide) {
+          bullet.classList.add('active');
+        } else {
+          bullet.classList.remove('active');
+        }
+      });
+    }
+
+    prevButtons.forEach((prevButton) => {
+      prevButton.addEventListener('click', () => {
+        if (currentSlide > 0) {
+          showSlide(currentSlide - 1);
+        }
+      });
+    });
+
+    nextButtons.forEach((nextButton) => {
+      nextButton.addEventListener('click', () => {
+        if (currentSlide < 2) {
+          showSlide(currentSlide + 1);
+        }
+      });
+    });
+
+    bullets.forEach((bullet, index) => {
+      bullet.addEventListener('click', () => {
+        showSlide(index);
+      });
+    });
+
+    showSlide(0);
+
+  </script>
 </body>
 
 </html>

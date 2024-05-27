@@ -164,6 +164,22 @@ a.fax {cursor: default;}
 .carouselCircle.active {background-color: #fff; opacity: 1;}
 
 
+/*마켓 슬라이드*/
+.bannerSwiper{margin-bottom: 24px;}
+.bannerWrap {height: 32px; justify-content: flex-end; left: unset; bottom: unset; position: absolute; right: calc(50% - 40px); bottom: 10px;}
+.bannerSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {bottom: -15px;}
+#bannerBtn {display: inline-block; position: absolute; width: 16px; height: 16px; background: no-repeat 50% 50%; background: url(../../img/btn-pause-banner.svg) no-repeat center; border: none; cursor: pointer;}  
+#bannerBtn.on {background: url(../../img/btn-play-banner.svg) no-repeat;} 
+.bannerBtnWrap{position: absolute; right: 0; z-index: 10; cursor: pointer;}
+.bannerWrap .swiper-pagination {position: relative;}
+
+.bannerSwiper .conferPagination.swiper-pagination-bullets.swiper-pagination-horizontal {height: 32px; right: 0; justify-content: flex-end; left: unset; bottom: unset; width: 210px;}
+.bannerSwiper .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+.bannerSwiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {width: 10px; height: 10px; background: #fff; border: none; opacity: .2; line-height: 32px;}
+.bannerSwiper .swiper-pagination-bullet-active {background: #fff; color: #fff !important; font-size: 15.21px; background: #fff !important; opacity: 1 !important;}
+
+
+
 /*탭*/
 .serchTab {padding-bottom: 50px; margin-bottom: 64px;}
 .serchTab .tab {display: flex; float: left;}
@@ -445,19 +461,19 @@ video::-webkit-media-controls-fullscreen-button { display: none !important; }
 margin-bottom: 32px; display: inline-block;}
 .conference div > a.more {display: flex; width: 127px; height: 37px; padding: 8px 16px 8px 16px; border-radius: 2px; border: 1px solid #120D4D; background:#fff url(../../img/ico_arrow_b.svg) no-repeat 90px 6px; font-size: 16px; font-weight: 600; line-height: 20.8px; color: #120D4D; margin-bottom: 45px;}
 
-.swiper-pagination-bullets.swiper-pagination-horizontal
 
 .paginationWrap {top: 198px; height: 32px; justify-content: flex-end; left: unset; bottom: unset; position: absolute; right: 0; top: -16px;}
 .conferPagination {width: 210px;}
 #conPlayBtn { display: inline-block; position: absolute; width: 32px; height: 32px; background: no-repeat 50% 50%; background: url(../../img/ico_conPlayBtn01.svg) no-repeat; border: none; right: 0;} 
 #conPlayBtn.on {background: url(../../img/ico_conPlayBtn02.svg) no-repeat;} 
 .playCrtl{position: absolute; right: 0; z-index: 10; cursor: pointer;}
-.paginationWrap{position: absolute; right: 0; bottom: 505px;}
+.paginationWrap{position: absolute; right: 0; top: 198px;}
 
-.conferPagination.swiper-pagination-bullets.swiper-pagination-horizontal {height: 32px; right: 0; justify-content: flex-end; left: unset; bottom: unset; width: 210px;}
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px); width: 32px; height: 32px; background: none; border: 1px solid #7E7E7E; opacity: 1; line-height: 32px;}
 
-.swiper-pagination-bullet-active {background: #7E7E7E; color: #fff !important; font-size: 15.21px; font-weight: 500; line-height: 24.34px; letter-spacing: 0.01em; text-align: center; background: #7E7E7E !important;}
+
+.paginationWrap .conferPagination.swiper-pagination-bullets.swiper-pagination-horizontal {height: 32px; right: 0; justify-content: flex-end; left: unset; bottom: unset; width: 210px;}
+.paginationWrap .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .paginationWrap  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px); width: 32px; height: 32px; background: none; border: 1px solid #7E7E7E; opacity: 1; line-height: 32px;}
+.paginationWrap .swiper-pagination-bullet-active {background: #7E7E7E; color: #fff !important; font-size: 15.21px; font-weight: 500; line-height: 24.34px; letter-spacing: 0.01em; text-align: center; background: #7E7E7E !important;}
 
 
 

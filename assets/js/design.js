@@ -164,6 +164,10 @@ $(document).on("click", ".arrowBtn", function () {
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 //제품슬라이드
 $(document).ready(function () {
   $('.sliderWrap').slick({
@@ -187,14 +191,26 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 4
         }
+<<<<<<< HEAD
     },
+=======
+          },
+>>>>>>> main
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 5
         }
+<<<<<<< HEAD
         }
         ]
   });
 });
 
+=======
+          }
+        ]
+
+  });
+});
+>>>>>>> main

@@ -167,12 +167,8 @@ a.fax {cursor: default;}
 
 
 /*마켓 슬라이드*/
-<<<<<<< HEAD
 .bannerSwiper{margin-bottom: 24px; border-radius: 8px;}
 .bannerSwiper img {border-radius: 8px;}
-=======
-.bannerSwiper{margin-bottom: 24px;}
->>>>>>> main
 .bannerWrap {height: 32px; justify-content: flex-end; left: unset; bottom: unset; position: absolute; right: calc(50% - 40px); bottom: 10px;}
 .bannerSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {bottom: -15px;}
 #bannerBtn {display: inline-block; position: absolute; width: 16px; height: 16px; background: no-repeat 50% 50%; background: url(../../img/btn-pause-banner.svg) no-repeat center; border: none; cursor: pointer;}  
@@ -813,16 +809,8 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   #quickMenu {width: 100%; top: unset; left: unset; overflow-x: inherit; position: absolute; height: 32px;}
   #quickMenu ul {display: flex;}
   #quickMenu ul li{min-width: 105px; height: 32px; padding: 6px 12px 6px 12px; border-radius: 20px; border: 1px solid #ccc;}
-<<<<<<< HEAD
-<<<<<<< Updated upstream
 
-=======
   #quickMenu li span {text-align: center;}
->>>>>>> Stashed changes
-=======
-  
-  
->>>>>>> main
   .titleH1 {width: 100%; font-size: 20px;font-weight: 700;line-height: 28px; margin-top: 32px; margin-bottom: 32px;}
   
   /* 소개*/

@@ -12,13 +12,17 @@ $(document).ready(function () {
 
 //3차 메뉴 스크롤 스크립트
 $(document).ready(function () {
-  var currentPosition = parseInt($("#quickMenu").css("top"));
-  $(window).scroll(function () {
-    var position = $(window).scrollTop();
-    $("#quickMenu").stop().animate({
-      "top": position + currentPosition + "px"
-    }, 800);
-  });
+  var WinW = $(window).width();
+
+  if (WinW > 1280) {
+    var currentPosition = parseInt($("#quickMenu").css("top"));
+    $(window).scroll(function () {
+      var position = $(window).scrollTop();
+      $("#quickMenu").stop().animate({
+        "top": position + currentPosition + "px"
+      }, 800);
+    });
+  }
 });
 
 //햄버거버튼
@@ -88,9 +92,6 @@ $(document).on("click", ".btnClose", function () {
 //  showSlide(0);
 //});
 
-
-
-
 //소개 접기 폈기
 $(document).on("click", ".arrowBtn", function () {
   $('.systemBox li').removeClass("on");
@@ -155,19 +156,6 @@ $(document).ready(function () {
 });
 
 
-
-//소개 접기 폈기
-$(document).on("click", ".arrowBtn", function () {
-  $('.systemBox li').removeClass("on");
-  $(this).parents('li').toggleClass("on");
-});
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 //제품슬라이드
 $(document).ready(function () {
   $('.sliderWrap').slick({
@@ -191,26 +179,13 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 4
         }
-<<<<<<< HEAD
     },
-=======
-          },
->>>>>>> main
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 5
         }
-<<<<<<< HEAD
-        }
-        ]
+}
+]
   });
 });
-
-=======
-          }
-        ]
-
-  });
-});
->>>>>>> main

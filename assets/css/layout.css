@@ -434,10 +434,9 @@ video::-webkit-media-controls-fullscreen-button { display: none !important; }
 .videoWrap video{display: -webkit-box; width: 100%;}
 #mainCont .leftDiv {display: flex; align-items: flex-start; margin-bottom: 240px;}
 #mainCont .leftDiv div {width: 100%;}
-.leftDiv .serviceImg{background: url(../../img/img_main_service.png) no-repeat; min-width: 455px; height: 680px; border-radius: 20px; display: inline-block; margin-left: 50px;}
 .leftDiv .serviceIcon i{width: 265px; height: 265px; border-radius: 999px; display:inline-block; }
-.leftDiv .serviceIcon i:nth-child(1){background: url(../../img/img_serviceIcon_01.png) no-repeat; margin-right: 20px;}
-.leftDiv .serviceIcon i:nth-child(2){width: 265px; height: 265px; border-radius: 999px; display:inline-block; background: url(../../img/img_serviceIcon_02.png) no-repeat; }
+.leftDiv .serviceIcon i:nth-child(1){background: url(../../img/img_serviceIcon_01.png) no-repeat center; margin-right: 20px;}
+.leftDiv .serviceIcon i:nth-child(2){ background: url(../../img/img_serviceIcon_02.png) no-repeat center;}
 
 .leftDiv div em{ font-size: 24px; display: inline-block; font-weight: 600; line-height: 31.2px; color: #545B80; margin-bottom: 20px;}
 .leftDiv div > h1 { font-size: 44px; font-weight: 600; line-height: 61.6px; color: #120D4D; margin-bottom: 32px;}
@@ -446,15 +445,21 @@ video::-webkit-media-controls-fullscreen-button { display: none !important; }
 .rightDiv div > span {display: inline-block; width: 427px;}
 
 #mainCont .rightDiv {display: flex; align-items: flex-start; margin-bottom: 240px;}
-.rightDiv .eduImg{background: url(../../img/img_main_edu.png) no-repeat; min-width: 455px; height: 680px; border-radius: 20px; display: inline-block; margin-right: 50px;}
 .rightDiv div em{ font-size: 24px; font-weight: 600; line-height: 31.2px; color: #545B80; margin-bottom: 20px; display: inline-block;}
 .rightDiv div > h1 { font-size: 44px; font-weight: 600; line-height: 61.6px; color: #120D4D; margin-bottom: 32px;}
 .rightDiv div > span { font-size: 18px; font-weight: 500; line-height: 27px; color: #7E7E7E; margin-bottom: 32px; display: inline-block; white-space: pre-line;}
 .rightDiv div > a.more {display: flex; width: 127px; height: 37px; padding: 8px 16px 8px 16px; border-radius: 2px; border: 1px solid #120D4D; background:#fff url(../../img/ico_arrow_b.svg) no-repeat 90px 6px; font-size: 16px; font-weight: 600; line-height: 20.8px; color: #120D4D; margin-bottom: 85px;}
 
-.cloudImg {background: url(../../img/img_main_cloud.png) no-repeat; min-width: 455px; height: 680px; border-radius: 20px; display: inline-block; margin-right: 50px;}
-.mailImg {background: url(../../img/img_main_mail.png) no-repeat; min-width: 455px; height: 680px; border-radius: 20px; display: inline-block; margin-right: 50px;}
 
+
+.serviceImg{background: url(../../img/img_main_service.png) no-repeat; margin-left: 50px;}
+.eduImg{background: url(../../img/img_main_edu.png) no-repeat; margin-right: 50px;}
+.cloudImg {background: url(../../img/img_main_cloud.png) no-repeat; margin-left: 50px;}
+.mailImg {background: url(../../img/img_main_mail.png) no-repeat; margin-right: 50px;}
+
+.rightDiv > i,
+.leftDiv > i,
+i.serviceImg{min-width: 455px; height: 680px; border-radius: 20px; display: inline-block;}
 
 .conference {position: relative;}
 .conference > div {display: flex;}  
@@ -477,7 +482,7 @@ margin-bottom: 32px; display: inline-block;}
 
 
 .paginationWrap .conferPagination.swiper-pagination-bullets.swiper-pagination-horizontal {height: 32px; right: 0; justify-content: flex-end; left: unset; bottom: unset; width: 210px;}
-.paginationWrap .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .paginationWrap  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px); width: 32px; height: 32px; background: none; border: 1px solid #7E7E7E; opacity: 1; line-height: 32px;}
+.paginationWrap .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .paginationWrap  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px); width: 32px; height: 32px; background: none; border: 1px solid #7E7E7E; opacity: 1; line-height: 32px; text-align: center;}
 .paginationWrap .swiper-pagination-bullet-active {background: #7E7E7E; color: #fff !important; font-size: 15.21px; font-weight: 500; line-height: 24.34px; letter-spacing: 0.01em; text-align: center; background: #7E7E7E !important;}
 
 
@@ -493,16 +498,20 @@ margin-bottom: 32px; display: inline-block;}
 .joinTxt span{color: #fff; font-size: 22px;font-weight: 500;line-height: 33px;text-align: center; opacity: .8;}
 .joinSlide {width: 100%; height: 675px;}
 .joinSlide .swiper-slide {height: 550px;}
-.joinSlide .swiper-slide > div{text-align: center;}
 .joinSlide .swiper-slide > div em{font-size: 32px; font-weight: 600; line-height: 41.6px; color: #fff;}
 .joinSlide .swiper-slide > div p{font-size: 100px; font-weight: 600; line-height: 130px; text-align: center; color: #fff;}
 .joinSlide .swiper-slide > div span{font-size: 32px; font-weight: 400; line-height: 41.6px; color: #fff;}
-.joinSlide .swiper-slide .bTxt {white-space: pre-line; color: #fff; font-size: 26px; font-weight: 400; line-height: 39px; text-align: center; position: absolute; bottom: -121px;}
-.joinSlide .swiper-slide:nth-child(1) > div {background: url(../../img/img_joinSlidImg01.png) no-repeat center; background-size: contain;}
-.joinSlide .swiper-slide:nth-child(2) > div {background: url(../../img/img_joinSlidImg02.png) no-repeat center; background-size: contain;}
-.joinSlide .swiper-slide:nth-child(3) > div {background: url(../../img/img_joinSlidImg03.png) no-repeat center; background-size: contain;}
-.joinSlide .swiper-slide:nth-child(4) > div {background: url(../../img/img_joinSlidImg03.png) no-repeat center; background-size: contain;}
-.joinSlide .swiper-slide:nth-child(5) > div {background: url(../../img/img_joinSlidImg03.png) no-repeat center; background-size: contain;}
+.joinSlide .swiper-slide .bTxt {white-space: pre-line; color: #fff; font-size: 26px; font-weight: 400; line-height: 39px; text-align: center; position: absolute; bottom: -121px; width: 500px;}
+.joinSlide .swiper-slide:nth-child(1) > div {background: url(../../img/img_joinSlidImg01.png) no-repeat center;}
+.joinSlide .swiper-slide:nth-child(2) > div {background: url(../../img/img_joinSlidImg02.png) no-repeat center;}
+.joinSlide .swiper-slide:nth-child(3) > div {background: url(../../img/img_joinSlidImg03.png) no-repeat center;}
+.joinSlide .swiper-slide:nth-child(4) > div {background: url(../../img/img_joinSlidImg04.png) no-repeat center;}
+.joinSlide .swiper-slide:nth-child(5) > div {background: url(../../img/img_joinSlidImg05.png) no-repeat center;}
+.joinSlide .swiper-slide > div{text-align: center; background-size: cover;}
+
+
+.joinSlide .swiper-slide:nth-child(4) .bTxt,  
+.joinSlide .swiper-slide:nth-child(5) .bTxt {line-height: 120px;}
 
 .joinSlide .swiper-wrapper {margin-left: -300px;}
 .joinSlide .swiper-slide > div { text-align: center; width: 455px; display: flex; justify-content: center; height: 550px; border-radius: 9999px; align-items: center;}
@@ -818,7 +827,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   #topMenu {display: none;}
   #wrap {width: 100%; min-width: 100%;}
   #wrap.hAuto {width: 100%;}
-  #mainCont #subCont {max-width: 100%; width: 100%; padding: 0 16px 108px;}
+  #mainCont #subCont {max-width: 100%; width: 100%; padding: 0 32px 108px;}
   .systemCon i {width: 100%;}
   
   .serchTab { padding-bottom: 0px; margin-bottom: 32px; margin-top: 24px;}
@@ -845,7 +854,26 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   #subCont {max-width: 100%; padding: 0 32px 10em;}
   .btnLogo {margin-left: 32px;}
   .hBottom a {margin-right: 32px;}
-  
+  .rightDiv > i,
+  .leftDiv > i, 
+  i.serviceImg{min-width: 391px; height: 560px; border-radius: 16px; background-size: contain}
+  .leftDiv div > h1,
+  .rightDiv div > h1,
+  .conference div > h1{font-size: 36px; font-weight: 600; line-height: 50.4px;}
+  .leftDiv div em,
+  .rightDiv div em,
+  .conference div em {font-size: 16px; font-weight: 600; line-height: 20.8px; margin-bottom: 16px;}
+  .leftDiv div > span,
+  .rightDiv div > span,
+  .conference div > span { font-size: 15px; font-weight: 500; line-height: 22.5px; text-align: left;}
+ .leftDiv .serviceIcon i{width: 228px; height: 228px; background-size: contain;}
+  .leftDiv div  > a.more ,
+  .rightDiv div  > a.more {margin-bottom: 33px;}
+  .conference div  > a.more {margin-bottom: 53px;}
+  .joinSlide .swiper-slide > div{width: 391px; height: 488px;}
+  .joinSlide .swiper-slide .bTxt { font-size: 20px; font-weight: 400; line-height: 30px; text-align: center; bottom: -120px;}
+  .joinSlide .swiper-slide:nth-child(4) .bTxt, .joinSlide .swiper-slide:nth-child(5) .bTxt {line-height: 100px;}
+  .joinSlide .swiper-wrapper {margin-left: 0px;}
   /*소개*/
   .network .txtBox {width: 100%; height: auto !important; min-height: 180px;}
   .networkTxt > div.imgWrap  {width: 472px; min-width: 50%; height: 348px; border-radius: 12px;}
@@ -864,7 +892,8 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   html {min-width: 350px;}
   #subCont {padding: 0 16px 7em;}
   .titleH1 {width: 100%; font-size: 20px;font-weight: 700;line-height: 28px; margin-top: 32px; margin-bottom: 93px;}
-  
+  #mainCont #subCont {padding: 0 16px 108px;}
+
   .hAuto #quickMenu {top: 120px;}
   #quickMenu {top: 24px;}
   #quickMenu ul li {margin-right: 8px;}
@@ -947,10 +976,9 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .bannerSwiper {margin-top: 8px;}
   .bannerWrap {right: calc(50% - 20px)}
   .sliderWrap .imgWrap { width:259px; height:240px;}
-  
-  
-  
-  
+}
+
+@media only screen and (max-device-width:830px) {
    /*메인*/
   #mainCont {padding-top: 80px;}
   .joinSlide .swiper-slide > div{width: 283px; height: 342.69px; border-radius: 999px;}
@@ -960,6 +988,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .leftDiv .serviceImg, .rightDiv .eduImg, .leftDiv i, .rightDiv i
   {margin-left: 0; margin-right: 0; height: 502px; width: 100%; min-width: 100%; max-height: 502px; background-size: contain;}
   .rightDiv div > span,.leftDiv div > span {width: 100%; word-break: keep-all; white-space: normal;}
+  .leftDiv div > span {max-width: 100%;}
   .rightDiv div > a.more,
   .leftDiv div > a.more {margin-bottom: 32px;}
   #mainCont .rightDiv { flex-direction: column-reverse; margin-bottom: 80px;}
@@ -973,7 +1002,6 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .joinagination.swiper-pagination-bullets.swiper-pagination-horizontal {top: 60px;}
   .joinTxt p{ font-size: 32px; font-weight: 600; line-height: 41.6px; text-align: center;margin-bottom: 50px; padding: 0 10px;}
   .joinTxt{margin-bottom: 52px;}
-  .joinSlide .swiper-slide .bTxt {font-size: 16px; font-weight: 400; line-height: 24px; text-align: center; width: 100%; min-width: 280px;}
   .joinSlide .swiper-slide {height: 292px;}
   .joinTxt span{ font-size: 16px; font-weight: 500; line-height: 24px; text-align: center;}
   .joinSlide .swiper-wrapper {margin-left: 100px;}
@@ -987,12 +1015,15 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .playCrtl {right: calc(50% - 60px);}
   .conference em, .rightDiv div em, .leftDiv div em {font-size: 16px; font-weight: 600; line-height: 20.8px; text-align: left; margin-bottom: 16px;}
   .paginationWrap .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .paginationWrap .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {width: 24px; height: 24px; line-height: 24px;}
-  
-  
+  .joinSlide .swiper-slide:nth-child(4) .bTxt, .joinSlide .swiper-slide:nth-child(5) .bTxt {line-height: 70px;}
 }
+
+
 
 @media only screen and (max-device-width:500px) {
 .organImg  {width: 100%; background: url(../../img/img_organImg_m.png) no-repeat center top; background-size: contain; margin-top: 32px; min-height: 1000px; transform:scale(1.04);}
+.joinSlide .swiper-slide .bTxt {font-size: 16px; font-weight: 400; line-height: 24px; text-align: center; width: 100%; min-width: 280px; bottom: -120px;}
+  
 }
 @media only screen and (max-device-width:432px) {
   .joinagination.swiper-pagination-bullets.swiper-pagination-horizontal {top: 100px;}

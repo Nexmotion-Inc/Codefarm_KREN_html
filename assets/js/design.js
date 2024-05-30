@@ -92,6 +92,20 @@ $(document).on("click", ".btnClose", function () {
 //  showSlide(0);
 //});
 
+//모바일 3차 메뉴 클릭했을때
+$(document).ready(function () {
+  var WinW = $(window).width();
+
+  if (WinW < 800) {
+    $('#quickMenu li').click(function () {
+      $('#quickMenu li').removeClass('on');
+      $(this).addClass('on');
+    });
+  }
+});
+
+
+
 //소개 접기 폈기
 $(document).on("click", ".arrowBtn", function () {
   $('.systemBox li').removeClass("on");

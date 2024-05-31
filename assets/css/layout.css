@@ -1,12 +1,10 @@
 @charset "utf-8";
 
 html, body {font-size: 10px;}
-html, body {height: 100%;}
 #wrap { display: flex; flex-direction: column;}
-.cartWrap, #subCont, .mailServiceWrap {flex: 1; height: 100%;}
-
+.cartWrap, #subCont {flex: 1; height: 100%;}
 /*포커스*/
-#wrap{min-width: 1360px; overflow-x: hidden;/* height: 100%;*/ min-height: 100%;}
+#wrap{min-width: 1360px; overflow-x: hidden; min-height: 100%;}
 #wrap.hAuto{height: auto; min-height: calc(100% - 402px);}
 
 /*인풋 셀렉트*/
@@ -83,20 +81,21 @@ a.menuBtn.closedNavMBtn {background: url(../../img/ico_close.svg) center no-repe
 
 /*상단메뉴*/
 #topMenu {height: 30px; display: flex; width: 100%; position: relative; align-items: flex-start; justify-content: space-between;}
-#topMenu ul li { color: #fff; float: left; vertical-align: middle; text-align: center; }
+#topMenu ul li { color: #fff; float: left; vertical-align: middle; text-align: center; min-width: 80px;}
 #topMenu ul {background: #fff;}
 .menuLink, .submenuLink { text-decoration:none; display: block; width: 150px; font-weight: bold;}
 .menuLink {margin-right: 20px; width: auto; height: 34px; border-radius: 6px; padding: 4px 13px; display: inline-block;  font-size: 16px; font-weight: 600; line-height: 25.6px; letter-spacing: 0.01em; text-align: right; box-sizing: border-box; color: #120D4D; font-weight: 600;}
 .menuLink:hover {background-color: #E0DEF2; text-decoration: none;}
 .topMenuLi:hover .submenu {height: 38px; width: auto;}
-.submenu {position: absolute; height: 0px; visibility: hidden; width: 100%; left: 0px; top: 65px; z-index: 30;}
+.submenu {position: absolute; height: 0px; visibility: hidden; width: 100%; left: 0px; top: 55px; padding-top: 10px; z-index: 50;}
 .submenu {height: 38px; width: auto; }
 .submenu li {display: inline-block; margin-right: 20px; height: 100%; color:#AEAEAE;}
-.submenu a { margin-right: -1px; display: inline-block; font-size: 16px; height: 38px; color:#AEAEAE; font-weight: 600; min-width: 60px;}
+.submenu a { margin-right: -1px; display: inline-block; font-size: 16px; height: 38px; color:#AEAEAE; font-weight: 600; min-width: 60px; line-height: 25.6px;
+letter-spacing: 0.01em; text-align: center;}
 .submenu a:hover{background:url(../../img/ico_nav.svg) no-repeat center 26px; text-decoration: none; background-size: 60px auto; color: #120D4D;}
 .submenu a:hover ,.menuLink:visited ,.menuLink:hover{color: #120D4D;}  
 .submenu.on { visibility: visible;}
-#topMenu > ul > li:nth-of-type(2) .submenu li{margin-right: 14px;}
+#topMenu > ul > li:nth-of-type(2) .submenu li{margin-right: 20px;}
 
 
 .hRight a{font-size: 1.6em; font-weight: bold; margin-right: 20px; width: auto; height: 34px; border-radius: 6px; padding: 4px 10px; color: #120D4D; display: flex;}
@@ -518,8 +517,16 @@ margin-bottom: 32px; display: inline-block;}
 .organImg {background:url(../../img/img_organImg.png) no-repeat center top; background-size: contain; display: inline-block; width: 1120px; height: 1312px; margin-top: 100px; margin-bottom: 94px;}
 
 /*메일서비스*/
-.mailServiceWrap #subCont { height: auto; max-width: 100%;}
-.mailServiceWrap {height: 100vh; margin-top: 24px;}
+.mailServiceWrap #subCont {max-width: 100%;}
+
+@media (max-width: 780px) {
+  .service-mail .list-wrap .service-layout {display: inline-block; width: 100%;}
+  .tab-list ul > li .list-wrap {position: relative !important;}
+  .tab-list ul {flex-direction: column;}
+  .mailServiceWrap .tab-list ul > li:last-of-type > a {top: 76px;}
+  .mailServiceWrap {margin-top: 0px;}
+}
+
 
 /* tab */
 .tab-list ul { position:relative; display: flex; align-items:flex-start; justify-content: space-around;}
@@ -610,12 +617,13 @@ margin-bottom: 32px; display: inline-block;}
 }
 #ft .container .left .botMenu a{ font-size:15px; color:#BBBBBB; padding:0 20px; font-family: 'noto sans kr'; font-weight: 200; line-height: 1.4em;}
 @media all and (max-width:480px) {
-    #ft .container .left .botMenu a{ width:50%; font-size:13px;}
+    #ft .container .left .botMenu a{ width:auto; font-size:13px; margin-right: 24px;}
     #ft .container .left .botMenu a:nth-child(3){padding-left:0;}
 }
 #ft .container .left .botMenu a:first-child{padding-left:0;}
 #ft .container .left .address{margin-top:40px;}
-#ft .container .left .address span{ position: relative; font-size:1.4rem; color:#999999; font-weight: 300; font-family: 'noto sans kr'; padding:0 20px; line-height: 1.4em; display: inline-block; margin-bottom:6px;}
+#ft .container .left .address .tit {color: #fff;}
+#ft .container .left .address span{ position: relative; font-size:1.4rem; color:#bbb; font-weight: 300; font-family: 'noto sans kr'; padding:0 20px; line-height: 1.4em; display: inline-block; margin-bottom:6px;}
 #ft .container .left .address span::before{ content:''; width:1px; height:12px; position:absolute; left:0; top:5px; background-color: rgba(255,255,255,0.2);}
 #ft .container .left .address span.tit{ font-weight: 600; padding-left:0;}
 @media all and (max-width:600px) {
@@ -662,6 +670,8 @@ margin-bottom: 32px; display: inline-block;}
   #ft .container .right .telList ul { display: inline-block; margin-top:10px;}
   #ft .container .right .telList ul li {display: inline-block; width:100%; margin-bottom:5px;}
   #ft .container .right .telList ul li .logo {  width:80px; display: inline-block;}
+  #ft .container .left .copyright { font-size:1rem;}
+
 }
 
 
@@ -876,10 +886,9 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .hAuto #quickMenu {top: 194px;}
   #quickMenu {top: 32px;}
   
-  html {font-size: 10px;}
   #subCont {padding: 0 16px 8.5em;}
   #contHeader {display: ; height: 66px;}
-  #contHeader > div:nth-of-type(2) {margin-top: -60px;}
+  #contHeader > div:nth-of-type(2) {margin-top: -66px; height: 66px; background: #fff;}
   .hBottom ul li:nth-child(1),
   .hBottom ul li:nth-child(2) {display: none;}
   #topMenu {display: none;}
@@ -901,6 +910,10 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   
   /*조직도*/
   .organImg {width: 100%; margin-top: 38px; margin-bottom: 0; height: auto; min-height: 800px;}
+  
+  /*메일서비스*/
+  .mailServiceWrap #wrap {display: inline-block;}
+
 }
 
 
@@ -946,7 +959,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   
   /*서비스*/
   .whatWeServe {margin-top: 117px;}
-
+  .mailServiceWrap #subCont {padding: 0 0 10em;}
 }
 
 /*스마트폰*/
@@ -989,12 +1002,17 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .paginationWrap .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .paginationWrap .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {width: 24px; height: 24px; line-height: 24px;}
   .joinSlide .swiper-slide:nth-child(4) .bTxt, .joinSlide .swiper-slide:nth-child(5) .bTxt {line-height: 70px;}
   
+  
+  /*서비스*/
+  .mailServiceWrap #subCont {padding: 0 32px 20em;}
+  .tab-list ul > li .list-wrap {top: 120px;}
+  
 }
 
 
 
 @media only screen and (max-device-width :767px) {
-  html {min-width: 350px;}
+  #wrap {min-width: 350px;}
   #subCont {padding: 0 16px 7em;}
   .titleH1 {width: 100%; font-size: 20px;font-weight: 700;line-height: 28px; margin-top: 32px; margin-bottom: 93px;}
   #mainCont #subCont {padding: 0 16px 108px;}
@@ -1086,7 +1104,12 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   
   
   /*서비스*/
+  .mailServiceWrap #subCont {min-height: 100%; height: auto;}
   .whatWeServe {margin-top: 88px;}
+  .tab-list ul > li .list-wrap {top:122px;}
+  .mailServiceWrap {display: flex;}
+  .mailServiceWrap #ft { min-height: unset;}
+ 
 }
 
 

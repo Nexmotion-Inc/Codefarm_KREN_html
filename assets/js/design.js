@@ -13,7 +13,6 @@ $(document).ready(function () {
 //3차 메뉴 스크롤 스크립트
 $(document).ready(function () {
   var WinW = $(window).width();
-
   if (WinW > 1280) {
     var currentPosition = parseInt($("#quickMenu").css("top"));
     $(window).scroll(function () {
@@ -24,6 +23,7 @@ $(document).ready(function () {
     });
   }
 });
+
 
 //햄버거버튼
 $(document).on("click", ".mobMenuBtn", function () {
@@ -42,6 +42,12 @@ $(document).on("click", ".btnClose", function () {
 });
 
 
+//모바일 메인네비 
+$(document).ready(function () {
+  $('.mainNav > ul > li').click(function () {
+    $(this).find('ul').toggleClass("show");
+  });
+});
 
 //마켓 배너 슬라이드
 //충돌로 인해 html 파일 내부 작성으로 변경
@@ -174,7 +180,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('.sliderWrap').slick({
     slide: 'div',
-    infinite: true,
+    infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     speed: 500,
@@ -191,15 +197,39 @@ $(document).ready(function () {
       {
         breakpoint: 960,
         settings: {
-          slidesToShow: 4
-        }
-    },
+          slidesToShow: 3
+        },
+        slidesToScroll: 3
+        },
       {
-        breakpoint: 768,
+        breakpoint: 820,
         settings: {
-          slidesToShow: 5
+          slidesToShow: 2
+        },
+        slidesToScroll: 2
+        },
+      {
+        breakpoint: 780,
+        settings: {
+          slidesToShow: 2.5
+        },
+        slidesToScroll: 2.5
+        },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2
+        },
+        slidesToScroll: 2
+        },
+      {
+        breakpoint: 490,
+        settings: {
+          slidesToShow: 1.2
+        },
+        slidesToScroll: 1
         }
-}
-]
+      ]
+
   });
-});
+})

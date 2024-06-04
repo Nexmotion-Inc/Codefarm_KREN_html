@@ -38,7 +38,18 @@ span, p {word-break: keep-all;}
 #subCont { position: relative; max-width: 1120px; margin: 0 auto; min-height: calc(100% - 402px); padding-bottom: 10em; width: 100%;}
 
 /*3차메뉴*/
-#quickMenu{min-width: 100px; height: 140px; position: absolute; top: 220px; z-index: 15; left: -140px;} 
+/*소개*/
+#quickMenu{min-width: 140px; display: flex; height: 140px; position: absolute; top: 290px; margin-left: -40px; z-index: 15; left: -140px; justify-content: flex-end;} 
+#subCont:has(.historyTable) #quickMenu{ top: 100px;}
+/*마켓*/
+#subCont:has(.productList) #quickMenu{ top: 185px;}
+/*서비스*/
+#subCont:has(.addServe) #quickMenu,
+#subCont:has(.whatWeServe) #quickMenu { top: 64px;}
+#subCont:has(.circuit) #quickMenu { top: 69px;}
+.serviceWrap #quickMenu { top: 69px;}
+.serviceWrap .section1 { margin-top: 68px;}
+
 #quickMenu.on{position: relative;} 
 .quickMenuMiddle{ width: 100%; display: flex; flex-direction: column; align-items: flex-end; justify-content: space-between;}
 #quickMenu li {text-align: right; margin-bottom: 12px;}
@@ -267,7 +278,7 @@ span.label {color: #120D4D; display: inline-block; border: 1px solid #120D4D; pa
 /*많은제품보러가기*/
 .productList .sliderWrap {display: flex; flex-wrap: wrap;}
 .productList .sliderWrap .cont{margin-bottom: 20px; margin-right: 23px; width: calc(100% / 3 - 16px);}
-.sliderWrap .imgWrap img {width: 95%; height: 100%; object-fit: contain;}
+.sliderWrap .imgWrap img {width: 85%; height: 100%; object-fit: contain; max-width: 242px;}
 .productListTab ul { float: right;}
 .productList .sliderWrap .cont:nth-child(3n) {margin-right: 0px;}
 .productListTab { height: 35px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between;}
@@ -589,7 +600,8 @@ margin-bottom: 32px; display: inline-block;}
 
 
 /*서비스*/
-.mailServiceWrap #subCont {max-width: 100%;}
+.mailServiceWrap {background-size: inherit !important;}
+.mailServiceWrap #subCont {max-width: 100%; padding-bottom: 7em;}
 .whatWeServe, .addServe, .circuit  {margin-top: 68px;}
 .whatWeServe .arrowIco {display: inline-block; width: 24px; height: 24px; background: url('../../img/ico_arrow_small.svg') no-repeat center; background-size: contain; vertical-align: middle; float: right;}
 .whatWeServe .expList.systemBox li{min-height: 182px; padding: 24px; height: auto;}
@@ -599,19 +611,39 @@ margin-bottom: 32px; display: inline-block;}
 .imgWrapPC img,
 .imgWrapM img{width: 100%; height: 100%; object-fit: contain;}
 
-
 .circuit .serchTab{display: flex; justify-content: space-between; padding-bottom: 0px; margin-bottom: 48px; flex-direction: row;}
 .circuit table{width: 100%;}
 .circuit table th{padding: 16.5px; text-align: center; border: 1px solid #ddd; background: #F0F0F9; color: #2F2D43; font-weight: 700; font-size: 18px;}
 .circuit table td{padding: 16.5px; text-align: center; border: 1px solid #ddd;  font-size: 18px; font-weight: 400; line-height: 28.8px; color: #333;}
 .circuit select {border-radius: 8px;  font-size: 16px; font-weight: 500; line-height: 25.6px; text-align: left; color: #333;}
 
+/*반납신청*/
+.requestReturn .returnBtn {padding: 14px 55px; border-radius: 8px; background-color: #002278;}
+.requestReturn .returnBtn span {color: #fff;}
+.requestReturn ul { margin-bottom: 50px;}
+.requestReturn ul li {font-size: 20px; line-height: 28px;}
+.requestReturn ul li::before {display: inline-block; width: 5px; height: 5px; content: ""; background-color: #506AF5; border-radius: 999px; vertical-align: middle; margin-right: 10px;}
+.requestReturn ul li:nth-child(2) {display: none;}
 
-
-
-
-
-
+/*회선 안내*/
+.circuitTop{width: 100%; display: flex; margin-bottom: 90px; margin-top: 64px;}
+.circuitRright h1{font-size: 46px; font-weight: 400; line-height: 64.4px; white-space: pre-line; margin-bottom: 32px;}
+.circuitRright{margin-right: 20px; display: inline-block;}
+.circuitRright span{ font-size: 18px; font-weight: 400; line-height: 28.8px; text-align: left;}
+.circuitLeft{width: 455px; height: 250px;}
+.circuitLeft img{width: 100%; height: 100%; display: inline-block; border-radius: 12px;}
+.circuitLeft img:nth-of-type(2) {display: none;}
+.circuitBottom {width: 100%;}
+.appProcess {margin-bottom: 82px;}
+.terProcedures {margin-bottom: 82px;}
+.circuitBottom > div > p {font-size: 24px; font-weight: 600; line-height: 38.4px; text-align: left; margin-bottom: 44px;}
+.circuitBottom div > p > span{font-size: 18px;}
+.circuitBottom div > span { font-size: 14px; font-weight: 300; line-height: 22.4px; display: block; color: #888;}
+.circuitBottom div .imgWrap {margin-bottom: 44px;}
+.circuitBottom div > span::before{display: inline-block; width: 5px; height: 5px; content: ""; background-color: #888; border-radius: 999px; vertical-align: middle; margin-right: 10px;}
+.serviceWrap:has(.circuitTop) #quickMenu{top: 410px;}
+.circuitBottom img:nth-of-type(1) {display: inline-block;}
+.circuitBottom img:nth-of-type(2) {display: none;}
 
 
 /*푸터*/
@@ -903,7 +935,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .main .videoWrap {height: calc(100dvh - 56px)}
   .videoContainer {height: calc(100dvh - 56px)}
   
-  #quickMenu {width: 100%; top: unset; left: unset; overflow-x: inherit; position: absolute; height: 32px;}
+  #quickMenu {width: 100%; top: unset; left: unset; overflow-x: inherit; height: 32px; margin: 0px;}
   #quickMenu ul {display: flex; width: 100%; overflow-x: auto; padding-right: 30px;}
   #quickMenu ul li{min-width: 105px; height: 32px; padding: 6px 12px 6px 12px; border-radius: 20px; border: 1px solid #ccc; width: auto; min-width: auto; margin-right: 12px;}
   #quickMenu ul li.on { border: 1px solid #120D4D; background: #120D4D;}
@@ -911,14 +943,14 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   #quickMenu li span {text-align: center; white-space: nowrap;}
   .titleH1 {margin-top: 52px; margin-bottom: 52px; font-size: 32px; line-height: 44.8px; font-weight: 700; margin-bottom: 137px;}
   .hAuto #quickMenu {top: 194px;}
-  #quickMenu {top: 32px;}
+  #quickMenu, .serviceWrap #quickMenu {top: 32px;}
   
   #subCont {padding: 0 16px 8.5em;}
   #contHeader {display: ; height: 66px;}
   #contHeader > div:nth-of-type(2) {margin-top: -66px; height: 66px; background: #fff;}
   #topMenu {display: none;}
   #wrap {width: 100%; min-width: 100%;}
-  #wrap.hAuto {width: 100%;}
+  #wrap.hAuto {width: 100%; position: relative;}
   #mainCont #subCont {max-width: 100%; width: 100%; padding: 0 32px 108px;}
   .systemCon i {width: 100%;}
   
@@ -938,24 +970,42 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .slick-slide img {width: 80%; object-fit: cover;}
    #wrap:has(.bannerSwiper) #contHeader::after {display: none;}
   .sliderWrap .cont {margin-right: 16.5px;}
-  #subCont:has(.detailHeader) .serchTab{margin-top: 14px;}
+  #subCont:has(.detailHeader) .serchTab{margin-top: 14px; max-width: 100%;}
   .noteCont {height: 152px;}
   .noteBody {width: 100%;}
+  
+  .hBottom li:nth-child(1) a,
+  .hBottom li:nth-child(2) a {display: none;}
+  .hBottom.rightNav li:nth-child(1) a,
+  .hBottom.rightNav li:nth-child(2) a {display: inline-block;}
+  
+  
+  /*서비스*/
+  .circuitTop {margin-top: 53px; margin-bottom: 131px;}
+  .circuitRright {width: 60%;}
+  .circuitRright h1{font-size: 32px; line-height: 46px; white-space: inherit; margin-bottom: 16px;}
+  .circuitRright span {font-size: 16px;}
+  .circuitLeft {width: 391px; height: 215px;}
+  .circuitLeft img {object-fit: cover;}
+  .serviceWrap:has(.circuitTop) #quickMenu {top: 319px;}
+    
+  .circuitBottom .imgWrap {width: 100%;}
+  .circuitBottom .imgWrap img{width: 100%;}
+  
+    
+    
 }
 
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1279px) {
-      
+  .mailServiceWrap {background-size: cover !important;}
+    
   /*메인*/
   .videoContainer {width: 100%;}
   #playButton {right: 50px; left: initial;}
   #subCont {max-width: 100%; padding: 0 32px 10em;}
   .btnLogo {margin-left: 32px;}
   .hBottom a {margin-right: 32px;}
-  .hBottom li:nth-child(1) a,
-  .hBottom li:nth-child(2) a {display: none;}
-  .hBottom.rightNav li:nth-child(1) a,
-  .hBottom.rightNav li:nth-child(2) a {display: inline-block;}
   .rightDiv > i,
   .leftDiv > i, 
   i.serviceImg{min-width: 391px; height: 560px; border-radius: 16px; background-size: contain}
@@ -976,11 +1026,20 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .joinSlide .swiper-slide .bTxt { font-size: 20px; font-weight: 400; line-height: 30px; text-align: center; bottom: -50px;}
   .joinSlide .swiper-slide:nth-child(4) .bTxt, .joinSlide .swiper-slide:nth-child(5) .bTxt {line-height: 100px;}
   .joinSlide .swiper-wrapper {margin-left: 0px;}
+  
   /*소개*/
   .network .txtBox {width: 100%; height: auto !important; min-height: 180px;}
   .networkTxt > div.imgWrap  {width: 472px; min-width: 50%; height: 348px; border-radius: 12px;}
   .esg .expList li, .responsibility .expList li {min-width: 200px; min-height: 188px; height: auto; width: calc(100% / 3 - 0px)}
   .map {width: 100%;}
+  .esg .expList li, .responsibility .expList li {margin-bottom: 0;}
+  .esg .expList li span br,
+  .responsibility .expList li span br{display: none;}
+  .esg .expList li p ,
+  .responsibility .expList li p { display: flex; flex-direction: column;}
+  .esg .expList li p i,
+  .responsibility .expList li p i{margin-left: 0;}
+  #subCont:has(.searchContTab) .serchTab{margin-top: 24px; padding-bottom: 0px; margin-bottom: 80px;}
   
   /*연혁*/
   .historyTable ul table {width: 100%;}
@@ -991,7 +1050,12 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   /*서비스*/
   .whatWeServe, .addServe, .circuit {margin-top: 117px;}
   .mailServiceWrap #subCont {padding: 0 0 10em;}
-  
+  .serviceWrap .section1 { margin-top: 117px;}
+  .requestReturn ul li {max-width: 478px;}
+  .requestReturn ul li:nth-child(2) {display: inline-block; margin-top: 4px;}
+  .requestReturn ul li::before {display: none;}
+  .requestReturn .returnBtn {margin-bottom: 140px;}
+
   
   /*메인메뉴*/
   .mainNav {width: calc(100% - 155px); padding: 64px 80px;}
@@ -1011,11 +1075,14 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .bannerSwiper img {width: 100%;}
   
    
+  /*3차메뉴 높이 설정*/
   #subCont:has(.productList) #quickMenu{top: 126px;}
   #subCont:has(.productList) .serchTab{margin-top: 14px; max-width: 100%;}
   .productList {margin-top: 152px;}
   
-  
+  #subCont:has(.addServe) #quickMenu, 
+  #subCont:has(.whatWeServe) #quickMenu, 
+  #subCont:has(.circuit) #quickMenu {top: 32px;}
 }
 
 /*스마트폰*/
@@ -1066,20 +1133,6 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .whatWeServe, .addServe, .circuit {margin-top: 117px;}
 
   
-    /*메인네비*/
-  .btnLogo {margin-left: 16px;}
-  .hBottom.rightNav ul {top: 24px; right: 24px; animation: fadein 1.2s;}
-  .closedNavM {width: 100%; padding: 24px; height: max-content; position: absolute; max-width: 331px; }
-  .mainNav > ul {margin-top: 72px; overflow-x: hidden;}
-  .mainNav > ul > li {flex-direction: column; margin-bottom: 32px;}
-  .mainNav ul ul li a {margin-bottom: 16px; font-size: 14px; font-weight: 500; line-height: 22.4px; text-align: center;  margin-left: 16px;}
-  .mainNav > ul > li > a {margin-bottom: 12px; font-size: 18px; font-weight: 600; line-height: 28.8px; text-align: left;}
-  .mainNav ul li ul {display: none;}
-  .mainNav ul li ul.show {display: flex;}
-  .mainNav ul ul { flex-direction: column;}
-  .mainNav > ul > li > a {pointer-events: none;}
-  
-  
   /*장바구니*/
   .cilContLeft .itemImg {width: 96px; height: 72px;}
   .itemTxt{overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all; width: calc(100% - 108px);}
@@ -1103,25 +1156,6 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .orderInfo {width: 100%;}
   .btnDeleteGray { width: 16px; height: 16px; margin-left: 8px; background: url(../../img/ico_delete02.svg) center no-repeat;}
   .orderTotCost .itemPrice {font-weight: 600;}
-  
-  
-   .detailHeader {flex-direction: column; margin-top: 87px;}
-  .carouselDetail {width: 100%; height: 273px;}
-  .detailHeaderLeft {margin-bottom: 24px;}
-  .detailHeaderRight {margin-left: 0; width: 100%;}
-  .detailBtn {display: none;}
-  .detailHeaderRight .txt >p{ font-size: 20px; font-weight: 600; line-height: 28px; text-align: left;}
-  .detailHeaderRight .txt > span{font-size: 14px; font-weight: 400; line-height: 22.4px; text-align: left;}
-  .detailAmount >div {flex-direction: column;}
-  .detailAmount >div .selectAmountWrap >a {width: 51px; height: 32px; line-height: 32px;}
-  .detailHeaderRight .txt .price i{ font-size: 14px; font-weight: 400; line-height: 22.4px;}
-  .detailHeaderRight .txt .price em{ font-size: 20px; font-weight: 600; line-height: 32px;}
-  .detailAmount .layerItemAmount {height: 32px;}
-  .detailAmount .layerItemAmount span {line-height: 32px;}
-  .detailHeaderRight .txt {margin-bottom: 24px;}
- .detailtotPrice {display: block; font-size: 24px; font-weight: 600; line-height: 38.4px;  text-align: right;}
-  .detailHeaderRight .txt >button{ font-size: 13px; font-weight: 400; line-height: 20.8px;}
-  .detailHeaderRight .txt >button {background-size: auto; padding-right: 15px;}
 
 }
 
@@ -1132,8 +1166,29 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   #mainCont #subCont {padding: 0 16px 108px;}
 
   .hAuto #quickMenu {top: 120px;}
-  #quickMenu {top: 24px;}
+  #quickMenu, .serviceWrap #quickMenu {top: 24px;}
   #quickMenu ul li {margin-right: 8px;}
+  
+  
+  /*메인네비*/
+  .btnLogo {margin-left: 16px;}
+  .hBottom.rightNav ul {top: 24px; right: 24px; animation: fadein 1.2s;}
+  .closedNavM {width: 100%; padding: 24px; height: max-content; position: absolute; max-width: 331px; }
+  .mainNav > ul {margin-top: 72px; overflow-x: hidden;}
+  .mainNav > ul > li {flex-direction: column; margin-bottom: 32px;}
+  .mainNav ul ul li a {margin-bottom: 16px; font-size: 14px; font-weight: 500; line-height: 22.4px; text-align: center;  margin-left: 16px;}
+  .mainNav > ul > li > a {margin-bottom: 12px; font-size: 18px; font-weight: 600; line-height: 28.8px; text-align: left;}
+  .mainNav ul li ul {display: none;}
+  .mainNav ul li ul.show {display: flex;}
+  .mainNav ul ul { flex-direction: column;}
+  .mainNav > ul > li > a {pointer-events: none;}
+  
+   /*3차메뉴 높이 설정*/
+  #subCont:has(.addServe) #quickMenu, 
+  #subCont:has(.whatWeServe) #quickMenu, 
+  #subCont:has(.circuit) #quickMenu,
+  #subCont:has(.historyTable) #quickMenu {top: 24px;}
+  
   
   /* 소개*/
   .parentTitle {font-size: 20px; margin-bottom: 20px;}
@@ -1207,23 +1262,14 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .searchContTab select {width: 80px;}
   .noteHeader >div select:last-child{margin-bottom: 0;}
   .serchTab{display: flex; flex-direction: column-reverse;}
+  
+  .noteTxt .noteTxtTitle span{ font-size: 15px; font-weight: 700; line-height: 15px;}
+  .noteTxt >div:last-child{ font-size: 13px; font-weight: 400; line-height: 15px;}
+  .noticeLabel {min-width: 32px; height: 23px; padding: 4px 8px; border-radius: 8px; font-size: 9px; font-weight: 700; line-height: 15px; text-align: center; box-sizing: border-box;}
 
   /*메인*/
   .bannerSwiper {margin-top: 8px;}
   .bannerWrap {right: calc(50% - 20px)}
-  
-  /*서비스*/
-  .mailServiceWrap #subCont {min-height: 100%; height: auto; padding: 0 16px 10em;}
-  .whatWeServe, .addServe, .circuit {margin-top: 88px;}
-  .tab-list ul > li .list-wrap {top:122px;}
-  .mailServiceWrap {display: flex;}
-  .mailServiceWrap #ft { min-height: unset;}
-  .imgWrapPC {display: none;}
-  .imgWrapM {display: inline-block;}
-  .circuit table th{white-space: pre-line;}
-  .circuit select {width: 84px; font-size: 13px; border-radius: 8px;}
-  .circuit .serchTab {flex-direction: column; margin-bottom: 24px;}
-  .circuit .serchTab .boxTab{margin-bottom: 24px;}
   
   /*마켓*/
   .serchTab { padding-bottom: 0px; margin-bottom: 32px; margin-top: 24px;}
@@ -1238,8 +1284,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .noteBody {width: 100%; margin-top: 16px;}
   .serchTab + .lgBox, .serchTab + .SUSEBox, .serchTab + .productBox  {margin-bottom: 80px;}
   
-  .serchTab .tab > li ul {width: 100vw; position: absolute; overflow-x: auto; height: 42px;
-}
+  .serchTab .tab > li ul {width: 100vw; position: absolute; overflow-x: auto; height: 42px; padding-right: 16px;}
   .serchTab .tab > li {margin-right: 12px;  padding: 0px; min-width: 60px;}
   .serchTab .tab > li ul li{width: auto; height: 38px;} 
   
@@ -1263,10 +1308,53 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .productList .sliderWrap .cont:nth-child(even) {margin-right: 0;}
   .productList .sliderWrap .cont:nth-child(odd) {margin-right: 16px;}
   
-  .noteTxt .noteTxtTitle span{ font-size: 15px; font-weight: 700; line-height: 15px;}
-  .noteTxt >div:last-child{ font-size: 13px; font-weight: 400; line-height: 15px;}
-  .noticeLabel {min-width: 32px; height: 23px; padding: 4px 8px; border-radius: 8px; font-size: 9px; font-weight: 700; line-height: 15px; text-align: center; box-sizing: border-box;}
-  
+  .detailHeader {flex-direction: column; margin-top: 87px;}
+  .carouselDetail {width: 100%; height: 273px;}
+  .detailHeaderLeft {margin-bottom: 24px;}
+  .detailHeaderRight {margin-left: 0; width: 100%;}
+  .detailBtn {display: none;}
+  .detailHeaderRight .txt >p{ font-size: 20px; font-weight: 600; line-height: 28px; text-align: left;}
+  .detailHeaderRight .txt > span{font-size: 14px; font-weight: 400; line-height: 22.4px; text-align: left;}
+  .detailAmount >div {flex-direction: column;}
+  .detailAmount >div .selectAmountWrap >a {width: 51px; height: 32px; line-height: 32px;}
+  .detailHeaderRight .txt .price i{ font-size: 14px; font-weight: 400; line-height: 22.4px;}
+  .detailHeaderRight .txt .price em{ font-size: 20px; font-weight: 600; line-height: 32px;}
+  .detailAmount .layerItemAmount {height: 32px;}
+  .detailAmount .layerItemAmount span {line-height: 32px;}
+  .detailHeaderRight .txt {margin-bottom: 24px;}
+  .detailtotPrice {display: block; font-size: 24px; font-weight: 600; line-height: 38.4px;  text-align: right;}
+  .detailHeaderRight .txt >button{ font-size: 13px; font-weight: 400; line-height: 20.8px;}
+  .detailHeaderRight .txt >button {background-size: auto; padding-right: 15px;}
+
+  /*서비스*/
+  .mailServiceWrap #subCont {min-height: 100%; height: auto; padding: 0 16px 10em;}
+  .whatWeServe, .addServe, .circuit {margin-top: 88px;}
+  .tab-list ul > li .list-wrap {top:122px;}
+  .mailServiceWrap {display: flex;}
+  .mailServiceWrap #ft { min-height: unset;}
+  .imgWrapPC {display: none;}
+  .imgWrapM {display: inline-block;}
+  .circuit table th{white-space: pre-line;}
+  .circuit select {width: 84px; font-size: 13px; border-radius: 8px;}
+  .circuit .serchTab {flex-direction: column; margin-bottom: 24px;}
+  .circuit .serchTab .boxTab{margin-bottom: 24px;}
+  .serviceWrap .section1 {margin-top: 88px;}
+  .requestReturn .returnBtn {margin-bottom: 30px;}
+  .requestReturn ul li:nth-child(2) {display: inline-block; margin-top: 8px;}
+  .requestReturn ul li::before {display: none;}
+  .circuitBottom img:nth-of-type(1) {display: none;}
+  .circuitBottom img:nth-of-type(2) {display: inline-block;}
+ 
+  .circuitTop {flex-direction: column; margin-top: 32px; margin-bottom: 112px;}
+  .circuitRright {width: 100%;}
+  .circuitRright h1 {font-size: 20px; line-height: 28px; width: 100%; white-space: pre-line;}
+  .circuitRright span{font-size: 13px; line-height: 20px;}
+  .circuitLeft {display: none;}
+  .serviceWrap:has(.circuitTop) #quickMenu {top: 214px;}
+  .circuitBottom > div > p {margin-bottom: 24px; font-size: 20px;}
+  .circuitBottom > div > p span{font-size: 15px;}
+  .terProcedures {margin-bottom: 0px;}
+  .circuitBottom div > span::before {width: 3px; height: 3px;}
   
 }
 /*스마트폰끝*/
@@ -1296,3 +1384,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 
 
 
+
+.circuitRright {
+  
+}

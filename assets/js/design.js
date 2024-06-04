@@ -44,8 +44,10 @@ $(document).on("click", ".btnClose", function () {
 
 //모바일 메인네비 
 $(document).ready(function () {
-  $('.mainNav > ul > li').click(function () {
+  var mainNavClick = $('.mainNav > ul > li');
+  mainNavClick.click(function () {
     $(this).find('ul').toggleClass("show");
+    mainNavClick.not($(this)).find('ul').removeClass('show');
   });
 });
 
@@ -113,9 +115,12 @@ $(document).ready(function () {
 
 
 //소개 접기 폈기
-$(document).on("click", ".arrowBtn", function () {
-  $('.systemBox li').removeClass("on");
-  $(this).parents('li').toggleClass("on");
+$(document).ready(function () {
+var arrowBtn = $('.systemBox li .arrowBtn');
+  arrowBtn.click(function () {
+    $(this).parents('li').toggleClass("on");
+    arrowBtn.not($(this)).parents('li').removeClass("on");
+  });
 });
 
 

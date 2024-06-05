@@ -928,6 +928,60 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .noteTxt .noteTxtTitle span{font-size: 18px; font-weight: 700; text-overflow: ellipsis; overflow: hidden; padding-bottom: 1px; display: inline-block; margin-left: 12px;}
 
 
+/*회선비계산*/
+.calcuTop {text-align: center; margin-bottom: 283px;}
+.calcuTop h1{font-size: 46px; font-weight: 400; line-height: 64.4px; white-space: pre-line; margin-bottom: 32px; margin-bottom: 104px; text-align: left;}
+.calcuTop ul{ display: flex; border: 1px solid #E2E2E2; width: 100%; padding: 40px; border-radius: 40px; justify-content: center; align-items: center; margin-bottom: 72px;}
+.calcuTop li {margin: 0 10px; text-align: center;}
+.calcuTop li p {font-size: 16px; margin-bottom: 24px;}
+.calcuTop li input {width: 194px; height: 76px; border-radius: 16px; font-weight: bold; font-size: 18px; text-align: center; padding: 10px;}
+.calcuTop select:focus ,  .calcuTop input:focus {outline: none;}
+.calcuTop input[type="number"] {position: relative; text-align: center; background-image: url('../../img/ico_inputNumSpin.svg'); background-position: 90px 55%; background-size: 54px 44px; background-repeat: no-repeat; caret-color: transparent; border: 1px solid #ccc; text-align: right; padding-right: 10px;}
+.calcuTop input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none !important; opacity: 1 !important; background: transparent !important; margin: 0; height: 76px; border: none; width: 70px; cursor: pointer; margin-right: 30px;}
+.calcuTop select {width: 194px; height: 76px; border-radius: 16px; font-weight: bold; font-size: 18px; text-align: left; padding: 10px; background: #fff  url(../../img/ico_inputArrow.svg) calc(100% - 5.5rem) center no-repeat; padding-left: 30%}
+
+.calcuBottom {margin-bottom: 170px;}
+.calcuBottom table{width: 100%;}
+.calcuBottom thead {background: #EAEAEF; padding: 5px; height: 60px; border-radius: 16px 16px 0 0;}  
+.calcuBottom tbody {background: #F7F7FA;} 
+.calcuBottom thead th{font-weight: 600; font-size: 24px;}
+.calcuBottom table td { padding: 30px 20px; border: 1px dashed #C1C2DF; text-align: right;}
+.calcuBottom table td p {color: #6A6A6A; font-size: 16px; margin-bottom: 20px;}
+.calcuBottom table td span {font-weight: 700; font-size: 28px;}
+.calcuBottom table tr td:first-child, th:first-child{ border-left: none;}
+.calcuBottom table tr:first-child th{border-top: none; border-radius: 16px 16px 0 0;}
+.calcuBottom table tr td:last-child, th:last-child{border-right: none;}
+.calcuBottom table tr:last-child td{border-bottom: none; border-radius: 0 0 16px 16px ;}
+.calcuBtn {background: #002278; width: 665px; height: 80px; padding: 21px 174px 21px 174px; border-radius: 12px; cursor: pointer; border: none; margin-bottom: 131px;}
+.calcuBtn span{ display: inline-block; font-size: 25px; font-weight: 600; line-height: 24px; letter-spacing: 0.01em; color: #fff; background: url(../../img/ico_calcuBtn_plus.svg) no-repeat right; padding-right: 24px; white-space: nowrap; padding-right: 35px; background-size: contain;}
+.calcuBtn + p {font-size: 18px; font-weight: 600;}
+
+/*서비스 대학생 할인*/
+.collegeCloudWrap p,.collegeCloudWrap div,.collegeCloudWrap h1,.collegeCloudWrap h2,.collegeCloudWrap h3,
+.collegeCloudWrap strong,.collegeCloudWrap span { font-family: "NanumSquare","Pretendard Variable", sans-serif !important; line-height: 21px;}
+.collegeCloudWrap { padding-top: 16px; background-color: #f6f6f6;}
+.collegeCloudWrap #subCont { height: auto;}
+.collegeCloudWrap h2 {font-size: 24px; margin: 19px 0; font-weight: bold; line-height: normal;}
+.collegeCloudWrap h3 {font-size: 19px; margin: 18px 0; font-weight: bold; line-height: normal;}
+.collegeCloudWrap p {font-size: 16px; margin: 16px 0;}
+.collegeCloudWrap strong {font-size: 16px; margin: 16px 0;}
+.collegeCloudWrap .aboutContainer2 .img { width: 100%; margin-top: 25px; margin-bottom: 50px;}
+.collegeCloudWrap .lineContainer { display: flex; align-items: center; justify-content: space-between; margin: 20px auto; color: #32475c99;}
+.collegeCloudWrap .line2 { width: 150px; border-top: 1px solid #e5e5e5; margin: 5px;}
+.collegeCloudWrap .infoContainer { min-width: 1000px; font-family: 'NanumSquare';}
+.collegeCloudWrap .subTitle { margin-top: 150px; text-align: center; font-size: 3.5rem; color: #fff; font-weight: 700;}
+.collegeCloudWrap .aboutContainer { width: 100%; margin: 50px auto 0; padding: 50px; align-items: center; border: 1px solid #595DC4; border-radius: 30px; background-color: #ffffff;}
+.collegeCloudWrap .aboutContainer2 { width: 100%; text-align: center; margin: 50px auto; padding: 50px; align-items: center; border: 1px solid #595DC4; border-radius: 30px; background-color: #ffffff;}
+.collegeCloudWrap .signupProcessContainer { text-align: center; width: 100%; margin: 50px auto; padding: 50px; align-items: center; border: 1px solid #595DC4; border-radius: 30px; background-color: #ffffff; font-family: 'NanumSquare';}
+.collegeCloudWrap .steps{ display: flex; justify-content: space-between; margin-top: 30px; align-items: center;}
+.collegeCloudWrap .circle{ width: 140px; height: 140px; border: 2px solid #a3a5eb; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 18px; font-weight: bold; color: #595DC4;}
+.collegeCloudWrap .arrow { content: ""; display: block; width: 14px; height: 14px; border: solid #595DC4; border-width: 3px 3px 0 0; transform: rotate(45deg);}
+.collegeCloudWrap .infoContainer { min-width: 100%; font-family: 'NanumSquare';}
+.collegeCloudWrap .subTitle { margin-top: 150px; text-align: center; font-size: 3.5rem; color: #fff; font-weight: 700;}
+
+
+
+
 
 
 /*테블릿*/
@@ -947,7 +1001,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   
   #subCont {padding: 0 16px 8.5em;}
   #contHeader {display: ; height: 66px;}
-  #contHeader > div:nth-of-type(2) {margin-top: -66px; height: 66px; background: #fff;}
+  #contHeader > div:nth-of-type(2) {margin-top: -66px; height: 66px; background: transparent;}
   #topMenu {display: none;}
   #wrap {width: 100%; min-width: 100%;}
   #wrap.hAuto {width: 100%; position: relative;}
@@ -992,9 +1046,23 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .circuitBottom .imgWrap {width: 100%;}
   .circuitBottom .imgWrap img{width: 100%;}
   
-    
-    
-}
+  /*서비스 요금계산*/
+  .calcuTop {margin-bottom: 100px;}
+  .calcuTop li {width: calc(100% / 5);}
+  .calcuTop select,
+  .calcuTop li input{width: 140px;}
+  .calcuTop li p {font-size: 18px;}
+  .calcuTop h1 {margin-bottom: 80px; font-size: 32px; line-height: 46px;}
+  .calcuBtn + p {display: none;}
+  .calcuBtn {margin-bottom: 0;}
+  .calcuTop select {padding-left: 20%; background-position: calc(100% - 3rem) center;}
+  .calcuTop input[type="number"]{padding-left: 0px;  background-position: 6rem 55%;}
+  .calcuTop input[type="number"]::-webkit-inner-spin-button {margin-right: 0px; width: 50px; margin-left: 30px;}
+  
+  
+  
+  
+  
 
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1279px) {
@@ -1083,7 +1151,13 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   #subCont:has(.addServe) #quickMenu, 
   #subCont:has(.whatWeServe) #quickMenu, 
   #subCont:has(.circuit) #quickMenu {top: 32px;}
+  
+  /*서비스 대학생 할인*/
+  .collegeCloudWrap .aboutContainer,
+  .collegeCloudWrap .aboutContainer2,
+  .collegeCloudWrap .signupProcessContainer{padding: 30px;}
 }
+
 
 /*스마트폰*/
 @media only screen and (max-device-width:830px) {
@@ -1156,7 +1230,24 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .orderInfo {width: 100%;}
   .btnDeleteGray { width: 16px; height: 16px; margin-left: 8px; background: url(../../img/ico_delete02.svg) center no-repeat;}
   .orderTotCost .itemPrice {font-weight: 600;}
-
+  
+  
+  /*서비스 회선 요금계산*/
+  .calcuTop {margin-bottom: 32px;}
+  .calcuTop h1{ font-size: 20px; line-height: 28px; white-space: normal; margin-bottom: 45px;}
+  .calcuTop ul{ flex-wrap: wrap; align-items: center; padding: 40px 20px; justify-content: space-between; margin-bottom: 32px;}
+  .calcuTop li {width: calc(100% / 2); margin-bottom: 32px; margin: 0px; margin-bottom: 32px;}
+  .calcuTop select, .calcuTop li input {max-width: 140px; font-size: 16px;}
+  .calcuTop select {padding-left: 3rem; background-position: calc(100% - 3rem) center }
+  .calcuTop input[type="number"] { background-position: 7rem 55%; background-size: auto 36px;}
+  .calcuTop input[type="number"]::-webkit-inner-spin-button {margin-right: 0px; width: 50px; margin-left: 20px;}
+  .calcuBtn {width: 100%; display: flex; align-items: center; justify-content: center;}
+  .calcuBtn span {font-size: 20px; background-size: 22px;}
+  .calcuBottom {margin-bottom: 30px;}
+  .calcuBottom table td {padding: 20px 10px;}
+  .calcuBottom table td p {margin-bottom: 10px;}
+  .calcuBottom table td span {font-size: 20px;}
+  .calcuBottom thead th {font-size: 20px;}
 }
 
 @media only screen and (max-device-width :767px) {
@@ -1167,7 +1258,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 
   .hAuto #quickMenu {top: 120px;}
   #quickMenu, .serviceWrap #quickMenu {top: 24px;}
-  #quickMenu ul li {margin-right: 8px;}
+  #quickMenu ul li {margin-right: 8px; margin-bottom: 0;}
   
   
   /*메인네비*/
@@ -1355,6 +1446,18 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
   .circuitBottom > div > p span{font-size: 15px;}
   .terProcedures {margin-bottom: 0px;}
   .circuitBottom div > span::before {width: 3px; height: 3px;}
+  
+  /*서비스 대학생 할인*/
+  .collegeCloudWrap .aboutContainer,
+  .collegeCloudWrap .aboutContainer2,
+  .collegeCloudWrap .signupProcessContainer{padding: 20px; border-radius: 16px;}
+  .collegeCloudWrap .steps {flex-direction: column;}
+  .collegeCloudWrap .circle {margin-bottom: 20px;}
+  .collegeCloudWrap .arrow {transform: rotate(135deg); margin-top: 0px; margin-bottom: 20px;}
+  
+  
+  
+  
   
 }
 /*스마트폰끝*/

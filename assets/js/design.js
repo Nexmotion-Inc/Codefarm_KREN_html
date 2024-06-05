@@ -51,6 +51,21 @@ $(document).ready(function () {
   });
 });
 
+//회선 요금계산 월요금 천단위 콤마
+$(document).ready(function () {
+  const input = document.querySelector('#monthlyFee');
+  input.addEventListener('keyup', function (e) {
+    let value = e.target.value;
+    value = Number(value.replaceAll(',', ''));
+    if (isNaN(value)) {
+      input.value = 0;
+    } else {
+      const formatValue = value.toLocaleString('ko-KR');
+      input.value = formatValue;
+    }
+  })
+});
+
 //마켓 배너 슬라이드
 //충돌로 인해 html 파일 내부 작성으로 변경
 //$(document).ready(function () {
@@ -116,7 +131,7 @@ $(document).ready(function () {
 
 //소개 접기 폈기
 $(document).ready(function () {
-var arrowBtn = $('.systemBox li .arrowBtn');
+  var arrowBtn = $('.systemBox li .arrowBtn');
   arrowBtn.click(function () {
     $(this).parents('li').toggleClass("on");
     arrowBtn.not($(this)).parents('li').removeClass("on");

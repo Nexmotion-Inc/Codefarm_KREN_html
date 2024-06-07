@@ -42,6 +42,20 @@ $(document).on("click", ".btnClose", function () {
 });
 
 
+//대학정보화현황조사 탭기능
+$(function () {
+  $(".collegeResearch section").hide();
+  $(".collegeResearch section:first").show();
+
+  $(".boxTab a").click(function () {
+    $("boxTab a").removeClass("active").css("color", "#555");
+    $(this).addClass("active").css("color", "#fff");
+    $(".tabArea").hide()
+    var activeTab = $(this).attr("rel");
+    $("#" + activeTab).fadeIn()
+  });
+});
+
 //모바일 메인네비 
 $(document).ready(function () {
   var mainNavClick = $('.mainNav > ul > li');
@@ -51,20 +65,6 @@ $(document).ready(function () {
   });
 });
 
-//회선 요금계산 월요금 천단위 콤마
-$(document).ready(function () {
-  const input = document.querySelector('#monthlyFee');
-  input.addEventListener('keyup', function (e) {
-    let value = e.target.value;
-    value = Number(value.replaceAll(',', ''));
-    if (isNaN(value)) {
-      input.value = 0;
-    } else {
-      const formatValue = value.toLocaleString('ko-KR');
-      input.value = formatValue;
-    }
-  })
-});
 
 //마켓 배너 슬라이드
 //충돌로 인해 html 파일 내부 작성으로 변경
@@ -195,6 +195,20 @@ $(document).ready(function () {
   });
 });
 
+//회선 요금계산 월요금 천단위 콤마
+$(document).ready(function () {
+  const input = document.querySelector('#monthlyFee');
+  input.addEventListener('keyup', function (e) {
+    let value = e.target.value;
+    value = Number(value.replaceAll(',', ''));
+    if (isNaN(value)) {
+      input.value = 0;
+    } else {
+      const formatValue = value.toLocaleString('ko-KR');
+      input.value = formatValue;
+    }
+  })
+});
 
 //제품슬라이드
 $(document).ready(function () {

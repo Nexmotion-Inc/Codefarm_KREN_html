@@ -896,7 +896,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .mailServiceWrap {background-size: inherit !important;}
 .mailServiceWrap #subCont {max-width: 100%; padding-bottom: 7em;}
 .whatWeServe, .addServe, .circuit  {margin-top: 68px;}
-.whatWeServe .arrowIco {display: inline-block; width: 24px; height: 24px; background: url('../../img/ico_arrow_small.svg') no-repeat center; background-size: contain; vertical-align: middle; float: right;}
+.arrowIco {display: inline-block; width: 24px; height: 24px; background: url('../../img/ico_arrow_small.svg') no-repeat center; background-size: contain; vertical-align: middle; float: right;}
 .whatWeServe .expList.systemBox li{min-height: 182px; padding: 24px; height: auto;}
 
 .imgWrapPC {width: 100%;}
@@ -963,9 +963,10 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .collegeResearch .contents ul li p.title{display: none;}
 
 /*회선비계산*/
+.caluClose {width: 30px; height: 30px; border-radius: 0 10px 0 10px; background-color: #D8E2FF; position: absolute; right: 0; top: 0; background-image: url(../../img/ico_caluClose.svg); background-repeat: no-repeat; background-position: center;}
 .calcuTop {text-align: center; margin-bottom: 283px;}
 .calcuTop h1{font-size: 46px; font-weight: 400; line-height: 64.4px; white-space: pre-line; margin-bottom: 32px; margin-bottom: 104px; text-align: left;}
-.calcuTop ul{ display: flex; border: 1px solid #E2E2E2; width: 100%; padding: 40px; border-radius: 40px; justify-content: center; align-items: center; margin-bottom: 72px;}
+.calcuTop ul{ display: flex; border: 1px solid #E2E2E2; width: 100%; padding: 40px; border-radius: 20px; justify-content: center; align-items: center; margin-bottom: 72px; position: relative;}
 .calcuTop li {margin: 0 10px; text-align: center;}
 .calcuTop li p {font-size: 16px; margin-bottom: 24px;}
 .calcuTop li input {width: 194px; height: 76px; border-radius: 16px; font-weight: bold; font-size: 18px; text-align: center; padding: 10px;}
@@ -1025,8 +1026,20 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .krenTable td ul > li { padding-left: 15px; line-height: 130%;}
 ol.textListOl {display: inline-block; width: 100%; font-size: inherit; margin: 15px 0 25px 0;}
 ol.textListOl > li {position: relative; padding-left: 15px; padding: 4px 0 4px 17px;}
-ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "▶️"; font-family: "xeicon"; font-size: 1.2rem; color: #666666;
-}
+ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "▶️"; font-family: "xeicon"; font-size: 1.2rem; color: #666666;}
+
+/*관리비안내*/
+.textList02 {display: inline-block; width: 100%; font-size: inherit; margin: 15px 0 25px 0;}
+.textList02 li {position: relative; padding-left: 15px; padding: 4px 0 4px 17px; font-size: 16px;}
+.textList02 > li:before { content: ""; background: #7A7EDE; display: block; position: absolute; left: 1px; width: 5px; height: 5px; border-width: 3px; top: 9px; margin-right: 10px; border-radius: 100px;}
+.textList02 ol {display: inline-block; width: 100%; font-size: inherit; margin: 15px 0 25px 0;}
+.textList02 ol > li {position: relative; padding-left: 15px; padding: 4px 0 4px 17px;}
+.administration .krenTable th{font-size: 15px;}
+
+.LayerBg { display: flex; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(217, 217, 217,.6); z-index: 1000;}
+html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
+.whatWeLayer { position: relative; width: 1013px; background-color: #fff; border-radius: 30px; margin: auto; padding: 57px 48px; transform: translateY(150%); transition: all 0.5s ease;}
+
 
 /*IP 할당신청*/
 .titleh4{font-size: 24px; font-weight: 600; line-height: 38.4px; text-align: left; margin-bottom: 22px;}
@@ -1072,26 +1085,48 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
 
 /*지역협의회*/
 /*안내*/
-.propelOver .imgWrap {width: 448px; height: 326px;}
-.propelOver .imgWrap img {width: 100%; height: 100%; border-radius: 20px;}
+.regionalWrap #quickMenu {top: 141px;}
+.propelOver, .propelCont {margin-bottom: 90px;}
+.propelOver .imgWrap {width: 448px; height: auto; margin-right: 48px;}
+.propelOver .imgWrap img {width: 100%; height: 100%; border-radius: 20px; object-fit: contain; border-radius: 16px;}
 
+.propelOver .flexCol {display: flex; align-items: center;}
+.barList li{margin-bottom: 72px; font-size: 18px; white-space: pre-line; position: relative; color: #3C3A58;}
+.barList li:last-child{margin-bottom: 0px;}
+.barList li::before {width: 50px; height: 6px; background-color: #120D4D; content: ""; display: inline-block; position: absolute; top: -14px;}
+.propelCont ul{display: flex;}
+.propelCont li {box-shadow: 2px 2px 15px rgba(18, 13, 77, .08); width: calc(100% / 4); margin-right: 20px; min-height: 274px; padding: 32px; border-radius: 12px; text-align: center;}
+.propelCont li:last-child {margin-right: 0px;}
+.propelCont li img{margin-bottom: 12px;}
+.propelCont li p {font-size: 20px; font-weight: bold; margin-bottom: 32px; color: #2F2D43;}
+.propelCont li span {font-size: 14px; line-height: 22px; color: #3C3A58; white-space: pre-line;}
 
+.propelProc ul {display: flex;}
+.propelProc li {width: calc(100% / 5); margin-right: 20px; padding: 32px; border-radius: 12px; text-align: center; position: relative;}
+.propelProc li:last-child {margin-right: 0px;}
+.propelProc li::after {content: ""; display: inline-block; width: 50px; height: 50px; background-image: url(../../img/ico_arrow02.svg); background-position: center; right: -50px; position: absolute; top: 50%; background-repeat: no-repeat; transform: translate(-50%, -50%);}
+.propelProc li:last-child::after {display: none;}
+.propelProc li img{margin-bottom: 10px;}
+.propelProc li p {font-size: 20px; font-weight: bold; color: #2F2D43;}
+.propelProc li span {font-size: 14px; line-height: 22px; color: #120D4D; display: block; margin-bottom: 26px; font-weight: bold;}
+.reglGuide .titleH1 {white-space: pre-line;}
+.regionalWrap .section1 { margin-top: 32px;}
+.regionalWrap .topTxt {margin-bottom: 64px;}
+.reglGuide .titleH1:nth-child(1) {margin-top: 0px; margin-bottom: 32px;} 
+.reglGuide .titleH1:nth-child(2) {margin:0; } 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*세미나*/
+.reglGuide .serchTab {display: flex; justify-content: space-between; margin-bottom: 0px;}
+.reglGuide select {border-radius: 8px;}
+.headquarters {flex-wrap: wrap; display: flex; margin-bottom: 30px;}
+.headquarters li {width: calc(100% / 3 - 13.33px); box-shadow: 2px 2px 15px rgba(18, 13, 77, .08); padding: 32px; border-radius: 12px; margin-bottom: 20px; margin-right: 20px; display: flex; flex-direction: column; justify-content: space-between;}
+.headquarters li:nth-child(3n) {margin-right: 0px;}
+.headquarters li p{font-size: 40px; font-weight: bold; color: #120D4D;}
+.headquarters .top {margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between;}
+.headquarters span {color: #777777; font-size: 11px; display: block; margin-bottom: 4px; padding: 4px 0 4px 0px;}
+.headquarters em{font-size: 18px; color: #120D4D; font-weight: bold; display: inline-block; padding: 4px 0 4px 0px; word-break: auto-phrase;}
+.headquarters .bottom {display: flex; align-items: flex-end; justify-content: space-between;}
+.headquarters .labelBlue { display: inline-block; width: 66px; height: 32px; border-radius: 16px; background-color: #002278; color: #fff; text-align: center; line-height: 32px; padding: 5px 16px; font-size: 18px; font-style: normal;}
 
 
 
@@ -1175,8 +1210,27 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   .collegeResearch .serchTab {margin-bottom: 0px; margin-top: 32px;}
   .nAddTable .titleh4 + span {display: inline-block;}
 
+  /*지역협의회 안내*/
+  .regionalWrap #quickMenu {top: 115px;}
+  .regionalWrap .topTxt {margin-bottom: 32px;}
+  .reglGuide .titleH1:nth-child(1) {margin-top: 0px; margin-bottom: 97px;} 
+  .reglGuide .titleH1:nth-child(2) {margin:0; } 
+  .propelOver .imgWrap {width: 489px; height: 278px;}
+  .propelCont li {min-height: 225px; padding: 25px;}
+  .propelCont li p {font-size: 16px;}
+  .propelCont li img {max-width: 44px; height: 44px;}
+  .propelCont li span {font-size: 12px; white-space: normal;}
+  .propelProc li{padding: 0px;}
+  .propelProc li p {font-size: 16px;}
+  .barList li { max-width: 360px; font-size: 18px; word-break: auto-phrase; white-space: normal;}
   
   
+  /*세미나*/
+  .headquarters li {padding: 32px 26px;}
+  .headquarters li p {font-size: 32px;}
+  .headquarters .top {margin-bottom: 40px;}
+  .headquarters em {font-size: 16px;}
+  .headquarters .labelBlue {font-size: 14px;}
 }
   
   
@@ -1375,6 +1429,17 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   .calcuBottom table td p {margin-bottom: 10px;}
   .calcuBottom table td span {font-size: 20px;}
   .calcuBottom thead th {font-size: 20px;}
+  
+  
+  /*세미나*/
+  .headquarters li {width: calc(100% / 2  - 7.5px); margin-right: 15px; padding: 20px 14px;}
+  .headquarters li:nth-child(3n) {margin-right: 15px;}
+  .headquarters li:nth-child(2n) {margin-right: 0px;}
+  .headquarters li p {font-size: 24px;}
+  .headquarters .top {margin-bottom: 30;}
+  .headquarters em {font-size: 12px;}
+  .headquarters .labelBlue{width: 45px; height: 22px; font-size: 10px; line-height: 22px;}
+  
 }
 
 @media only screen and (max-device-width :767px) {
@@ -1602,7 +1667,33 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   .interFailList > li > p >  a {font-size: 18px;}
   
   
+  /*지역협의회*/
+  .regionalWrap #quickMenu {top: 86px;}
   
+  .regionalWrap .section1 { margin-top: 24px;}
+  .regionalWrap .topTxt {margin-bottom: 24px;}
+  .reglGuide .titleH1:nth-child(1) {margin-top: 0px; margin-bottom: 97px;} 
+  .reglGuide .titleH1:nth-child(2) {margin:0; } 
+  .reglGuide .flexCol {flex-direction: column;}
+  .propelOver, .propelCont {margin-bottom: 64px;}
+  .propelCont ul{flex-wrap: wrap; justify-content: space-between;}
+  .propelCont li {width: calc(100% / 2 - 6px); margin-right: 0; margin-bottom: 11px; padding: 24px 20px;}
+  .propelCont li p {margin-bottom: 19px;}
+  .propelOver .imgWrap { width: 100%; margin-right: 0px;}
+  .reglGuide .barList {margin-top: 24px; width: 100%;} 
+  .propelOver .imgWrap {margin-bottom: 24px; height: auto;}
+  .barList li {margin-bottom: 46px;}
+  .propelProc ul {flex-wrap: wrap; margin-top: 48px;}
+  .propelProc li {width: calc(100% / 2); margin-right: 0px; margin-bottom: 59px;}
+  .propelProc li:nth-child(2)::after,
+  .propelProc li:nth-child(4)::after {display: none;}
+  .propelProc li p {font-size: 18px;}
+  .propelProc li img {width: 44px; height: 44px; object-fit: contain;}
+  
+  /*세미나*/
+  .reglGuide .serchTab{flex-direction: column;}
+  .reglGuide .serchTab .boxTab{margin-bottom: 24px;}
+  .reglGuide .serchTab select{ max-width: 84px; font-size: 13px; margin-bottom: 24px;}
   
   
   
@@ -1631,10 +1722,3 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
 
 
 
-
-
-
-
-.circuitRright {
-  
-}

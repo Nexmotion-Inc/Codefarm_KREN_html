@@ -150,76 +150,75 @@
       <div id="quickMenu">
         <ul>
           <li><a href="" target=""><span>회선 안내</span></a></li>
-          <li class="on"><a href="#" target=""><span>회선비 계산</span></a></li>
-          <li><a href="#" target=""><span>요금 안내</span></a></li>
+          <li><a href="" target=""><span>회선비 계산</span></a></li>
+          <li class="on"><a href="#" target=""><span>요금 안내</span></a></li>
         </ul>
       </div>
-
-
       <div class="section1" id="#section1">
-        <div class="calcuTop">
-          <h1><b>회선 이용 시</b> 발생되는 요금을
-            <b>미리 계산</b>해볼 수 있으며, 연회비는 보유 회선을
-            모두 입력하셔야 <b>정확한 금액이 산출</b>됩니다.
-          </h1>
-          <ul>
-            <a href="" class="caluClose"></a> <!--버튼추가-->
-            <li>
-              <p>회선방식</p>
-              <select>
-                <option>유선</option>
-              </select>
+        <div class="administration">
+          <p class="parentTitle">관리비 안내</p>
+          <div class="serchTab">
+            <ul class="boxTab">
+              <a href="#">
+                <li>월 유선 요금</li>
+              </a>
+              <a href="#">
+                <li>월 무선 요금</li>
+              </a>
+              <a href="#">
+                <li class="on">관리비</li>
+              </a>
+            </ul>
+          </div>
+
+          <div class="nAddTable">
+            <div>
+              <p class="titleh4">한국교육정보화재단 관리비 기준표</p>
+            </div>
+            <div class="widOverScroll">
+              <table class="krenTable">
+                <thead>
+                  <tr>
+                    <th>구간</th>
+                    <th>2Mbps 이상 ~ 301Mbps 미만</th>
+                    <th>301Mbps 이상 ~ 701Mbps 미만</th>
+                    <th>701Mbps 이상 ~ 1,501Mbps 미만</th>
+                    <th>1,501Mbps 이상 ~ 3,001Mbps 미만</th>
+                    <th>3,001Mbps 이상 ~ 6,001Mbps 미만</th>
+                    <th>6,001Mbps 이상 ~ 10,001Mbps 미만</th>
+                    <th>10,001Mbps 이상 ~ </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>연회비</td>
+                    <td>500,000</td>
+                    <td>1,000,000</td>
+                    <td>1,500,000</td>
+                    <td>2,000,000</td>
+                    <td>2,500,000</td>
+                    <td>3,000,000</td>
+                    <td>3,500,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <ul class="textList02">
+            <li>관리비는 보유하신 회선의 총합으로 계산합니다.</li>
+            <li>본교가 분교나 제2캠퍼스의 회선을 합산하여 일괄 납부하는 경우는 가능하나, 기타기관(산학협력단, 연구소, 병원, 의료원)등은 본교와 일괄 합산할 수 없습니다.
+              <ol>
+                <li>- 1/4분기 개통 : 관리비 100%적용</li>
+                <li>- 2/4분기 개통 : 관리비 75%적용</li>
+                <li>- 3/4분기 개통 : 관리비 50%적용</li>
+                <li>- 4/4분기 개통 : 관리비 25%적용</li>
+              </ol>
             </li>
-            <li>
-              <p>회선용량</p>
-              <select>
-                <option>유선</option>
-              </select>
-            </li>
-            <li>
-              <p>회선 수</p>
-              <input type="number" value="0" min="0" />
-            </li>
-            <li>
-              <p>총 사용량(M)</p>
-              <input type="text" value="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
-            </li>
-            <li>
-              <p>월 요금(원)</p>
-              <input type="text" value="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="monthlyFee" />
-            </li>
+            <li>회선 해지시 관리비는 반환하지 않습니다.</li>
+            <li>한국교육정보화재단에서 할당 받은 IP주소는 2008년부터 수수료를 부과하며, 관리비 청구 시 같이 청구합니다.<br />
+              (2006년 제 4차 한국교육정보화재단 운영위원회 결정 사항)</li>
           </ul>
-          <button class="calcuBtn">
-            <span>회선 추가하기</span>
-          </button>
-          <p>합계</p>
-        </div>
-        <div class="calcuBottom">
-          <table>
-            <thead>
-              <tr>
-                <th colspan="2">합계</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <p>회선 수</p><span>0</span>
-                </td>
-                <td>
-                  <p>월 요금(원)</p><span>0</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>총 사용량(M)</p><span>0</span>
-                </td>
-                <td>
-                  <p>총 관리비(원)</p><span>0</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>

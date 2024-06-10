@@ -225,7 +225,7 @@ a.fax {cursor: default;}
 
 .boxTab {display: flex; margin-top:3px;}
 .boxTab a { margin-right: 16px;}
-.boxTab a li {width: auto; padding: 9px 14px; border-radius: 8px; border:1px solid #bbb; color:#bbb; font-size: 16px; font-weight: 500;}
+.boxTab a li {width: auto; padding: 9px 14px; border-radius: 8px; border:1px solid #bbb; color:#bbb; font-size: 16px; font-weight: 500; white-space: nowrap;}
 .boxTab a li.on {border: 1px solid #120D4D; background: #EEEDFA; color: #353876; font-weight: 600;}
 
 .slick-slider{ position: relative; display: block; box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; -khtml-user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent;}
@@ -1126,10 +1126,14 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
 .headquarters span {color: #777777; font-size: 11px; display: block; margin-bottom: 4px; padding: 4px 0 4px 0px;}
 .headquarters em{font-size: 18px; color: #120D4D; font-weight: bold; display: inline-block; padding: 4px 0 4px 0px; word-break: auto-phrase;}
 .headquarters .bottom {display: flex; align-items: flex-end; justify-content: space-between;}
-.headquarters .labelBlue { display: inline-block; width: 66px; height: 32px; border-radius: 16px; background-color: #002278; color: #fff; text-align: center; line-height: 32px; padding: 5px 16px; font-size: 18px; font-style: normal;}
+.headquarters .labelBlue { display: inline-block; height: 32px; border-radius: 16px; background-color: #002278; color: #fff; text-align: center; line-height: 32px; padding: 5px 16px; font-size: 18px; font-style: normal;}
 
-
-
+.seminarJoin .noData {font-size: 48px; font-weight: 500; margin-top: 65px; margin-bottom: 119px;}
+.seminarJoin .serchTab select{border: none;}
+.seminarJoin .serchTab input {border: none; width: 100%;}
+.seminarJoin .serchTab input + a {background-image: url(../../img/ico_searchR.svg); background-repeat: no-repeat; display: inline-block; background-size: 14px; min-width: 26px; height: 26px; background-position: center;}
+.seminarJoin .searchR { display: flex; border-bottom: 1px solid #DDDDDD; align-items: center;}
+.seminarJoin .searchR div {display: flex; align-items: center; justify-content: flex-end;}
 
 /*테블릿*/
 @media only screen and (max-device-width : 1279px) {
@@ -1695,8 +1699,13 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
   .reglGuide .serchTab .boxTab{margin-bottom: 24px;}
   .reglGuide .serchTab select{ max-width: 84px; font-size: 13px; margin-bottom: 24px;}
   
-  
-  
+  .seminarJoin .serchTab {width: 100%;}
+  .seminarJoin .serchTab select {margin-bottom: 0; font-size: 12px; min-width: 90px;     padding-right: 3rem;}
+  .seminarJoin .serchTab div {width: 100%;}
+  .seminarJoin .serchTab input {width: 100%; font-size: 12px;}
+  .seminarJoin .noData {font-size: 32px; margin-bottom: 20px; text-align: center;}
+  .seminarJoin .serchTab input::placeholder {font-size: 12px;}
+  .pageMoveTab {display: none;}
 }
 /*스마트폰끝*/
 

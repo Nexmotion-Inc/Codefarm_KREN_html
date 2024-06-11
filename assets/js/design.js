@@ -1,3 +1,4 @@
+
 //상단메뉴
 $(document).ready(function () {
   $('.topMenuLi').mouseenter(function () {
@@ -195,20 +196,6 @@ $(document).ready(function () {
   });
 });
 
-//회선 요금계산 월요금 천단위 콤마
-$(document).ready(function () {
-  const input = document.querySelector('#monthlyFee');
-  input.addEventListener('keyup', function (e) {
-    let value = e.target.value;
-    value = Number(value.replaceAll(',', ''));
-    if (isNaN(value)) {
-      input.value = 0;
-    } else {
-      const formatValue = value.toLocaleString('ko-KR');
-      input.value = formatValue;
-    }
-  })
-});
 
 //제품슬라이드
 $(document).ready(function () {

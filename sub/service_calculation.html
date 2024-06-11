@@ -163,7 +163,7 @@
             모두 입력하셔야 <b>정확한 금액이 산출</b>됩니다.
           </h1>
           <ul>
-            <a href="" class="caluClose"></a> <!--버튼추가-->
+            <a href="" class="caluClose"></a><!--버튼추가-->
             <li>
               <p>회선방식</p>
               <select>
@@ -277,6 +277,20 @@
       </div>
     </footer>
   </div>
+  <script>
+    //회선 요금계산 월요금 천단위 콤마
+    const input = document.querySelector('#monthlyFee');
+    input.addEventListener('keyup', function(e) {
+      let value = e.target.value;
+      value = Number(value.replaceAll(',', ''));
+      if (isNaN(value)) {
+        input.value = 0;
+      } else {
+        const formatValue = value.toLocaleString('ko-KR');
+        input.value = formatValue;
+      }
+    });
+  </script>
 </body>
 
 </html>

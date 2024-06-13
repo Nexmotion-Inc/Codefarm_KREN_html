@@ -1790,6 +1790,7 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   .paginationWrap .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .paginationWrap .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {width: 24px; height: 24px; line-height: 24px;}
   .joinSlide .swiper-slide:nth-child(4) .bTxt, .joinSlide .swiper-slide:nth-child(5) .bTxt {line-height: 70px;}
   .joinSlide .swiper-slide .bTxt { bottom: -140px; font-size: 20px; font-weight: 400; line-height: 30px;}
+  .conference {max-height: inherit; }
   
 }
 /*스마트폰끝*/

@@ -1163,7 +1163,7 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
 
   
   #quickMenu {width: 100%; top: unset; left: unset; overflow-x: inherit; height: 32px; margin: 0px;}
-  #quickMenu ul {display: flex; width: 100%; overflow-x: auto; padding-right: 30px;}
+  #quickMenu ul {display: flex; width: 100%; overflow-x: auto; overflow-y: hidden; padding-right: 30px;}
   #quickMenu ul li{min-width: 105px; height: 32px; padding: 6px 12px 6px 12px; border-radius: 20px; border: 1px solid #ccc; width: auto; min-width: auto; margin-right: 12px;}
   #quickMenu ul li.on { border: 1px solid #120D4D; background: #120D4D;}
   #quickMenu ul li.on span{color: #fff;}
@@ -1265,6 +1265,7 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   .partnerBtn {width: 100%;}
   .mProgram .subTitle {font-size: 40px; line-height: 53px;}
   .mProgram .subTitle, .mProgram div ul li:last-child {margin-bottom: 32px;}
+  .mProgram .subTitle{max-width: 534px;}
   #subCont:has(.mProgram) .serchTab {margin-bottom: 40px;}
   .mLevels .imgWrap {width: 100%;}
   .mLevels .txt a {font-size: 22px;}
@@ -1323,7 +1324,7 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   /*연혁*/
   .historyTable ul table {width: 100%;}
   .historyTable colgroup col:nth-child(1) {min-width: 246px !important;}
-  .historyTable .parentTitle{white-space: nowrap; font-size: 24px; margin-right: 77px;}
+  .historyTable .parentTitle{white-space: nowrap; font-size: 24px; margin-right: 77px; width: 167px;}
   
   
   /*서비스*/
@@ -1376,14 +1377,11 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   .interFailList > li > p > a {font-size: 18px;}
 }
 @media only screen and (max-device-width : 1000px) {
-  .mProgram .subTitle, .mLevels .subTitle {font-size: 28px; line-height: 36px;}
-  .mProgram .imgPartner{min-width: 100%; height: 360px; background-position: top; background-size: cover;}
-  .mProgram {flex-direction: column;}
-  .partnerBtn {width: 100%;}
-  .mProgram div ul li {margin-bottom: 8px; max-width: 100%;}
-  .partnerList li {width: auto; min-width: auto; width: calc(100% / 2 - 8px); margin-right: 16px;}
-  .mProgram .imgPartner { display: none;}
-  .mProgram .subTitle+.imgPartner {display: inline-block; margin-bottom: 24px;}
+  .imgPartner {min-width: 291px;height: 604px; margin-right: 32px;}
+  .mProgram .subTitle, .mLevels .subTitle {font-size: 28px; line-height: 36px; margin-bottom: 20px;}
+  .mProgram .subTitle {max-width: 386px;}
+  .mProgram div ul li {margin-bottom: 10px; max-width: 381px;}
+  .mProgram div ul li:last-child {margin-bottom: 32px;}
 }
 
 /*스마트폰*/
@@ -1488,17 +1486,16 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   
 }
 
-@media only screen and (max-device-width :768px) {
+@media only screen and (max-device-width :767px) {
   #wrap {min-width: 350px;}
   #subCont {padding: 0 16px 7em;}
   .titleH1 {width: 100%; font-size: 20px;font-weight: 700;line-height: 28px; margin-top: 32px; margin-bottom: 93px;}
   #mainCont #subCont {padding: 0 16px 108px;}
-  #contHeader .menuBtn.rightNav {margin-top: 0px;}
   .hAuto #quickMenu {top: 120px;}
   #quickMenu, .serviceWrap #quickMenu {top: 24px;}
   #quickMenu ul li {margin-right: 8px; margin-bottom: 0;}
-  
-  
+  #contHeader .menuBtn.rightNav {margin-top: 0px;}
+
   /*메인네비*/
   .btnLogo {margin-left: 16px;}
   .hBottom.rightNav ul {top: 24px; right: 24px; animation: fadein 1.2s;}
@@ -1648,6 +1645,15 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   .detailtotPrice {display: block; font-size: 24px; font-weight: 600; line-height: 38.4px;  text-align: right;}
   .detailHeaderRight .txt >button{ font-size: 13px; font-weight: 400; line-height: 20.8px;}
   .detailHeaderRight .txt >button {background-size: auto; padding-right: 15px;}
+  
+  .mProgram .imgPartner{min-width: 100%; height: 360px; background-position: top; background-size: cover;}
+  .mProgram {flex-direction: column;}
+  .partnerBtn {width: 100%;}
+  .mProgram div ul li {margin-bottom: 8px; max-width: 100%;}
+  .partnerList li {width: auto; min-width: auto; width: calc(100% / 2 - 8px); margin-right: 16px;}
+  .mProgram .imgPartner { display: none;}
+  .mProgram .subTitle+.imgPartner {display: inline-block; margin-bottom: 24px;}
+  
 
   /*서비스*/
   .mailServiceWrap #subCont {min-height: 100%; height: auto; padding: 0 16px 10em;}

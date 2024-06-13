@@ -4,7 +4,7 @@ html, body {font-size: 10px;}
 #wrap { display: flex; flex-direction: column;}
 .cartWrap, #subCont {flex: 1; height: 100%;}
 /*ν¬μ»¤μ¤*/
-#wrap{min-width: 1360px; overflow-x: hidden; min-height: 100%;}
+#wrap{min-width: 1360px; overflow-x: hidden; min-height: 100%; position: relative;}
 #wrap.hAuto{height: auto; min-height: calc(100% - 402px);}
 
 html:has(.historyTable) {scroll-behavior: smooth !important;}
@@ -138,7 +138,6 @@ letter-spacing: 0.01em; text-align: center;}
 .hBottom.rightNav a{color: #272727;}
 .hBottom.rightNav a.basket {text-indent: -9999px; display: inline-block; width: 32px; height: 32px;
  background: url(../../img/ico_basket_b.svg) center no-repeat; text-align: inherit;}
-.menuBtn.rightNav {margin-top: 66px;}
 
 .titleH1{ font-size: 46px; font-weight: 700; line-height: 64.4px; text-align: left; color: #2F2D43; margin-top: 64px; margin-bottom: 94px;}
 .parentTitle{display: flex; align-items: center;  font-size: 28px; font-weight: 700; line-height: 44.8px; letter-spacing: 0.01em; text-align: left; color: #2F2D43; margin-bottom: 32px;}
@@ -1159,6 +1158,8 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "β–
 @media only screen and (max-device-width : 1279px) {
   .main .videoWrap {height: calc(100dvh - 56px)}
   .videoContainer {height: calc(100dvh - 56px)}
+  #contHeader .menuBtn.rightNav {margin-top: 66px;}
+
   
   #quickMenu {width: 100%; top: unset; left: unset; overflow-x: inherit; height: 32px; margin: 0px;}
   #quickMenu ul {display: flex; width: 100%; overflow-x: auto; padding-right: 30px;}
@@ -1380,6 +1381,8 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "β–
   .partnerBtn {width: 100%;}
   .mProgram div ul li {margin-bottom: 8px; max-width: 100%;}
   .partnerList li {width: auto; min-width: auto; width: calc(100% / 2 - 8px); margin-right: 16px;}
+  .mProgram .imgPartner { display: none;}
+  .mProgram .subTitle+.imgPartner {display: inline-block; margin-bottom: 24px;}
 }
 
 /*μ¤λ§νΈν°*/
@@ -1489,7 +1492,7 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "β–
   #subCont {padding: 0 16px 7em;}
   .titleH1 {width: 100%; font-size: 20px;font-weight: 700;line-height: 28px; margin-top: 32px; margin-bottom: 93px;}
   #mainCont #subCont {padding: 0 16px 108px;}
-
+  #contHeader .menuBtn.rightNav {margin-top: 0px;}
   .hAuto #quickMenu {top: 120px;}
   #quickMenu, .serviceWrap #quickMenu {top: 24px;}
   #quickMenu ul li {margin-right: 8px; margin-bottom: 0;}
@@ -1738,9 +1741,7 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "β–
   .seminarJoin .noData {font-size: 32px; margin-bottom: 20px; text-align: center;}
   .seminarJoin .serchTab input::placeholder {font-size: 12px;}
 
-  
-  .mProgram .imgPartner { display: none;}
-  .mProgram .subTitle+.imgPartner {display: inline-block; margin-bottom: 24px;}
+
   .mLevels > ul {flex-direction: column; margin-bottom: 103px;}
   .mLevels > ul li {width: 100%; margin-bottom: 16px; }
   .mLevels > ul li:last-child {margin-bottom: 48px;}

@@ -753,7 +753,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .itemAmount { display: flex; height: 32px;; border: 1px solid #d2d2d2; border-radius: 4px; overflow: hidden;}
 .itemAmount a{display: inline-block; width: 32px; height: 100%; background-color: #f6f6f6;}
 .itemAmount span {display: inline-block; width: 40px; height: 100%;  line-height: 32px; font-size: 16px; text-align: center;}
-.itemPrice {font-size: 18px !important; font-weight: 800;}
+.itemPrice {font-size: 18px; font-weight: 800;}
 .cilTotal {display: flex; justify-content: space-around; background-color: #F8F9FA; padding-top: 16px; padding-bottom: 16px; border-radius: 0 0 16px 16px; border-top: 1px solid #ddd}
 .cilTotal >div >span {display: block; padding-bottom: 8px;}
 .cilTotal >div >span:first-child {font-size: 12px; color: #999;}
@@ -1273,6 +1273,13 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   .mLevels > ul {min-height: auto; margin-bottom: 370px;}
   .mLevels ul ul li {font-size: 14px;}
   .mProgram div ul li {max-width: 550px;}
+  
+  
+  /*장바구니*/
+  .itemTxt {max-width:260px; width: 100%; margin-right: 20px;}
+  .btnDeleteGray { margin-left: 10px; margin-right: 10px;}
+  .btnCouponSelect{margin: 3px 10px 3px 20px; white-space: nowrap;}
+  .cilCont .itemPrice {margin-top: 4px; font-size: 16px; white-space: nowrap;}
 
 }
   
@@ -1377,85 +1384,39 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   .interFailList > li > p > a {font-size: 18px;}
 }
 @media only screen and (max-device-width : 1000px) {
+  /*마켓 장바구니*/
   .imgPartner {min-width: 291px;height: 604px; margin-right: 32px;}
   .mProgram .subTitle, .mLevels .subTitle {font-size: 28px; line-height: 36px; margin-bottom: 20px;}
   .mProgram .subTitle {max-width: 386px;}
   .mProgram div ul li {margin-bottom: 10px; max-width: 381px;}
   .mProgram div ul li:last-child {margin-bottom: 32px;}
+  
+  /*메인*/
+  .rightDiv > i, .leftDiv > i, i.serviceImg {min-width: 343px; height: 501px; border-radius: 16px; background-size: contain;}
+  .serviceImg , .cloudImg {margin-left: 20px;}
+  .mailImg, .eduImg {margin-right: 20px;}
+  .leftDiv div > h1, .rightDiv div > h1, .conference div > h1 {font-size: 32px; line-height: 40px;}
+  #mainCont .leftDiv, #mainCont .rightDiv {margin-bottom: 160px;}
+  .conference div > h1 {margin-right: 50px;}
+  .conference em {font-size: 16px; margin-bottom: 16px;}
+  .expBox {max-height: 200px;}
+  .conference div > a.more { margin-bottom: 63px;}
+  .leftDiv .serviceIcon {display: flex;}
+  .leftDiv .serviceIcon i{width: 160px; height: 160px;}
+  .rightDiv div > h1, .leftDiv div > h1 {margin-bottom: 24px;}
+  .conference {max-height: 640px;}
+
 }
 
 /*스마트폰*/
 @media only screen and (max-device-width:830px) {
-   /*메인*/
-  #mainCont {padding-top: 80px;}
-  .joinSlide .swiper-slide > div{width: 283px; height: 342.69px; border-radius: 999px;}
-  #playButton {left: unset;}
-  #mainCont .leftDiv {flex-direction: column; margin-bottom: 80px;}
-  .serviceIcon {display: none;}
-  .leftDiv .serviceImg, .rightDiv .eduImg, .leftDiv i, .rightDiv i
-  {margin-left: 0; margin-right: 0; height: 502px; width: 100%; min-width: 100%; max-height: 502px; background-size: contain;}
-  .rightDiv div > span,.leftDiv div > span {width: 100%; word-break: keep-all; white-space: normal;}
-  .leftDiv div > span {max-width: 100%;}
-  .rightDiv div > a.more,
-  .leftDiv div > a.more {margin-bottom: 32px;}
-  #mainCont .rightDiv { flex-direction: column-reverse; margin-bottom: 80px;}
-  .conference > div {flex-direction: column; min-width:100%; min-height: -webkit-fill-available; border-radius: 16px;}
-  .conference > div img {width: 100%; min-height: 502px; object-fit: cover;}
-  .conference em { font-size: 24px; font-weight: 600; line-height: 33.6px; text-align: left; margin-bottom: 16px;}
-  .conference div > h1,.rightDiv div > h1,.leftDiv div > h1 {font-size: 24px; font-weight: 600; line-height: 33.6px; text-align: left; margin-bottom: 24px;}
-  .joinSlide {height: 450px;}
-  .joinSlide .swiper-wrapper {}
-  #bottomCont {height: 793px; padding-top: 80px;}
-  .joinagination.swiper-pagination-bullets.swiper-pagination-horizontal {top: 60px;}
-  .joinTxt p{ font-size: 32px; font-weight: 600; line-height: 41.6px; text-align: center;margin-bottom: 50px; padding: 0 10px;}
-  .joinTxt{margin-bottom: 52px;}
-  .joinSlide .swiper-slide {height: 292px;}
-  .joinTxt span{ font-size: 16px; font-weight: 500; line-height: 24px; text-align: center;}
-  .joinSlide .swiper-wrapper {margin-left: 100px;}
-  .joinSlide .swiper-slide > div em {font-size: 18px; font-weight: 600; line-height: 23.4px; text-align: center;}
-  .joinSlide .swiper-slide > div p {font-size: 60px; font-weight: 600; line-height: 78px; text-align: center;}
-  .joinSlide .swiper-slide > div span {font-size: 18px; font-weight: 400; line-height: 23.4px; text-align: center;}
-  .paginationWrap .conferPagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-   height: 24px; right: calc(50% + 24px); bottom: -360px; transform: translate(50%, 0);}
-  .paginationWrap {position: relative;}
-  #conPlayBtn {top: 336px; width: 24px; height: 24px; background-size: contain;}
-  .playCrtl {right: calc(50% - 60px);}
-  .conference em, .rightDiv div em, .leftDiv div em {font-size: 16px; font-weight: 600; line-height: 20.8px; text-align: left; margin-bottom: 16px;}
-  .paginationWrap .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .paginationWrap .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {width: 24px; height: 24px; line-height: 24px;}
-  .joinSlide .swiper-slide:nth-child(4) .bTxt, .joinSlide .swiper-slide:nth-child(5) .bTxt {line-height: 70px;}
-  .joinSlide .swiper-slide .bTxt { bottom: -140px; font-size: 20px; font-weight: 400; line-height: 30px;}
-
   
   /*서비스*/
   .mailServiceWrap #subCont {padding: 0 32px 10em;}
   .tab-list ul > li .list-wrap {top: 120px;}
   .whatWeServe, .addServe, .circuit {margin-top: 117px;}
 
-  
-  /*장바구니*/
-  .cilContLeft .itemImg {width: 96px; height: 72px;}
-  .itemTxt{overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all; width: calc(100% - 108px);}
-  .cilContLeft, .cilContLeft a, .cilContRight {flex-wrap: wrap;}
-  .cilTotal {flex-direction: column; justify-content: center; align-items: stretch;}
-  .cilTotal >div >span:first-child {font-size: 15px; float: left;}
-  .cilTotal >span {display: none;}
-  .itemPrice {float: right; font-weight: 400; font-size: 15px !important;}
-  .cilTotalPlus + div {}
-  .cilCont {position: relative;}
-  .cilTotal div:last-child span{font-weight: bold;}
-  .cilContLeft .btnChk{order: 1; width: 18px;}
-  .btnChk::before {min-width: 18px;}
-  .cilContLeft a:nth-of-type(2) {order: 2; width: calc(100% - 26px); margin-bottom: 24px;}
-  .itemAmount {order: 3; width: 78px; margin-right: 8px; height: 25px;}
-  .itemAmount a{min-width: 24px;}
-  .btnCouponSelect {margin-left: 0px; max-width: 53px; float: right; order: 4; width: 53px; height: 25px;}
-  .cilContRight {display: flex; align-items: center; order: 5; position: absolute; bottom: 22px; right: 0;}
-  .itemAmount span {line-height: 25px;}
-  .cilContLeft { align-items: center; width: 100%;}
-  .orderInfo {width: 100%;}
-  .btnDeleteGray { width: 16px; height: 16px; margin-left: 8px; background: url(../../img/ico_delete02.svg) center no-repeat;}
-  .orderTotCost .itemPrice {font-weight: 600;}
-  
+ 
   
   /*서비스 회선 요금계산*/
   .calcuTop {margin-bottom: 32px;}
@@ -1758,6 +1719,71 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   
   .reviewTitle h1 {font-size: 24px; line-height: 32px;}
   .nowPartnerBtn {width: 100%;}
+  
+  
+   
+  /*장바구니*/
+  .cilContLeft .itemImg {width: 96px; height: 72px;}
+  .itemTxt{overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all; width: calc(100% - 140px); max-width: 100%;}
+  .cilContLeft, .cilContLeft a, .cilContRight {flex-wrap: wrap;}
+  .cilTotal {flex-direction: column; justify-content: center; align-items: stretch;}
+  .cilTotal >div >span:first-child {font-size: 15px; float: left;}
+  .cilTotal >span {display: none;}
+  .itemPrice {float: right; font-weight: bold; font-size: 15px; margin-top: 0 !important;}
+  .cilTotalPlus + div {}
+  .cilCont {position: relative;}
+  .cilTotal div:last-child span{font-weight: bold;}
+  .cilContLeft .btnChk{order: 1; width: 18px;}
+  .btnChk::before {min-width: 18px;}
+  .cilContLeft a:nth-of-type(2) {order: 2; width: calc(100% - 26px); margin-bottom: 24px;}
+  .itemAmount {order: 3; width: 78px; margin-right: 8px; height: 25px;}
+  .itemAmount a{min-width: 24px;}
+  .btnCouponSelect {margin-left: 0px; max-width: 53px; float: right; order: 4; width: 53px; height: 25px;}
+  .cilContRight {display: flex; align-items: center; order: 5; position: absolute; bottom: 22px; right: 0;}
+  .itemAmount span {line-height: 25px;}
+  .cilContLeft { align-items: center; width: 100%;}
+  .orderInfo {width: 100%;}
+  .btnDeleteGray { width: 16px; height: 16px; margin-left: 8px; background: url(../../img/ico_delete02.svg) center no-repeat; margin-right: 0px;}
+  .orderTotCost .itemPrice {font-weight: 600;}
+  
+  /*메인*/
+  #mainCont {padding-top: 80px;}
+  .joinSlide .swiper-slide > div{width: 283px; height: 342.69px; border-radius: 999px;}
+  #playButton {left: unset;}
+  #mainCont .leftDiv {flex-direction: column; margin-bottom: 80px;}
+  .serviceIcon {display: none !important;}
+  .leftDiv .serviceImg, .rightDiv .eduImg, .leftDiv i, .rightDiv i
+  {margin-left: 0; margin-right: 0; height: 502px; width: 100%; min-width: 100%; max-height: 502px; background-size: contain;}
+  .rightDiv div > span,.leftDiv div > span {width: 100%; word-break: keep-all; white-space: normal;}
+  .leftDiv div > span {max-width: 100%;}
+  .rightDiv div > a.more,
+  .leftDiv div > a.more {margin-bottom: 32px;}
+  #mainCont .rightDiv { flex-direction: column-reverse; margin-bottom: 80px;}
+  .conference > div {flex-direction: column; min-width:100%; min-height: -webkit-fill-available; border-radius: 16px;}
+  .conference > div img {width: 100%; min-height: 502px; object-fit: cover;}
+  .conference em { font-size: 24px; font-weight: 600; line-height: 33.6px; text-align: left; margin-bottom: 16px;}
+  .conference div > h1,.rightDiv div > h1,.leftDiv div > h1 {font-size: 24px; font-weight: 600; line-height: 33.6px; text-align: left; margin-bottom: 24px;}
+  .joinSlide {height: 450px;}
+  .joinSlide .swiper-wrapper {}
+  #bottomCont {height: 793px; padding-top: 80px;}
+  .joinagination.swiper-pagination-bullets.swiper-pagination-horizontal {top: 60px;}
+  .joinTxt p{ font-size: 32px; font-weight: 600; line-height: 41.6px; text-align: center;margin-bottom: 50px; padding: 0 10px;}
+  .joinTxt{margin-bottom: 52px;}
+  .joinSlide .swiper-slide {height: 292px;}
+  .joinTxt span{ font-size: 16px; font-weight: 500; line-height: 24px; text-align: center;}
+  .joinSlide .swiper-wrapper {margin-left: 100px;}
+  .joinSlide .swiper-slide > div em {font-size: 18px; font-weight: 600; line-height: 23.4px; text-align: center;}
+  .joinSlide .swiper-slide > div p {font-size: 60px; font-weight: 600; line-height: 78px; text-align: center;}
+  .joinSlide .swiper-slide > div span {font-size: 18px; font-weight: 400; line-height: 23.4px; text-align: center;}
+  .paginationWrap .conferPagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+   height: 24px; right: calc(50% + 24px); bottom: -360px; transform: translate(50%, 0);}
+  .paginationWrap {position: relative;}
+  #conPlayBtn {top: 336px; width: 24px; height: 24px; background-size: contain;}
+  .playCrtl {right: calc(50% - 60px);}
+  .conference em, .rightDiv div em, .leftDiv div em {font-size: 16px; font-weight: 600; line-height: 20.8px; text-align: left; margin-bottom: 16px;}
+  .paginationWrap .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .paginationWrap .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {width: 24px; height: 24px; line-height: 24px;}
+  .joinSlide .swiper-slide:nth-child(4) .bTxt, .joinSlide .swiper-slide:nth-child(5) .bTxt {line-height: 70px;}
+  .joinSlide .swiper-slide .bTxt { bottom: -140px; font-size: 20px; font-weight: 400; line-height: 30px;}
   
 }
 /*스마트폰끝*/

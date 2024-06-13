@@ -7,6 +7,9 @@ html, body {font-size: 10px;}
 #wrap{min-width: 1360px; overflow-x: hidden; min-height: 100%;}
 #wrap.hAuto{height: auto; min-height: calc(100% - 402px);}
 
+html:has(.historyTable) {scroll-behavior: smooth !important;}
+
+
 /*인풋 셀렉트*/
 input[type='text'],
 input[type='password']{height: 40px; border-radius: 5px; border: 1px solid #ccc; padding: 10px; width: 352px;}
@@ -66,20 +69,23 @@ span, p {word-break: keep-all;}
 /*햄버거메뉴*/
 .mainNav { visibility: hidden; opacity:0; height: 100%; position: fixed; right: -1140px; top: 0; z-index: 55; width: 1140px; padding: 64px 94px; box-sizing: border-box; -webkit-transition: all .25s ease; -moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease; background: #ECECF4;; display: flex; flex-direction: row; align-content:flex-start; flex-wrap: wrap; align-items:center; justify-content: flex-start; }
 .mobMenuBtn {z-index: 9;  display: inline-block; width: 60px; height: 60px; text-indent: -9999px; box-sizing: border-box; background:url(../[TPH_Vimages]/ham.svg) center no-repeat; -webkit-transition: all .25s ease; -moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease;}
-.closedNavM { visibility: visible; opacity: 1; right: 0; animation: fadein .8s; position: absolute;}
-a.menuBtn.closedNavMBtn {background: url(../../img/ico_close.svg) center no-repeat; z-index: 99; cursor: pointer;}
-.mainNav > ul{display: flex; flex-direction: column; margin-top: 130px; }
-.mainNav > ul > li {margin-bottom: 64px;}
-.mainNav > ul > li > a{font-weight: 600; display: inline-block; width: 197px; font-size: 24px;}
-.mainNav ul ul{ width: 755px; display: flex; flex-wrap: wrap;}
-.mainNav > ul > li{font-size: 18px; margin-right: 60px; display: flex;}
-.mainNav ul ul li{float: left; margin-right: 60px;}
-.mainNav ul ul li a{margin-bottom: 32px; display: inline-block; font-size: 18px; font-weight: 500;}
-.mainNav ul li:last-child{margin-right: 0px;}
-.mainNav ul a {color: #120D4D;}
-.mainNav ul a:hover{text-decoration: none;}
+.closedNavM {visibility: visible; opacity: 1; right: 0; animation: fadein .8s; position: absolute; display: flex; overflow-y: auto; overflow-x: hidden; justify-content: flex-end; padding-left: 94px;}
+.mainNav > ul:nth-child(2){display: flex; flex-direction: column; margin-top: 130px; width: 100%;}
+.mainNav > ul:nth-child(2) > li {margin-bottom: 64px;}
+.mainNav > ul:nth-child(2) > li > a{font-weight: 600; display: inline-block; width: 197px; font-size: 24px;}
+.mainNav ul:nth-child(2) ul{ width: 755px; display: flex; flex-wrap: wrap;}
+.mainNav > ul:nth-child(2) > li{font-size: 18px; margin-right: 60px; display: flex;}
+.mainNav ul:nth-child(2) ul li{float: left; margin-right: 60px;}
+.mainNav ul:nth-child(2) ul li a{margin-bottom: 32px; display: inline-block; font-size: 18px; font-weight: 500;}
+.mainNav ul:nth-child(2) li:last-child{margin-right: 0px; margin-bottom: 0;}
+.mainNav ul:nth-child(2) a {color: #120D4D;}
+.mainNav ul:nth-child(2) a:hover{text-decoration: none;}
 
-
+/*햄버거 버튼 누르면 네비 안에 복사되는 로그인 버튼*/
+.mainNav.closedNavM ul:nth-child(1) {display: flex; width: 181px; justify-content: space-around; align-items: center;}
+.mainNav.closedNavM ul:nth-child(1) a.menuBtn{background: url(../../img/ico_close.svg) center no-repeat !important; z-index: 99; cursor: pointer;}
+.mainNav.closedNavM ul:nth-child(1) a {font-size: 1.6em; color: #272727; font-weight: 600;}
+.mainNav.closedNavM ul:nth-child(1) a.basket {background: url(../../img/ico_basket_b.svg) center no-repeat !important;}
 
 
 #menuToggle{ display: block; position: relative; top: 50px; left: 50px; z-index: 1; -webkit-user-select: none; user-select: none;}
@@ -121,7 +127,6 @@ letter-spacing: 0.01em; text-align: center;}
 .hBottom ul{display: flex; position: relative; z-index: 20;}
 .hBottom a{margin-right: 20px; width: auto; height: 34px; border-radius: 6px; padding: 4px 13px; display: inline-block;  font-size: 1.6em; font-weight: 600; line-height: 25.6px; letter-spacing: 0.01em; text-align: right; box-sizing: border-box; color: #120D4D;}
 .hBottom.rightNav li:last-child a{margin-right: 0px;}
-.hBottom.rightNav ul {z-index: 60;}
 .hBottom a:hover {text-decoration: none;}
  a.menuBtn {text-indent: -9999px; display: inline-block; width: 32px; height: 32px;
  background: url(../../img/ico_ham.svg) center no-repeat; text-align: inherit;}
@@ -133,7 +138,6 @@ letter-spacing: 0.01em; text-align: center;}
 .hBottom.rightNav a{color: #272727;}
 .hBottom.rightNav a.basket {text-indent: -9999px; display: inline-block; width: 32px; height: 32px;
  background: url(../../img/ico_basket_b.svg) center no-repeat; text-align: inherit;}
-
 
 
 .titleH1{ font-size: 46px; font-weight: 700; line-height: 64.4px; text-align: left; color: #2F2D43; margin-top: 64px; margin-bottom: 94px;}
@@ -295,13 +299,13 @@ span.label {color: #120D4D; display: inline-block; border: 1px solid #120D4D; pa
 /*파트너*/
 .mProgram {width: 100%; display: flex; margin-bottom: 120px;}
 .mProgram > div {float: right;}
-.imgPartner {display: inline-block; min-width: 455px; height: 625px; background: url(../../img/img_partner.png) center no-repeat; border-radius: 12px; float: left; margin-right: 40px;}
-.partnerBtn {width: 100%; background: #120D4D; width: 625px; height: 74px; padding: 21px 174px 21px 174px; border-radius: 12px; cursor: pointer; border: none;}
+.imgPartner {display: inline-block; min-width: 455px; height: 625px; background: url(../../img/img_partner.png) center no-repeat; border-radius: 12px; float: left; margin-right: 40px; border-radius: 16px;}
+.partnerBtn {width: 100%; background: #120D4D; width: 625px; height: 74px; border-radius: 12px; cursor: pointer; border: none; display: flex; align-items: center; justify-content: center;}
 .partnerBtn span{ display: inline-block; font-size: 20px; font-weight: 600; line-height: 32px; letter-spacing: 0.01em; color: #fff; background: url(../../img/ico_plus.svg) no-repeat right; padding-right: 33px; white-space: nowrap;}
 .partnerBg {background: linear-gradient(180deg, rgba(14, 13, 77, 0) 55%, #0E0D4D 80%, #120D4D 80%);}
 .partnerBg #subCont { height: auto;}
 .mLevels .subTitle {margin-bottom: 24px;}
-.mLevels > ul{width: 100%; min-height: 692px; display: flex; margin-bottom: 162px;}
+.mLevels > ul{width: 100%; min-height: 692px; display: flex; margin-bottom: 276px;}
 .mLevels .txt a{display: inline-block; font-size: 28px; font-weight: 600; line-height: 47.6px; letter-spacing: -0.01em; text-align: left; background: url(../../img/ico_arrow.svg) right no-repeat; background-size: 9px,16px; width: 100%; margin-bottom: 16px;}
 .mLevels .imgWrap{width: 341px; height: 204px; border-radius: 10px; background: #fff; margin-bottom: 20px;}
 .mLevels .imgWrap img {width: 100%; height: 100%; object-fit: cover;}
@@ -340,7 +344,7 @@ span.label {color: #120D4D; display: inline-block; border: 1px solid #120D4D; pa
 
 .reviewSwiper .imgWrap {display: inline-block; width: 168.4px; height: 168.4px; top: -48px; left: -37px; border-radius: 999px; background: #fff; position: absolute;}
 .reviewSwiper .imgWrap img {width: 100%; height: 100%; object-fit: cover; border-radius: 999px;}
-.nowPartnerBtn {width: 100%; background: #fff; width: 550px; height: 72px; padding: 21px 174px 21px 174px; border-radius: 12px; cursor: pointer; border: none; margin-bottom: 70px;}
+.nowPartnerBtn {width: 100%; background: #fff; width: 550px; height: 72px; border-radius: 12px; cursor: pointer; border: none; margin-bottom: 70px;}
 .nowPartnerBtn span{ display: inline-block; font-size: 20px; font-weight: 600; line-height: 32px; letter-spacing: 0.01em; color: #272727; background: url(../../img/ico_plus_b.svg) no-repeat right; padding-right: 33px;}
 
 
@@ -815,6 +819,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .btnPurple { background-color: var(--dark-purple); color: #fff; border-radius: 4px; font-weight: 600;}
 .detailBody {margin-top: 100px;}
 
+
 /*내부 콘텐츠 검색창*/
 .searchContTab {display: flex; max-width: 760px; margin: 0 auto;}
 .searchContTab select { width: 120px; border: 1px solid #2b2b2b; border-right: none; border-radius: 0; height: 48px; flex-shrink: 0;}
@@ -898,6 +903,21 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 .whatWeServe, .addServe, .circuit  {margin-top: 68px;}
 .arrowIco {display: inline-block; width: 24px; height: 24px; background: url('../../img/ico_arrow_small.svg') no-repeat center; background-size: contain; vertical-align: middle; float: right;}
 .whatWeServe .expList.systemBox li{min-height: 182px; padding: 24px; height: auto;}
+
+/*서비스 안내 레이어*/
+.LayerBg { display: flex; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(217, 217, 217,.6); z-index: 1000;}
+.layer {transform: translateY(150%); transition: all 0.5s ease;}
+html:has(.layer.show) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
+.layer { position: relative; width: 1013px; background-color: #fff; border-radius: 30px; margin: auto; padding: 57px 48px; transform: translateY(150%); transition: all 0.5s ease;}
+.LayerBg .layer.show {transform: translateY(0%); transition: all 0.5s ease;}
+.LayerBg .layer .titleBox {margin-bottom: 70px;}
+.LayerBg .layer .titleBox span {color: #120D4D; font-size: 14px; font-weight: 500; margin-bottom: 5px; display: inline-block;}
+.LayerBg .layer .titleBox p {color: #120D4D; font-size: 24px; font-weight: bold;}
+.LayerBg .layer .flexCol img{ margin-right: 43px;}
+.LayerBg .layer > ul {margin-bottom: 55px;}
+.LayerBg .layer ul li{font-size: 14px; margin-bottom: 32px; line-height: 22px; white-space: pre-line; font-weight: 500;}  
+.LayerBg .layer ul li:last-child{margin-bottom: 0;}
+
 
 .imgWrapPC {width: 100%;}
 .imgWrapM {display: none;}
@@ -1036,10 +1056,6 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
 .textList02 ol > li {position: relative; padding-left: 15px; padding: 4px 0 4px 17px;}
 .administration .krenTable th{font-size: 15px;}
 
-.LayerBg { display: flex; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(217, 217, 217,.6); z-index: 1000;}
-html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
-.whatWeLayer { position: relative; width: 1013px; background-color: #fff; border-radius: 30px; margin: auto; padding: 57px 48px; transform: translateY(150%); transition: all 0.5s ease;}
-
 
 /*IP 할당신청*/
 .titleh4{font-size: 24px; font-weight: 600; line-height: 38.4px; text-align: left; margin-bottom: 22px;}
@@ -1090,7 +1106,7 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
 .propelOver .imgWrap {width: 448px; height: auto; margin-right: 48px;}
 .propelOver .imgWrap img {width: 100%; height: 100%; border-radius: 20px; object-fit: contain; border-radius: 16px;}
 
-.propelOver .flexCol {display: flex; align-items: center;}
+.flexCol {display: flex; align-items: center;}
 .barList li{margin-bottom: 72px; font-size: 18px; white-space: pre-line; position: relative; color: #3C3A58;}
 .barList li:last-child{margin-bottom: 0px;}
 .barList li::before {width: 50px; height: 6px; background-color: #120D4D; content: ""; display: inline-block; position: absolute; top: -14px;}
@@ -1135,6 +1151,10 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
 .seminarJoin .searchR { display: flex; border-bottom: 1px solid #DDDDDD; align-items: center;}
 .seminarJoin .searchR div {display: flex; align-items: center; justify-content: flex-end;}
 
+.mProgram .subTitle+.imgPartner {display: none;}
+
+
+
 /*테블릿*/
 @media only screen and (max-device-width : 1279px) {
   .main .videoWrap {height: calc(100dvh - 56px)}
@@ -1149,7 +1169,7 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
   .titleH1 {margin-top: 52px; margin-bottom: 52px; font-size: 32px; line-height: 44.8px; font-weight: 700; margin-bottom: 137px;}
   .hAuto #quickMenu {top: 194px;}
   #quickMenu, .serviceWrap #quickMenu {top: 32px;}
-  
+  #subCont:has(.historyTable) #quickMenu{top: 32px !important;}
   #subCont {padding: 0 16px 8.5em;}
   #contHeader {display: ; height: 66px;}
   #contHeader > div:nth-of-type(2) {margin-top: -66px; height: 66px;}
@@ -1178,6 +1198,7 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
   #subCont:has(.detailHeader) .serchTab{margin-top: 14px; max-width: 100%;}
   .noteCont {height: 152px;}
   .noteBody {width: 100%;}
+
   
   .hBottom li:nth-child(1) a,
   .hBottom li:nth-child(2) a {display: none;}
@@ -1235,12 +1256,23 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
   .headquarters .top {margin-bottom: 40px;}
   .headquarters em {font-size: 16px;}
   .headquarters .labelBlue {font-size: 14px;}
+  
+  
+  /*마켓 파트터*/
+  .imgPartner {min-width: 391px; height: 606px; margin-right: 32px;}
+  .partnerBtn {width: 100%;}
+  .mProgram .subTitle {font-size: 40px; line-height: 53px;}
+  .mProgram .subTitle, .mProgram div ul li:last-child {margin-bottom: 32px;}
+  #subCont:has(.mProgram) .serchTab {margin-bottom: 40px;}
+  .mLevels .imgWrap {width: 100%;}
+  .mLevels .txt a {font-size: 22px;}
+  .mLevels .txt {padding: 0px;}
+  .mLevels > ul {min-height: auto; margin-bottom: 370px;}
+  .mLevels ul ul li {font-size: 14px;}
+  .mProgram div ul li {max-width: 550px;}
+
 }
   
-  
-  
-
-
 @media only screen and (min-device-width : 768px) and (max-device-width : 1279px) {
   .mailServiceWrap {background-size: cover !important;}
   #wrap:has(.rightNav)  #contHeader > div:nth-of-type(2) {height: 0px;}
@@ -1303,14 +1335,13 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
 
   
   /*메인메뉴*/
-  .mainNav {width: calc(100% - 155px); padding: 64px 80px;}
-  .mainNav ul ul {max-width: 582px; width: 100%;}
-  .mainNav ul ul li {margin-right: 40px;}
-  .mainNav > ul > li > a {font-size: 20px; font-weight: 600; line-height: 32px; text-align: left;}
-  .mainNav ul ul li a{ font-size: 15px; font-weight: 500; line-height: 24px; text-align: center;}
+  .mainNav {width: calc(100% - 155px); padding: 6.4rem 8rem;}
+  .mainNav ul:nth-child(2) ul {max-width: 582px; width: 100%;}
+  .mainNav ul:nth-child(2) ul li {margin-right: 40px;}
+  .mainNav > ul:nth-child(2) > li > a {font-size: 20px; font-weight: 600; line-height: 32px; text-align: left;}
+  .mainNav ul:nth-child(2) ul li a{ font-size: 15px; font-weight: 500; line-height: 24px; text-align: center;}
   .hBottom.rightNav {margin-top: 0 !important; padding-right: 80px;}
   .closedNavM {position: absolute;}
-  .hBottom.rightNav ul {top: 64px;}
   
   
   /*마켓*/
@@ -1342,7 +1373,14 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
   .interFailList > li > a {font-size: 24px;}
   .interFailList > li > p > a {font-size: 18px;}
 }
-
+@media only screen and (max-device-width : 1000px) {
+  .mProgram .subTitle, .mLevels .subTitle {font-size: 28px; line-height: 36px;}
+  .mProgram .imgPartner{min-width: 100%; height: 360px; background-position: top; background-size: cover;}
+  .mProgram {flex-direction: column;}
+  .partnerBtn {width: 100%;}
+  .mProgram div ul li {margin-bottom: 8px; max-width: 100%;}
+  .partnerList li {width: auto; min-width: auto; width: calc(100% / 2 - 8px); margin-right: 16px;}
+}
 
 /*스마트폰*/
 @media only screen and (max-device-width:830px) {
@@ -1383,7 +1421,7 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
   .conference em, .rightDiv div em, .leftDiv div em {font-size: 16px; font-weight: 600; line-height: 20.8px; text-align: left; margin-bottom: 16px;}
   .paginationWrap .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .paginationWrap .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {width: 24px; height: 24px; line-height: 24px;}
   .joinSlide .swiper-slide:nth-child(4) .bTxt, .joinSlide .swiper-slide:nth-child(5) .bTxt {line-height: 70px;}
-    .joinSlide .swiper-slide .bTxt { bottom: -140px; font-size: 20px; font-weight: 400; line-height: 30px;}
+  .joinSlide .swiper-slide .bTxt { bottom: -140px; font-size: 20px; font-weight: 400; line-height: 30px;}
 
   
   /*서비스*/
@@ -1422,11 +1460,11 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
   .calcuTop h1{ font-size: 20px; line-height: 28px; white-space: normal; margin-bottom: 45px;}
   .calcuTop ul{ flex-wrap: wrap; align-items: center; padding: 40px 20px; justify-content: space-between; margin-bottom: 32px;}
   .calcuTop li {width: calc(100% / 2); margin-bottom: 32px; margin: 0px; margin-bottom: 32px;}
-  .calcuTop select, .calcuTop li input {max-width: 140px; font-size: 16px;}
+  .calcuTop select, .calcuTop li input {min-width: 140px; width: 80%; font-size: 16px;}
   .calcuTop select {padding-left: 3rem; background-position: calc(100% - 3rem) center }
-  .calcuTop input[type="number"] { background-position: 7rem 55%; background-size: auto 36px;}
+  .calcuTop input[type="number"] {background-position: 80% 55%; background-size: auto 36px; text-align: center; padding-left: 25%;}
   .calcuTop input[type="number"]::-webkit-inner-spin-button {margin-right: 0px; width: 50px; margin-left: 20px;}
-  .calcuBtn {width: 100%; display: flex; align-items: center; justify-content: center;}
+  .calcuBtn {width: 100%; display: flex; align-items: center; justify-content: center; padding: 0;}
   .calcuBtn span {font-size: 20px; background-size: 22px;}
   .calcuBottom {margin-bottom: 30px;}
   .calcuBottom table td {padding: 20px 10px;}
@@ -1442,11 +1480,11 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
   .headquarters li p {font-size: 24px;}
   .headquarters .top {margin-bottom: 30;}
   .headquarters em {font-size: 12px;}
-  .headquarters .labelBlue{width: 45px; height: 22px; font-size: 10px; line-height: 22px;}
+  .headquarters .labelBlue{max-width: 45px; height: 22px; font-size: 10px; line-height: 22px;}
   
 }
 
-@media only screen and (max-device-width :767px) {
+@media only screen and (max-device-width :768px) {
   #wrap {min-width: 350px;}
   #subCont {padding: 0 16px 7em;}
   .titleH1 {width: 100%; font-size: 20px;font-weight: 700;line-height: 28px; margin-top: 32px; margin-bottom: 93px;}
@@ -1460,15 +1498,15 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
   /*메인네비*/
   .btnLogo {margin-left: 16px;}
   .hBottom.rightNav ul {top: 24px; right: 24px; animation: fadein 1.2s;}
-  .closedNavM {width: 100%; padding: 24px; height: max-content; position: absolute; max-width: 331px; }
-  .mainNav > ul {margin-top: 72px; overflow-x: hidden;}
-  .mainNav > ul > li {flex-direction: column; margin-bottom: 32px;}
-  .mainNav ul ul li a {margin-bottom: 16px; font-size: 14px; font-weight: 500; line-height: 22.4px; text-align: center;  margin-left: 16px;}
-  .mainNav > ul > li > a {margin-bottom: 12px; font-size: 18px; font-weight: 600; line-height: 28.8px; text-align: left;}
-  .mainNav ul li ul {display: none;}
-  .mainNav ul li ul.show {display: flex;}
-  .mainNav ul ul { flex-direction: column;}
-  .mainNav > ul > li > a {pointer-events: none;}
+  .closedNavM {width: 100%; padding: 24px; height: 100%; position: absolute; max-width: 331px; }
+  .mainNav > ul:nth-child(2) {margin-top: 72px; overflow-x: hidden;}
+  .mainNav > ul:nth-child(2) > li {flex-direction: column; margin-bottom: 32px;}
+  .mainNav ul:nth-child(2) ul li a {margin-bottom: 16px; font-size: 14px; font-weight: 500; line-height: 22.4px; text-align: center;  margin-left: 16px;}
+  .mainNav > ul:nth-child(2) > li > a {margin-bottom: 12px; font-size: 18px; font-weight: 600; line-height: 28.8px; text-align: left;}
+  .mainNav ul:nth-child(2) li ul {display: none;}
+  .mainNav ul:nth-child(2) li ul.show {display: flex;}
+  .mainNav ul:nth-child(2) ul { flex-direction: column;}
+  .mainNav > ul:nth-child(2) > li > a {pointer-events: none;}
   
    /*3차메뉴 높이 설정*/
   #subCont:has(.addServe) #quickMenu, 
@@ -1545,7 +1583,6 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
   .qna .noteTxt .noteTxtInfo div:nth-child(1) {margin-left: 0;}
   .noteTxt >div:first-child {margin-bottom: 15px;}
   .qna .noteCont { flex-direction: column; padding: 24px 16px; height: auto;}
-  .qna .btnWrite {display: none;}
   .searchContTab select {width: 80px;}
   .noteHeader >div select:last-child{margin-bottom: 0;}
   .serchTab{display: flex; flex-direction: column-reverse;}
@@ -1574,12 +1611,7 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
   .serchTab .tab > li ul {width: 100vw; position: absolute; overflow-x: auto; height: 42px; padding-right: 16px;}
   .serchTab .tab > li {margin-right: 12px;  padding: 0px; min-width: 60px;}
   .serchTab .tab > li ul li{width: auto; height: 38px;} 
-  
-  .mProgram .imgPartner{min-width: 100%; min-width: 343px; height: 360px;}
-  .mProgram {flex-direction: column;}
-  .partnerBtn {width: 100%;}
-  .mProgram div ul li {margin-bottom: 8px;}
-  {font-size: 28px; font-weight: 600; line-height: 39.2px;}
+      
   .partnerList li {width: auto; min-width: auto; width: calc(100% / 2 - 8px); margin-right: 16px;}
   .partnerList li:nth-child(4n) {margin-right: auto;}
   .partnerList li:nth-child(2n){margin-right: 0;}
@@ -1705,7 +1737,20 @@ html:has(.LayerBg) #wrap {filter: blur(4px); -webkit-filter: blur(4px);}
   .seminarJoin .serchTab input {width: 100%; font-size: 12px;}
   .seminarJoin .noData {font-size: 32px; margin-bottom: 20px; text-align: center;}
   .seminarJoin .serchTab input::placeholder {font-size: 12px;}
-  .pageMoveTab {display: none;}
+
+  
+  .mProgram .imgPartner { display: none;}
+  .mProgram .subTitle+.imgPartner {display: inline-block; margin-bottom: 24px;}
+  .mLevels > ul {flex-direction: column; margin-bottom: 103px;}
+  .mLevels > ul li {width: 100%; margin-bottom: 16px; }
+  .mLevels > ul li:last-child {margin-bottom: 48px;}
+  .mLevels > ul > li:nth-child(1){border-radius: 16px;}
+  .mLevels > ul > li:nth-child(2){border-radius: 16px;}
+  .mLevels > ul > li:nth-child(3){border-radius: 16px;}
+  
+  .reviewTitle h1 {font-size: 24px; line-height: 32px;}
+  .nowPartnerBtn {width: 100%;}
+  
 }
 /*스마트폰끝*/
 

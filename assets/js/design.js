@@ -1,4 +1,3 @@
-
 //상단메뉴
 $(document).ready(function () {
   $('.topMenuLi').mouseenter(function () {
@@ -128,6 +127,12 @@ $(document).ready(function () {
   }
 });
 
+//
+$(document).ready(function () {
+  $('.menuBtn').click(function () {
+    $('.closedNavM').append($('.hBottom.rightNav ul').clone(true));
+  });
+});
 
 
 //소개 접기 폈기
@@ -138,6 +143,21 @@ $(document).ready(function () {
     arrowBtn.not($(this)).parents('li').removeClass("on");
   });
 });
+
+
+//행버거 안에 버튼 추가
+$(document).ready(function () {
+  $('.menuBtn').one('click', function () {
+    $(".hBottom ul").clone().appendTo(".mainNav").insertBefore('.mainNav ul:eq(0)');
+  });
+});
+
+
+$(document).ready(function () {
+  $(".imgPartner").clone().appendTo(".mProgram > div").insertAfter('.mProgram > div .subTitle');
+});
+
+
 
 
 //마켓 배너 슬라이드

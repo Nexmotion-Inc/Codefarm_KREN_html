@@ -25,6 +25,16 @@ $(document).ready(function () {
 });
 
 
+
+//좌측 메뉴
+$(function () {
+  $('.menuBtn').one('click', function () {
+    $(".hBottom ul").clone().appendTo(".mainNav").insertBefore('.mainNav ul:eq(0)').addClass('cloneMenu');
+
+    $(".imgPartner").clone().appendTo(".mProgram > div").insertAfter('.mProgram > div .subTitle');
+  });
+});
+
 //햄버거버튼
 $(document).on("click", ".mobMenuBtn", function () {
   $(".hBottom").toggleClass("rightNav");
@@ -127,13 +137,6 @@ $(document).ready(function () {
   }
 });
 
-//
-$(document).ready(function () {
-  $('.menuBtn').click(function () {
-    $('.closedNavM').append($('.hBottom.rightNav ul').clone(true));
-  });
-});
-
 
 //소개 접기 폈기
 $(document).ready(function () {
@@ -145,14 +148,8 @@ $(document).ready(function () {
 });
 
 
-//행버거 안에 버튼 추가
-$(document).ready(function () {
-  $('.menuBtn').one('click', function () {
-    $(".hBottom ul").clone().appendTo(".mainNav").insertBefore('.mainNav ul:eq(0)');
-  });
-});
 
-
+//마켓 모바일 이미지 복사
 $(document).ready(function () {
   $(".imgPartner").clone().appendTo(".mProgram > div").insertAfter('.mProgram > div .subTitle');
 });

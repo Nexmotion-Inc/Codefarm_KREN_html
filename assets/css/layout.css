@@ -69,23 +69,29 @@ span, p {word-break: keep-all;}
 /*햄버거메뉴*/
 .mainNav { visibility: hidden; opacity:0; height: 100%; position: fixed; right: -1140px; top: 0; z-index: 55; width: 1140px; padding: 64px 94px; box-sizing: border-box; -webkit-transition: all .25s ease; -moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease; background: #ECECF4;; display: flex; flex-direction: row; align-content:flex-start; flex-wrap: wrap; align-items:center; justify-content: flex-start; max-height: 100%;}
 .mobMenuBtn {z-index: 9;  display: inline-block; width: 60px; height: 60px; text-indent: -9999px; box-sizing: border-box; background:url(../[TPH_Vimages]/ham.svg) center no-repeat; -webkit-transition: all .25s ease; -moz-transition: all .25s ease; -ms-transition: all .25s ease; -o-transition: all .25s ease; transition: all .25s ease;}
-.closedNavM {visibility: visible; opacity: 1; right: 0; animation: fadein .3s; position: absolute; display: flex; overflow-y: auto; overflow-x: hidden; justify-content: flex-end; padding-left: 94px;  height: fit-content;}
-.mainNav > ul:nth-child(2){display: flex; flex-direction: column; margin-top: 130px; width: 100%;}
-.mainNav > ul:nth-child(2) > li {margin-bottom: 64px;}
-.mainNav > ul:nth-child(2) > li > a{font-weight: 600; display: inline-block; width: 197px; font-size: 24px;}
-.mainNav ul:nth-child(2) ul{ width: 755px; display: flex; flex-wrap: wrap;}
-.mainNav > ul:nth-child(2) > li{font-size: 18px; margin-right: 60px; display: flex;}
-.mainNav ul:nth-child(2) ul li{float: left; margin-right: 60px;}
-.mainNav ul:nth-child(2) ul li a{margin-bottom: 32px; display: inline-block; font-size: 18px; font-weight: 500;}
-.mainNav ul:nth-child(2) li:last-child{margin-right: 0px; margin-bottom: 0;}
-.mainNav ul:nth-child(2) a {color: #120D4D;}
-.mainNav ul:nth-child(2) a:hover{text-decoration: none;}
+.closedNavM {visibility: visible; opacity: 1; right: 0; animation: fadein .3s; display: flex; overflow-y: auto; overflow-x: hidden; justify-content: flex-end; padding-left: 94px;  height: fit-content;}
+.closedNavM::-webkit-scrollbar {width: 10px;}
+.closedNavM::-webkit-scrollbar-track { background-color: #E0E0F8;}
+.closedNavM::-webkit-scrollbar-thumb { background-color: #b6b7e5; border-radius: 10px;}
+.closedNavM::-webkit-scrollbar-button {display: none;}
 
+
+
+.mainNav > ul:not(.cloneMenu){display: flex; flex-direction: column; margin-top: 130px; width: 100%;}
+.mainNav > ul:not(.cloneMenu) > li {margin-bottom: 64px;}
+.mainNav > ul:not(.cloneMenu) > li > a{font-weight: 600; display: inline-block; width: 197px; font-size: 24px;}
+.mainNav ul:not(.cloneMenu) ul{ width: 755px; display: flex; flex-wrap: wrap;}
+.mainNav > ul:not(.cloneMenu) > li{font-size: 18px; margin-right: 60px; display: flex;}
+.mainNav ul:not(.cloneMenu) ul li{float: left; margin-right: 60px;}
+.mainNav ul:not(.cloneMenu) ul li a{margin-bottom: 32px; display: inline-block; font-size: 18px; font-weight: 500;}
+.mainNav ul:not(.cloneMenu) li:last-child{margin-right: 0px; margin-bottom: 0;}
+.mainNav ul:not(.cloneMenu) a {color: #120D4D;}
+.mainNav ul:not(.cloneMenu) a:hover{text-decoration: none;}
 /*햄버거 버튼 누르면 네비 안에 복사되는 로그인 버튼*/
-.mainNav.closedNavM ul:nth-child(1) {display: flex; width: 181px; justify-content: space-around; align-items: center;}
-.mainNav.closedNavM ul:nth-child(1) a.menuBtn{background: url(../../img/ico_close.svg) center no-repeat !important; z-index: 99; cursor: pointer;}
-.mainNav.closedNavM ul:nth-child(1) a {font-size: 1.6em; color: #272727; font-weight: 600;}
-.mainNav.closedNavM ul:nth-child(1) a.basket {background: url(../../img/ico_basket_b.svg) center no-repeat !important;}
+.mainNav.closedNavM ul.cloneMenu {display: flex; width: 181px; justify-content: space-around; align-items: center;}
+.mainNav.closedNavM ul.cloneMenu a.menuBtn{background: url(../../img/ico_close.svg) center no-repeat !important; z-index: 99; cursor: pointer;}
+.mainNav.closedNavM ul.cloneMenu a {font-size: 1.6em; color: #272727; font-weight: 600;}
+.mainNav.closedNavM ul.cloneMenu a.basket {background: url(../../img/ico_basket_b.svg) center no-repeat !important;}
 
 
 #menuToggle{ display: block; position: relative; top: 50px; left: 50px; z-index: 1; -webkit-user-select: none; user-select: none;}
@@ -422,7 +428,7 @@ span.label {color: #120D4D; display: inline-block; border: 1px solid #120D4D; pa
 #btnPlayer {position: absolute; z-index: 10; width: 40px; height: 40px; background: #fff; border-radius: 999px; text-indent: -999px; }
 .playButton {border: none; padding: 0; cursor: pointer; width: 40px; height: 40px; background: url(../../img/ico_pauseBtn.svg) no-repeat; display: block; position: absolute; top: 92%; right: 0%; z-index: 5; border-radius: 50%; transform: translate(-50%, -50%); left: calc(50% + 540px);}
 .playButton.on{background: url(../../img/ico_pauseBtn02.svg) no-repeat;}
-.videoContainer {display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; width: 100dvw; height: calc(100dvh - 122px);}
+.videoContainer {display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; width: auto; height: calc(100dvh - 122px);}
 .videoContainer video{width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; -o-object-position: center bottom; object-position: center bottom;}
 
 
@@ -529,9 +535,9 @@ margin-bottom: 32px; display: inline-block;}
 .joinSlide .swiper-slide:nth-child(5) > div {background: url(../../img/img_joinSlidImg05.png) no-repeat center;}
 .joinSlide .swiper-slide > div{text-align: center; background-size: cover;}
 .joinSlide .swiper-slide:nth-child(4) .bTxt,  
-.joinSlide .swiper-slide:nth-child(5) .bTxt {line-height: 120px;}
+.joinSlide .swiper-slide:nth-child(5) .bTxt {line-height: 40px;}
 .joinSlide .swiper-wrapper {margin-left: -300px;}
-.joinSlide .swiper-slide > div { text-align: center; width: 455px; display: flex; justify-content: center; height: 550px; border-radius: 9999px; align-items: center;}
+.joinSlide .swiper-slide > div {text-align: center; width: 455px; display: flex; justify-content: center; height: 550px; border-radius: 9999px; align-items: center; flex-direction: column;}
 
 /*조직도*/
 .organImg {background:url(../../img/img_organImg.png) no-repeat center top; background-size: contain; display: inline-block; width: 1120px; height: 1312px; margin-top: 100px; margin-bottom: 94px;}
@@ -1347,10 +1353,11 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   
   /*메인메뉴*/
   .mainNav {width: calc(100% - 155px); padding: 6.4rem 8rem;}
-  .mainNav ul:nth-child(2) ul {max-width: 582px; width: 100%;}
-  .mainNav ul:nth-child(2) ul li {margin-right: 40px;}
-  .mainNav > ul:nth-child(2) > li > a {font-size: 20px; font-weight: 600; line-height: 32px; text-align: left;}
-  .mainNav ul:nth-child(2) ul li a{ font-size: 15px; font-weight: 500; line-height: 24px; text-align: center;}
+  .mainNav > ul:not(.cloneMenu) {margin-top: 68px;}
+  .mainNav ul:not(.cloneMenu) ul {max-width: 582px; width: 100%;}
+  .mainNav ul:not(.cloneMenu) ul li {margin-right: 40px;}
+  .mainNav > ul:not(.cloneMenu) > li > a {font-size: 20px; font-weight: 600; line-height: 32px; text-align: left;}
+  .mainNav ul:not(.cloneMenu) ul li a{ font-size: 15px; font-weight: 500; line-height: 24px; text-align: center;}
   .hBottom.rightNav {margin-top: 0 !important; padding-right: 80px;}
   .closedNavM {position: absolute;}
   
@@ -1464,14 +1471,14 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   .btnLogo {margin-left: 16px;}
   .hBottom.rightNav ul {top: 24px; right: 24px; animation: fadein 1.2s;}
   .closedNavM {width: 100%; padding: 24px; position: absolute; max-width: 331px;}
-  .mainNav > ul:nth-child(2) {margin-top: 72px; overflow-x: hidden;}
-  .mainNav > ul:nth-child(2) > li {flex-direction: column; margin-bottom: 32px;}
-  .mainNav ul:nth-child(2) ul li a {margin-bottom: 16px; font-size: 14px; font-weight: 500; line-height: 22.4px; text-align: center;  margin-left: 16px;}
-  .mainNav > ul:nth-child(2) > li > a {margin-bottom: 12px; font-size: 18px; font-weight: 600; line-height: 28.8px; text-align: left;}
-  .mainNav ul:nth-child(2) li ul {display: none;}
-  .mainNav ul:nth-child(2) li ul.show {display: flex;}
-  .mainNav ul:nth-child(2) ul { flex-direction: column;}
-  .mainNav > ul:nth-child(2) > li > a {pointer-events: none;}
+  .mainNav > ul:not(.cloneMenu) {margin-top: 40px; overflow-x: hidden;}
+  .mainNav > ul:not(.cloneMenu) > li {flex-direction: column; margin-bottom: 32px;}
+  .mainNav ul:not(.cloneMenu) ul li a {margin-bottom: 16px; font-size: 14px; font-weight: 500; line-height: 22.4px; text-align: center;  margin-left: 16px;}
+  .mainNav > ul:not(.cloneMenu) > li > a {margin-bottom: 12px; font-size: 18px; font-weight: 600; line-height: 28.8px; text-align: left;}
+  .mainNav ul:not(.cloneMenu) li ul {display: none;}
+  .mainNav ul:not(.cloneMenu) li ul.show {display: flex;}
+  .mainNav ul:not(.cloneMenu) ul { flex-direction: column;}
+  .mainNav > ul:not(.cloneMenu) > li > a {pointer-events: none;}
   
    /*3차메뉴 높이 설정*/
   #subCont:has(.addServe) #quickMenu, 

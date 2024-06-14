@@ -415,7 +415,7 @@ span.label {color: #120D4D; display: inline-block; border: 1px solid #120D4D; pa
 
 /*메인*/
 /*.main {background: #F1F1F1;}*/
-.main #contHeader{position: relative; background: linear-gradient(180deg, rgba(241, 241, 241, 0.8) 0%, rgba(241, 241, 241, 0.3) 14%, rgba(241, 241, 241, 0) 99.99%, #F1F1F1 100%); }
+.main #contHeader{position: relative;}
 .main .videoWrap{  position: relative; width: 100%; height: calc(100dvh - 122px);}
 
 .main .videoWrap a.more { display: flex; width: 96px; height: 37px; padding: 8px 16px 8px 16px; border-radius: 2px; border: 1px solid #120D4D; background: rgba(255,255,255, .4) url(../../img/ico_arrow_b.svg) no-repeat 60px 6px; font-size: 16px; font-weight: 600; line-height: 20.8px; color: #120D4D; margin-bottom: 85px; position: relative; z-index: 10; display: inline-block;}
@@ -446,8 +446,6 @@ video::-webkit-media-controls-volume-slider {display: none;}
 그대로고 단지 버튼만 없앤다. */ 
 video::-webkit-media-controls-fullscreen-button { display: none !important; }
 
-
-.main #topMenu ul {background: none;}
 #mainCont{background: #F1F1F1 url(../../img/bg_main.png) no-repeat center 635px; background-size: 100% 1670px;}
 
 #mainCont { padding-top: 120px; width: 100%; height: 100%;}
@@ -897,7 +895,7 @@ ol.text-list-ol > li::before { position:absolute !important; left:0 !important; 
 
 
 /*서비스*/
-.mailServiceWrap {background-size: inherit !important;}
+.mailServiceWrap {background-size: cover !important;}
 .mailServiceWrap #subCont {max-width: 100%; padding-bottom: 7em;}
 .whatWeServe, .addServe, .circuit  {margin-top: 68px;}
 .arrowIco {display: inline-block; width: 24px; height: 24px; background: url('../../img/ico_arrow_small.svg') no-repeat center; background-size: contain; vertical-align: middle; float: right;}
@@ -1172,7 +1170,6 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   .hAuto #quickMenu {top: 194px;}
   #quickMenu, .serviceWrap #quickMenu {top: 32px;}
   #subCont:has(.historyTable) #quickMenu{top: 32px !important;}
-  #subCont {padding: 0 16px 8.5em;}
   #contHeader {display: ; height: 66px;}
   #contHeader > div:nth-of-type(2) {margin-top: -66px; height: 66px;}
   #topMenu {display: none;}
@@ -1284,7 +1281,7 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
 }
   
 @media only screen and (min-device-width : 768px) and (max-device-width : 1279px) {
-  .mailServiceWrap {background-size: cover !important;}
+  .mailServiceWrap {background-size: cover !important; display: flex;}
   #wrap:has(.rightNav)  #contHeader > div:nth-of-type(2) {height: 0px;}
 
   /*메인*/
@@ -1340,7 +1337,7 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
   
   /*서비스*/
   .whatWeServe, .addServe, .circuit {margin-top: 117px;}
-  .mailServiceWrap #subCont {padding: 0 0 10em;}
+  .mailServiceWrap #subCont {padding: 0 0 10em; height: auto;}
   .serviceWrap .section1 { margin-top: 117px;}
   .requestReturn ul li {max-width: 478px;}
   .requestReturn ul li:nth-child(2) {display: inline-block; margin-top: 4px;}
@@ -1418,7 +1415,7 @@ ol.textListOl > li::before { position: absolute; left: 0; top: 3px; content: "�
 @media only screen and (max-device-width:830px) {
   
   /*서비스*/
-  .mailServiceWrap #subCont {padding: 0 32px 10em;}
+  .mailServiceWrap #subCont {padding: 0 32px 10em; height: auto;}
   .tab-list ul > li .list-wrap {top: 120px;}
   .whatWeServe, .addServe, .circuit {margin-top: 117px;}
 
